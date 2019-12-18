@@ -1,0 +1,7 @@
+node_modules/
+.npm
+.env.development
+.env.production
+.cache/
+public
+.DS_Store
