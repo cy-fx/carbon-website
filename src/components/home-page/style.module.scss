@@ -1,0 +1,188 @@
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+div,
+nav,
+img,
+body,
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.greetingsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 130px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.greetingsLineDecorationContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.greetingsLineHoleder {
+  display: flex;
+  width: 30%;
+  
+}
+
+.greetingsCard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 1.3rem;
+  line-height: 1.3;
+
+  min-height: 270px;
+}
+
+.greetingsParagraph {
+  width: 85%;
+  margin-bottom: 50px;
+}
+
+.navigationContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigationPages {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 130px;
+  justify-content: space-between;
+}
+
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 1.3rem;
+}
+
+.aboutTitle{
+margin-bottom: 45px;
+font-weight: 500;
+}
+
+.aboutParagraph {
+  width: 85%;
+}
+
+.imageHolder {
+  width: 100%;
+}
+
+.imageSource {
+  width: 100%;
+}
+
+.greetingsLink,
+.navigationLink {
+  color: #fff;
+  display: inline-block;
+}
+
+.greetingsLink {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navigationLink {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.greetingsLink:hover,
+.navigationLink:hover {
+  color: #666;
+}
+
+.lineDecoratorContainer {
+  display: flex;
+}
+
+.lineDecoratorWhite {
+  border-bottom: 1px solid white;
+  width: 14px;
+  margin: 45px 0;
+}
+
+.aboutContent {
+  margin: 10px 0 80px;
+}
+
+.linkDecoration {
+  display: flex;
+  border: 5px solid blue;
+  margin-top: -10px
+}
+
+.greetingsLink:hover .linkDecoration {
+  border: 5px solid white;
+}
+
+.heroContainer {
+  width: 100%;
+  margin: 250px 0 40px;
+}
+
+.sliderContainer {
+  margin-bottom: 130px;
+}
+
+.sliderContainer .imageSource{
+  height: 670px;
+}
+
+@media screen and (max-width: 600px) {
+  .greetingsCard {
+    width: 100%;
+  }
+  .navigationContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .aboutCard {
+    width: 100%;
+  }
+}
