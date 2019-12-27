@@ -4,7 +4,6 @@ import homePageStyle from "./style.module.scss"
 import Img from "gatsby-image"
 
 const HomePage = ({ homePageData }) => {
-  console.log(homePageData)
   return (
     <div className={homePageStyle.componentContainer}>
       <section className={homePageStyle.heroContainer}>
