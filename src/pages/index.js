@@ -5,7 +5,6 @@ import HomePage from "../components/home-page"
 import Footer from "../components/footer"
 import Header from "../components/header"
 
-
 const IndexPage = () => (
   <StaticQuery
     query={graphql`
@@ -39,6 +38,28 @@ const IndexPage = () => (
                 title
               }
             }
+            title
+            featuredProjects {
+              featuredImage {
+                description
+                fluid(maxWidth: 1400, quality: 100) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
+                title
+              }
+              slideDescription {
+                buttonText
+                link
+                name
+                icon {
+                  file {
+                    url
+                  }
+                }
+                paragraph
+                title
+              }
+            }
           }
           about {
             paragraph
@@ -54,7 +75,7 @@ const IndexPage = () => (
           <Header></Header>
           <SEO title="Home" />
           <HomePage homePageData={homePageData} />
-          <Footer/>
+          <Footer />
         </React.Fragment>
       )
     }}
