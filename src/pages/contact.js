@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import ContactPage from "../components/contact-page"
-import Footer from "../components/footer"
+import FooterContact from "../components/footer-contact"
 import Header from "../components/header"
 
 
@@ -44,7 +44,7 @@ const Contact = () => (
           <Header></Header>
           <SEO title="Contact" />
           <ContactPage contactPageData={contactPageData} />
-          <Footer/>
+          <FooterContact/>
         </React.Fragment>
       )
     }}

@@ -18,11 +18,14 @@ img {
 }
 
 body {
-  background-color: #000;
   color: #fff;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
+}
+
+.backgroundContainer{
+  background-color: #000000;
 }
 
 .componentContainer {
@@ -32,6 +35,8 @@ body {
 
   margin: 0 auto;
   max-width: 1180px;
+  background-color: #000000;
+
 }
 
 .greetingsContainer {
