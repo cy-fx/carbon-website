@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const CaseStudyPage = ({ caseStudyData }) => {
-  console.log(caseStudyData)
 
   return (
     <div>

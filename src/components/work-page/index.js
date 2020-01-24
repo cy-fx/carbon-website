@@ -1,10 +1,22 @@
 import React from "react"
 import workPageStyle from "./style.module.scss"
+import FeaturedProject from "./featured-project"
 
 const WorkPage = ({ workPageData }) => {
-  console.log(workPageData)
   return (
-    <div className={workPageStyle.componentContainer}></div>
+    <div className={workPageStyle.backgroundContainer}>
+      <div className={workPageStyle.componentContainer}>
+        <section className={workPageStyle.greeting}>
+          <div className={workPageStyle.winWinContainer}>
+            <p className={workPageStyle.title}>{workPageData.introduction.title}</p>
+          </div>
+          <div className={workPageStyle.getInTouch}>
+            <p className={workPageStyle.paragraph}>{workPageData.introduction.paragraph}</p>
+          </div>
+        </section>
+        <FeaturedProject featuredProjectData={workPageData.projects}/>
+      </div>
+    </div>
   )
 }
 
