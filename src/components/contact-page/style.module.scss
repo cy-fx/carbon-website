@@ -1,0 +1,63 @@
+
+.backgroundContainer{
+  background-color: #000000;
+}
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1180px;
+  color: #ffffff;
+  min-height: 600px;
+}
+
+.socialMediaNavigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.socialMediaLink {
+  margin-right: 12px;
+}
+
+.imageHolder {
+  width: 100%;
+}
+
+.imageSource {
+  width: 100%;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.winWinContainer {
+  width: 33%;
+}
+
+.winWinSize{
+  width: 160px;
+}
+
+.getInTouch {
+  width: 60%;
+  font-size: 3.4rem;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.eMail {
+  display: inline-block;
+  margin: 60px 0 25px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.socialMediaLink{
+  width: 30px ;
+}

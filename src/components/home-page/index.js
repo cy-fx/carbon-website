@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 
 const HomePage = ({ homePageData }) => {
   return (
+    <div className={homePageStyle.backgroundContainer}>
     <div className={homePageStyle.componentContainer}>
       <section className={homePageStyle.heroContainer}>
         <figure className={homePageStyle.imageHolder}>
@@ -110,6 +111,7 @@ const HomePage = ({ homePageData }) => {
           </div>
         </span>
       </section>
+    </div>
     </div>
   )
 }

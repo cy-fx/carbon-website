@@ -24,10 +24,6 @@ body {
   font-weight: 300;
 }
 
-.backgroundContainer{
-  background-color: #000000;
-}
-
 .componentContainer {
   display: flex;
   flex-direction: row;
@@ -35,8 +31,6 @@ body {
 
   margin: 0 auto;
   max-width: 1180px;
-  background-color: #000000;
-
 }
 
 .greetingsContainer {
