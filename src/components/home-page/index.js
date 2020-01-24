@@ -2,8 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 import homePageStyle from "./style.module.scss"
 import Img from "gatsby-image"
+import Slider from "../slider"
 
 const HomePage = ({ homePageData }) => {
+ 
   return (
     <div className={homePageStyle.backgroundContainer}>
     <div className={homePageStyle.componentContainer}>
@@ -72,12 +74,7 @@ const HomePage = ({ homePageData }) => {
       </section>
 
       <section className={homePageStyle.sliderContainer}>
-        <figure className={homePageStyle.imageHolder}>
-          <img
-            className={homePageStyle.imageSource}
-            src={homePageData.slider.featuredProjects[0].hoverImage.fluid.src}
-          />
-        </figure>
+        <Slider sliderData={homePageData.slider}/>
       </section>
       <section className={homePageStyle.aboutContainer}>
       <span className={homePageStyle.greetingsLineDecorationContainer}>
