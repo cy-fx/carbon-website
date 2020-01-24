@@ -45,6 +45,9 @@ const IndexPage = () => (
                 fluid(maxWidth: 1400, quality: 100) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
                 }
+                file {
+                  url
+                }
                 title
               }
               slideDescription {
