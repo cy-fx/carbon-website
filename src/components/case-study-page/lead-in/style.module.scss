@@ -1,0 +1,67 @@
+.backgroundContainer {
+  background-color: #000000;
+}
+
+.fullWidth{
+  width: 100%;
+  margin-bottom: 30px;
+}
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1180px;
+  color: #ffffff;
+  
+}
+
+.leadInContainer {
+  display: flex;
+  flex-direction: row;
+  height: 650px;
+  width: 100%;
+}
+.leadInDescription {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  width: 50%;
+}
+
+.leadInImage {
+  height: 100%;
+  width: 50%;
+  background-color: #222222;
+}
+
+.imageHolder {
+  width: 100%;
+}
+
+.imageSource {
+  width: 100%;
+}
+
+.projectNumber {
+  padding-bottom: 60px;
+}
+
+.projectTitle {
+  font-size: 16px;
+ margin-bottom: 70px;
+ font-weight: lighter;
+}
+.projectsubtitle {
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+
+.projectParagraph {
+  font-size: 23px;
+}
+
+.projectInformation {
+  width: 50%;
+  margin-left: 100px;
+}

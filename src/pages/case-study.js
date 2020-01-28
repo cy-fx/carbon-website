@@ -51,6 +51,7 @@ const CaseStudy = () => (
           }
           leadIn {
             title
+            paragraph
           }
           testimonial {
             testimonial
@@ -64,6 +65,7 @@ const CaseStudy = () => (
                 ... on ContentfulV1Item {
                   id
                   name
+                  text
                 }
               }
           }
@@ -83,7 +85,6 @@ const CaseStudy = () => (
     `}
     render={data => {
       const caseStudyData = data.contentfulV1CaseStudyPage
-
       return (
         <React.Fragment>
           <Header></Header>
