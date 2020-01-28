@@ -1,0 +1,131 @@
+.footerContainer {
+  color: #ffffff;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #000000;
+}
+
+.marginContainer {
+  max-width: 1180px;
+  background-color: #000000;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 85px 0 125px;
+}
+
+.socialMediaNavigation {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.signOffContainer {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signOffContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.signOffContent .imageHolder {
+  margin-bottom: 40px;
+}
+
+.multiCultural {
+  font-weight: 600;
+}
+
+.contactMessageContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMessageText,
+.contactMessageEmail {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.contactMessageEmail {
+  color: #555555;
+}
+
+.countriesContainer {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.legal {
+  margin-bottom: 20px;
+}
+
+.socialMediaLink {
+  margin-right: 12px;
+}
+
+.countries {
+  margin: 47px 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.lineDecoratorContainer {
+  display: flex;
+}
+
+.lineDecorator {
+  border: 1px solid black;
+  width: 14px;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.whiteSpace {
+  min-height: 100px;
+}
+
+.col50 {
+  display: flex;
+  width: 50%;
+}
+
+.col70 {
+  display: flex;
+  width: 70%;
+}
+
+.col30 {
+  display: flex;
+  width: 30%;
+}
+
+.signOffContainer .imageSource {
+  width: 180px;
+}
+
+.socialMediaNavigation .imageSource {
+  width: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .greetingsCard {
+    width: 100%;
+  }
+  .navigationContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .aboutCard {
+    width: 100%;
+  }
+}
