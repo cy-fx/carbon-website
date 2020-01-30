@@ -136,9 +136,13 @@ font-weight: 500;
   text-decoration: none;
 }
 
-.greetingsLink:hover,
+.greetingsLink:hover {
+  color: #ffffff;
+}
+
 .navigationLink:hover {
-  color: #666;
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .lineDecoratorContainer {
@@ -162,7 +166,7 @@ font-weight: 500;
 }
 
 .greetingsLink:hover .linkDecoration {
-  border: 5px solid white;
+  border: 5px solid #0000bb;
 }
 
 .heroContainer {
@@ -177,6 +181,8 @@ font-weight: 500;
 .sliderContainer .imageSource{
   height: 670px;
 }
+
+
 
 @media screen and (max-width: 600px) {
   .greetingsCard {

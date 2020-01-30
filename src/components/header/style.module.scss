@@ -118,3 +118,12 @@ button {
 .actualTime{
     margin: 0 5px;
 }
+
+.navigationButton:hover .offCanvas {
+  display: initial;
+}
+
+
+.offCanvas{
+  display: none;
+}
