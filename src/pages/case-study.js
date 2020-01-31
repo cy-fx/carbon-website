@@ -71,7 +71,9 @@ const CaseStudy = () => (
           }
           projectOverview {
             title
-            paragraph
+            paragraph{
+              paragraph
+            }
           }
           leadInImage {
             description
