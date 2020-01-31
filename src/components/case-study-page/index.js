@@ -3,7 +3,6 @@ import caseStudyPageStyle from "./style.module.scss"
 import LeadIn from "./lead-in"
 
 const CaseStudyPage = ({ caseStudyData }) => {
-  console.log(caseStudyData)
   return (
     <div className={caseStudyPageStyle.backgroundContainer}>
       <div className={caseStudyPageStyle.componentContainer}>
@@ -35,7 +34,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
               {caseStudyData.projectOverview.title}
             </p>
             <p className={caseStudyPageStyle.paragraph}>
-              {caseStudyData.projectOverview.paragraph}
+              {caseStudyData.projectOverview.paragraph.paragraph}
             </p>
           </div>
         </section>
