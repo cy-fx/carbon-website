@@ -1,5 +1,6 @@
 .backgroundContainer {
   background-color: #000000;
+  width: 100%;
 }
 
 .fullWidth {
@@ -49,7 +50,7 @@
   font-size: 55px;
   font-weight: bolder;
   line-height: 1;
-  padding-bottom: 50px;
+  margin-bottom: 35px;
 }
 .projectsubtitle {
   font-size: 1.5rem;
@@ -69,5 +70,57 @@
 
 .projectInformation {
   width: 80%;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 756px) {
+
+  
+
+  .backgroundContainer{
+    min-width: 320px;
+  }
+
+  .featuredProjectContainer {
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 45px;
+  }
+  .featuredProjectDescription {
+    width: 100%;
+    order: 2
+  }
+
+  .featuredProjectImage {
+    height: 280px;
+    width: 100%;
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .projectNumber, .projectParagraph{
+    display: none;
+  }
+
+  .projectInformation{
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .projectTitle{
+    font-size: 2rem;
+    width: 65%;
+    margin-bottom: 36px;
+  }
+
+  .projectButtonText{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+
+
+
 }
 

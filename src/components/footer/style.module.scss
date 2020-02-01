@@ -4,6 +4,8 @@
   font-size: 14px;
   font-weight: 300;
   background-color: #fff;
+  margin-top:90px;
+  margin-bottom: 120px;
 }
 
 .marginContainer {
@@ -13,7 +15,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 85px 0 125px;
+  // padding: 85px 0 125px;
+}
+
+.legalAndTextContainer {
+  margin-top: 100px;
+  display: flex;
 }
 
 .socialMediaNavigation {
@@ -59,9 +66,11 @@
 }
 
 .countriesContainer {
-  width: 15%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .legal {
@@ -73,9 +82,9 @@
 }
 
 .countries {
-  margin: 47px 0;
   font-weight: 600;
   font-size: 1rem;
+  margin-bottom: 100px;
 }
 
 .lineDecoratorContainer {
@@ -116,16 +125,94 @@
   width: 25px;
 }
 
-@media screen and (max-width: 600px) {
-  .greetingsCard {
+.contactMessageContainer .logo {
+  display: none;
+}
+
+.hablamosEspanol{
+  display: none;
+}
+
+@media screen and (max-width: 756px) {
+  .footerContainer {
     width: 100%;
+    margin-top: 30px;
   }
-  .navigationContainer {
+
+  .marginContainer {
+   width: 90%;
+   padding-bottom: 50px;
+   padding-top: 0;
+   margin-top: 60px;
+  }
+
+  .signOffContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    order:2;
+    margin-top:40px;
   }
-  .aboutCard {
-    width: 100%;
+  .signOffContainer .logo {
+    display: none;
   }
+
+  .signOffContent{
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .contactMessageContainer .logo {
+    display: block;
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .contactMessageContainer  {
+    width: 100%;
+    order:1;
+    margin-top: 0px;
+  }
+
+  .contactMessageEmail  {
+    width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 28px;
+  }
+
+  .contactMessageText{
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+
+  .countriesContainer{
+    order:1;
+    width: 100%;
+    margin-bottom: 35px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .countries{
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .hablamosEspanol{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .legal{
+    margin-bottom: 20px;
+    
+  }
+
+  .legalAndTextContainer {
+    margin-top: 30px;
+    flex-direction: column;
+    order: 2;
+  }
+  
+  
 }

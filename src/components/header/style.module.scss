@@ -1,5 +1,6 @@
-.backgroundContainer{
+.backgroundContainer {
   background-color: #000000;
+  width: 100%;
 }
 
 button {
@@ -35,43 +36,38 @@ button {
 //     padding: 0;
 // }
 
-.homeLogoContainer{
-    width: 33%;
-    margin-top: 45px;
+.homeLogoContainer {
+  width: 33%;
+  margin-top: 45px;
 }
 
-.locationContainer{
-    width: 47%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 70px;
+.locationContainer {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
 }
 
-.navigationContainer{
-    width: 20%;
-    display: flex;
-    justify-content: flex-end;
+.navigationContainer {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .weatherIcon {
-    margin: 0 5px;
-    
+  margin: 0 5px;
 }
 
-
-.weatherIcon .imageSource{
-    width: 20px;
-    height: 20px;
-    
+.weatherIcon .imageSource {
+  width: 20px;
+  height: 20px;
 }
 
-.timeAndWeather{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.timeAndWeather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
-
 
 .headerContainer {
   display: flex;
@@ -90,7 +86,6 @@ button {
   width: 120px;
   background-color: blue;
   padding-top: 50px;
-
 }
 
 .hamburger {
@@ -115,15 +110,60 @@ button {
   font-size: 1.5rem;
 }
 
-.actualTime{
-    margin: 0 5px;
+.actualTime {
+  margin: 0 5px;
 }
 
 .navigationButton:hover .offCanvas {
   display: initial;
 }
 
-
-.offCanvas{
+.offCanvas {
   display: none;
+}
+
+@media screen and (max-width: 756px) {
+
+  .backgroundContainer{
+    min-width: 320px;
+  }
+  .locationContainer {
+    display: none;
+  }
+  .headerContainer {
+    width: 90%;
+  }
+  
+  .homeLogoContainer {
+    width: 50%;
+    margin: 20px 0;
+    
+  }
+  .navigationContainer {
+    width: 50%;
+    
+  }
+  .homeLogoContainer .imageSource {
+    width: 40px;
+  }
+
+  .navigationButton {
+    width: 56px;
+    height: 60px;
+    background-color: blue;
+    padding-top: 0;
+  }
+
+  
+  .hamburger {
+    padding: 0 10px;
+    margin-top: 25px;
+  }
+  
+  .hamburgerLine {
+    display: flex;
+    border-bottom: 1px solid white;
+    margin: 3px 0;
+  }
+  
 }
