@@ -1,21 +1,20 @@
 .footerContainer {
-  color: #000;
+  color: #000000;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
-  background-color: #fff;
-  margin-top:90px;
-  margin-bottom: 120px;
+  background-color: #ffffff;
+  padding-top:90px;
+  padding-bottom: 120px;
 }
 
 .marginContainer {
   max-width: 1180px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // padding: 85px 0 125px;
 }
 
 .legalAndTextContainer {
@@ -62,7 +61,7 @@
 }
 
 .contactMessageEmail {
-  color: blue;
+  color:#0000FF;
 }
 
 .countriesContainer {
@@ -136,14 +135,17 @@
 @media screen and (max-width: 756px) {
   .footerContainer {
     width: 100%;
-    margin-top: 30px;
+    padding-top: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 50px;
   }
 
   .marginContainer {
    width: 90%;
-   padding-bottom: 50px;
+   padding-bottom: 0;
    padding-top: 0;
-   margin-top: 60px;
+   margin-top: 0;
   }
 
   .signOffContainer {
