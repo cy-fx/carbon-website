@@ -61,7 +61,53 @@
   font-size: 23px;
 }
 
+
+
 .projectInformation {
   width: 50%;
   margin-left: 100px;
+}
+
+
+@media screen and (max-width: 756px) {
+  .fullWidth{
+    margin-bottom: 20px;
+  }
+
+  
+ 
+  .leadInContainer {
+    height: auto;
+    width: 100% !important;
+    flex-direction: column;
+
+  }
+
+  .leadInDescription {
+    padding-top: 0;
+    width: 100% !important;
+  }
+  
+  .projectInformation {
+    margin-left: 0;
+    width: 100% !important;
+  }
+
+  .leadInImage {
+    height: 400px;
+    width: 100%;
+  }
+
+  .projectTitle{
+    margin-bottom: 20px;
+      font-size: 23px;
+      font-weight: bolder;
+    
+  }
+
+  .projectParagraph{
+    margin: 45px 0;
+  }
+
+  
 }
