@@ -66,6 +66,11 @@ const AgencyPage = ({ agencyPageData }) => {
           </div>
         </section>
       </div>
+      <section className={agencyPageStyle.viewWorkSection}>
+        <div className={agencyPageStyle.viewWorkContainer}>
+          <h2 className={agencyPageStyle.title}>View Work -></h2>
+        </div>
+      </section>
     </div>
   )
 }
