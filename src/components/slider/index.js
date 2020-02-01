@@ -22,8 +22,9 @@ const Slider = ({ sliderData }) => {
               <span className={sliderStyle.projectButtonText}>
                 {item.slideDescription.buttonText}
               </span>
-              <span className={sliderStyle.linkDecoration}></span>
+              {/* <span className={sliderStyle.linkDecoration}></span> */}
             </div>
+            <div><span>• • • •</span></div>
           </div>
           <div className={sliderStyle.featuredProjectImage}>
             <figure className={sliderStyle.imageHolder}>
