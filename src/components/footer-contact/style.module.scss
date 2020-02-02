@@ -1,19 +1,23 @@
 .footerContainer {
-  color: #000;
+  color: #000000;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
-  background-color: #fff;
+  background-color: #ffffff;
+  padding-top:90px;
+  padding-bottom: 50px;
 }
 
 .marginContainer {
   max-width: 1180px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  padding: 70px 0 20px;
+}
+
+.legalAndTextContainer {
+  display: flex;
 }
 
 .socialMediaNavigation {
@@ -23,14 +27,14 @@
 
 
 .signOffContainer {
-  width: 33%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100%;
 }
 
 .signOffContent {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .signOffContent .imageHolder {
@@ -39,10 +43,10 @@
 
 .multiCultural {
   font-weight: 600;
+  margin-bottom: 2px;
 }
 
 .contactMessageContainer {
-  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -55,17 +59,18 @@
 }
 
 .contactMessageEmail {
-  color: blue;
+  color:#0000FF;
 }
 
 .countriesContainer {
-  width: 15%;
   display: flex;
   flex-direction: column;
+  width: 17%;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .legal {
-  margin-bottom: 20px;
 }
 
 .socialMediaLink {
@@ -75,6 +80,8 @@
 .countries {
   font-weight: 600;
   font-size: 1rem;
+  display: flex;
+  
 }
 
 .lineDecoratorContainer {
@@ -85,7 +92,7 @@
   border: 1px solid black;
   width: 14px;
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .whiteSpace {
@@ -115,16 +122,111 @@
   width: 25px;
 }
 
-@media screen and (max-width: 600px) {
-  .greetingsCard {
+.contactMessageContainer .logo {
+  display: none;
+}
+
+.hablamosEspanol{
+  display: none;
+}
+
+.multiLegal{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  
+}
+
+.logo{
+  width: 33%;
+}
+
+@media screen and (max-width: 756px) {
+  .footerContainer {
     width: 100%;
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
   }
-  .navigationContainer {
+  
+
+  .marginContainer {
+   width: 90%;
+   padding-bottom: 0;
+   padding-top: 0;
+   margin-top: 0;
+  }
+
+  .signOffContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    order:2;
+    margin-top:40px;
   }
-  .aboutCard {
-    width: 100%;
+  .signOffContainer .logo {
+    width: 50%;
+    order:2;
+    margin: 45px 0;
   }
+
+  .signOffContent{
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .contactMessageContainer .logo {
+    display: block;
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .logo .imageSource{
+    width: 100%
+  }
+
+ 
+
+  .contactMessageEmail  {
+    width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 28px;
+  }
+
+  .contactMessageText{
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+
+  .countriesContainer{
+    order:1;
+    width: 100%;
+    margin-bottom: 35px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .countries{
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .hablamosEspanol{
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .multiLegal{
+    order: 3;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .legal{
+    margin-bottom: 60px;
+    
+  }
+
+ 
 }
