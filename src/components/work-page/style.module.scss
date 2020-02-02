@@ -1,5 +1,4 @@
-
-.backgroundContainer{
+.backgroundContainer {
   background-color: #000000;
 }
 .componentContainer {
@@ -40,7 +39,7 @@
   width: 33%;
 }
 
-.winWinSize{
+.winWinSize {
   width: 160px;
 }
 
@@ -58,15 +57,46 @@
   color: #000000;
 }
 
-.socialMediaLink{
-  width: 30px ;
+.socialMediaLink {
+  width: 30px;
 }
 
-.title{
+.title {
   font-weight: bolder;
   font-size: 1.1rem;
 }
 
-.paragraph{
+.paragraph {
   font-weight: bolder;
+}
+
+@media screen and (max-width: 756px) {
+  .backgroundContainer {
+    min-width: 320px;
+  }
+  .componentContainer {
+    width: 90%;
+    padding-bottom: 0;
+  }
+
+  .winWinContainer {
+    display: none;
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 45px 0 45px;
+  }
+
+  .getInTouch {
+    width: 100%;
+  }
+
+  .paragraph {
+    font-size: 23px;
+    line-height: 1.1;
+  }
+  
 }
