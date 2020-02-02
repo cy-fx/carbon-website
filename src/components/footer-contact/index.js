@@ -1,8 +1,8 @@
 import React from "react"
-import footerContactStyle from "./style.module.scss"
+import footerStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
 
-const FooterContact = () => (
+const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -37,49 +37,34 @@ const FooterContact = () => (
       }
     `}
     render={data => {
-      const footerContactData = data.contentfulV1Footer
+      const footerData = data.contentfulV1Footer
 
       return (
-        <div className={footerContactStyle.footerContainer}>
-          <div className={footerContactStyle.marginContainer}>
-            <section className={footerContactStyle.signOffContainer}>
-              <span className={footerContactStyle.lineDecorator}></span>
-              <div className={footerContactStyle.signOffContent}>
-                <figure className={footerContactStyle.imageHolder}>
+        <div className={footerStyle.footerContainer}>
+          <div className={footerStyle.marginContainer}>
+            <section className={footerStyle.signOffContainer}>
+                <figure
+                  className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
+                >
                   <img
-                    className={footerContactStyle.imageSource}
-                    src={footerContactData.signOff.carbonWordmark.file.url}
-                    alt={footerContactData.signOff.carbonWordmark.title}
+                    className={footerStyle.imageSource}
+                    src={footerData.signOff.carbonWordmark.file.url}
+                    alt={footerData.signOff.carbonWordmark.title}
                   />
                 </figure>
-              </div>
-            </section>
-            <section className={footerContactStyle.contactMessageContainer}>
-              <span className={footerContactStyle.lineDecoratorContainer}>
-                <span className={footerContactStyle.col70}>
-                  <span className={footerContactStyle.lineDecorator}></span>
-                </span>
-                <span className={footerContactStyle.col30}>
-                  <span className={footerContactStyle.lineDecorator}></span>
-                </span>
-              </span>
-              <div className={footerContactStyle.lineDecoratorContainer}>
-                <div className={footerContactStyle.col50}></div>
-                <div className={footerContactStyle.col50}></div>
-              </div>
-
-              <span className={footerContactStyle.multiCultural}>
-                {footerContactData.signOff.multiCultural}
-              </span>
-              <span className={footerContactStyle.legal}>
-                {footerContactData.signOff.legal}
-              </span>
-            </section>
-            <section className={footerContactStyle.countriesContainer}>
-              <span className={footerContactStyle.lineDecorator}></span>
-              <span className={footerContactStyle.countries}>
-                {footerContactData.countries}
-              </span>
+                <div className={footerStyle.multiLegal}>
+                  <span className={footerStyle.multiCultural}>
+                    {footerData.signOff.multiCultural}
+                  </span>
+                  <span className={footerStyle.legal}>
+                    {footerData.signOff.legal}
+                  </span>
+                </div>
+                <section className={footerStyle.countriesContainer}>
+                  <span className={footerStyle.countries}>
+                    {footerData.countries}
+                  </span>
+                </section>
             </section>
           </div>
         </div>
@@ -88,4 +73,4 @@ const FooterContact = () => (
   />
 )
 
-export default FooterContact
+export default Footer
