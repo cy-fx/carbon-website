@@ -264,16 +264,61 @@ body {
   width: 25px;
 }
 
-@media screen and (max-width: 600px) {
-  .greetingsCard {
-    width: 100%;
+
+@media screen and (max-width: 756px) {
+  .backgroundContainer{
+    min-width: 320px;
+    top: 80px;
+    min-height: 100vh;
+    padding-bottom: 0;
   }
-  .navigationContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.componentContainer {
+    width: 90%;
+    padding-bottom: 0;
   }
-  .aboutCard {
+
+  .signOffContainer {
     width: 100%;
+    order:2;
+    margin-top: 45px;
   }
+.navigationSection{
+  order:1;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.link{
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+.signOffContent .imageHolder{
+  display: none;
+}
+
+.socialMediaNavigation .imageHolder{
+  display: initial;
+}
+
+
+
+.signOffContent {
+  font-size: 16px;
+}
+
+.whiteSpace{
+  display: none;
+}
+
+.multiCultural{
+  margin-bottom: 2px;
+}
+
+.legal{
+  margin-bottom: 35px;
+}
+
+  
 }
