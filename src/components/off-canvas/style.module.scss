@@ -35,7 +35,6 @@ body {
   -webkit-box-shadow: 0px 30px 30px -7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 30px 30px -7px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 30px 30px -7px rgba(0, 0, 0, 0.3);
-
 }
 
 .componentContainer {
@@ -139,7 +138,7 @@ body {
   font-weight: bolder;
 }
 
-.link:hover{
+.link:hover {
   text-decoration: underline;
 }
 
@@ -264,61 +263,63 @@ body {
   width: 25px;
 }
 
+.homeIcon {
+  width: 110px;
+}
 
 @media screen and (max-width: 756px) {
-  .backgroundContainer{
+  .backgroundContainer {
     min-width: 320px;
     top: 80px;
     min-height: 100vh;
     padding-bottom: 0;
   }
-.componentContainer {
+  .componentContainer {
     width: 90%;
     padding-bottom: 0;
   }
 
   .signOffContainer {
     width: 100%;
-    order:2;
+    order: 2;
     margin-top: 45px;
   }
-.navigationSection{
-  order:1;
-  margin-top: 40px;
-  margin-bottom: 50px;
-}
+  .navigationSection {
+    order: 1;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
 
-.link{
-  font-size: 50px;
-  margin-bottom: 10px;
-  font-weight: lighter;
-}
+  .link {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+  }
 
-.signOffContent .imageHolder{
-  display: none;
-}
+  .signOffContent .imageHolder {
+    display: none;
+  }
 
-.socialMediaNavigation .imageHolder{
-  display: initial;
-}
+  .socialMediaNavigation .imageHolder {
+    display: initial;
+  }
 
+  .signOffContent {
+    font-size: 16px;
+  }
 
+  .whiteSpace {
+    display: none;
+  }
 
-.signOffContent {
-  font-size: 16px;
-}
+  .multiCultural {
+    margin-bottom: 2px;
+  }
 
-.whiteSpace{
-  display: none;
-}
-
-.multiCultural{
-  margin-bottom: 2px;
-}
-
-.legal{
-  margin-bottom: 35px;
-}
-
-  
+  .legal {
+    margin-bottom: 35px;
+  }
+  .homeIcon {
+    width: 70px;
+  }
 }

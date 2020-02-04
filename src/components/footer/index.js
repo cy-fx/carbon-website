@@ -31,6 +31,18 @@ const Footer = () => (
               title
             }
           }
+          socialMediaNavigationWhite {
+            navigation {
+              icon {
+                file {
+                  url
+                }
+                title
+              }
+              link
+              title
+            }
+          }
           paragraph
           email
         }
@@ -101,8 +113,8 @@ const Footer = () => (
                   {footerData.email}
                 </span>
                 <p className={footerStyle.hablamosEspanol}>
-                  {`{ Hablamos -> Español }`}
-                </p>
+             {`{ Hablamos `}{<span className={footerStyle.arrow}>-></span>}{` Español }`}
+            </p>
               </section>
             </div>
           </div>

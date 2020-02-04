@@ -27,6 +27,8 @@ body {
 
 .backgroundContainer {
   background-color: #ffffff;
+  overflow: hidden;
+
 }
 
 .componentContainer {
@@ -44,10 +46,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: relative;
+
 }
 
 .whoWeAreCard{
-  margin: 185px 0;
+  margin: 185px 0 300px;
   width: 50%;
   
 }
@@ -108,6 +112,13 @@ body {
 
 .whatWeDoSection{
   margin-bottom: 115px;
+  position: relative;
+  
+}
+
+.whatWeDoCard{
+  width: 50%;
+  
 }
 
 .servicesSection{
@@ -127,6 +138,55 @@ body {
   display: none;
 }
 
+.winWinContainerAbsolute{
+  position: absolute;
+  bottom:50px;
+  right: -300px;
+}
+
+.winWinContainerAbsolute .imageSource{
+  width: 350px;
+  height: 350px;
+}
+
+.lsdContainerAbsolute{
+  position: absolute;
+  top:-50px;
+  left: -200px;
+}
+
+.lsdContainerAbsolute .imageSource{
+  height: 1000px;
+}
+
+.carbonIconBlackContainerAbsolute{
+  position: absolute;
+  top:0;
+  right: -400px;
+}
+
+.carbonIconBlackContainerAbsolute .imageSource{
+  height: 933px;  animation-name: spin;
+  animation-duration: 99999ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+
+
 @media screen and (max-width: 756px) {
   .backgroundContainer{
     min-width: 320px;
@@ -140,6 +200,7 @@ body {
     justify-content: initial;
     margin-top: 40px;
     margin-bottom: 50px;
+    flex-direction: column;
   }
   
   .whoWeAreCard{
@@ -242,5 +303,25 @@ body {
     margin-top: 230px;
     padding: 40px 0;
    font-weight: lighter;
+  }
+
+  .lsdContainerAbsolute{
+    display: none;
+  }
+  
+ 
+  
+  .winWinContainerAbsolute{
+    position: relative;
+    bottom:0;
+    right: 0;
+  }
+  
+  .winWinContainerAbsolute .imageSource{
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: flex;
+    
   }
 }

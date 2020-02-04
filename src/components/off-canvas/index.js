@@ -93,12 +93,13 @@ const OffCanvas = () => (
             <section className={offCanvasStyle.navigationSection}>
               {offCanvasData.navigationItems.map(item => (
                 <div className={offCanvasStyle.navigationList}>
+                  {console.log(item)}
                   <Link
                     key={item.id}
                     className={offCanvasStyle.link}
                     to={item.link}
-                  >
-                    {item.title}—
+                  >{item.title === "Home"?<img className={offCanvasStyle.homeIcon} src={item.icon.file.url}/>:item.title}
+                    
                   </Link>
                 </div>
               ))}
