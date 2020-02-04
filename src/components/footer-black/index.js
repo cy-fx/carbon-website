@@ -9,7 +9,7 @@ const Footer = () => (
         contentfulV1Footer {
           countries
           signOff {
-            carbonWordmark {
+            carbonWordmarkWhite {
               file {
                 url
               }
@@ -19,7 +19,7 @@ const Footer = () => (
             legal
             multiCultural
           }
-          socialMediaNavigation {
+          socialMediaNavigationWhite {
             navigation {
               icon {
                 file {
@@ -55,8 +55,8 @@ const Footer = () => (
                   >
                     <img
                       className={footerStyle.imageSource}
-                      src={footerData.signOff.carbonWordmark.file.url}
-                      alt={footerData.signOff.carbonWordmark.title}
+                      src={footerData.signOff.carbonWordmarkWhite.file.url}
+                      alt={footerData.signOff.carbonWordmarkWhite.title}
                     />
                   </figure>
                   <span className={footerStyle.multiCultural}>
@@ -66,7 +66,7 @@ const Footer = () => (
                     {footerData.signOff.legal}
                   </span>
                   <nav className={footerStyle.socialMediaNavigation}>
-                    {footerData.socialMediaNavigation.navigation.map(item => (
+                    {footerData.socialMediaNavigationWhite.navigation.map(item => (
                       <a
                         className={footerStyle.socialMediaLink}
                         href={item.link}
@@ -90,8 +90,8 @@ const Footer = () => (
                 >
                   <img
                     className={footerStyle.imageSource}
-                    src={footerData.signOff.carbonWordmark.file.url}
-                    alt={footerData.signOff.carbonWordmark.title}
+                    src={footerData.signOff.carbonWordmarkWhite.file.url}
+                    alt={footerData.signOff.carbonWordmarkWhite.title}
                   />
                 </figure>
                 <p className={footerStyle.contactMessageText}>
@@ -101,8 +101,8 @@ const Footer = () => (
                   {footerData.email}
                 </span>
                 <p className={footerStyle.hablamosEspanol}>
-                  {`{ Hablamos -> Español }`}
-                </p>
+             {`{ Hablamos `}{<span className={footerStyle.arrow}>-></span>}{` Español }`}
+            </p>
               </section>
             </div>
           </div>

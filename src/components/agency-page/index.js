@@ -7,6 +7,15 @@ const AgencyPage = ({ agencyPageData }) => {
     <div className={agencyPageStyle.backgroundContainer}>
       <div className={agencyPageStyle.componentContainer}>
         <section className={agencyPageStyle.whoWeAreSection}>
+        <div className={agencyPageStyle.lsdContainerAbsolute}>
+            <figure className={agencyPageStyle.lsdSize}>
+              <img
+                className={agencyPageStyle.imageSource}
+                src={agencyPageData.backgroundImage.file.url}
+              />
+            </figure>
+          </div>
+       
           <div className={agencyPageStyle.whoWeAreCard}>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whoWeAre.title}
@@ -20,6 +29,14 @@ const AgencyPage = ({ agencyPageData }) => {
             <p className={agencyPageStyle.paragraph}>
               {agencyPageData.whoWeAre.buttonText}
             </p>
+          </div>
+          <div className={agencyPageStyle.winWinContainerAbsolute}>
+            <figure className={agencyPageStyle.winWinSize}>
+              <img
+                className={agencyPageStyle.imageSource}
+                src={agencyPageData.winWinGif.file.url}
+              />
+            </figure>
           </div>
         </section>
         <section className={agencyPageStyle.whatWeBelieveInSection}>
@@ -46,7 +63,16 @@ const AgencyPage = ({ agencyPageData }) => {
           </div>
         </section>
         <section className={agencyPageStyle.whatWeDoSection}>
+       
           <div className={agencyPageStyle.whatWeDoCard}>
+          <div className={agencyPageStyle.carbonIconBlackContainerAbsolute}>
+            <figure className={agencyPageStyle.lsdSize}>
+              <img
+                className={agencyPageStyle.imageSource}
+                src={agencyPageData.carbonIconBlack.file.url}
+              />
+            </figure>
+          </div>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whatWeDo.title}
             </h4>

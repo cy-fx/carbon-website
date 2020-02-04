@@ -36,7 +36,7 @@ const ContactPage = ({ contactPageData }) => {
               ))}
             </nav>
             <p className={contactPageStyle.hablamosEspanol}>
-             {`{ Hablamos`}{<span className={contactPageStyle.arrow}>-></span>}{` Español }`}
+             {`{ Hablamos `}{<span className={contactPageStyle.arrow}>-></span>}{` Español }`}
             </p>
           </div>
         </div>

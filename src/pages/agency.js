@@ -67,6 +67,26 @@ const Agency = () => (
             paragraph
           }
           winWinMindset
+          winWinMindsetImage {
+            file {
+              url
+            }
+          }
+          winWinGif {
+            file {
+              url
+            }
+          }
+          backgroundImage {
+            file {
+              url
+            }
+          }
+          carbonIconBlack {
+            file {
+              url
+            }
+          }
         }
       }
     `}
