@@ -18,7 +18,6 @@
 .featuredProjectContainer {
   display: flex;
   flex-direction: row;
-  height: 650px;
   width: 100%;
 }
 .featuredProjectDescription {
@@ -30,11 +29,11 @@
 .featuredProjectImage {
   height: 100%;
   width: 66%;
-  background-color: #222222;
 }
 
 .imageHolder {
   width: 100%;
+  height: 670px;
 }
 
 .imageSource {
@@ -44,6 +43,22 @@
 .projectNumber {
   padding-bottom: 175px;
   font-size: 23px;
+  display: flex;
+}
+
+.featuredProjectTitle {
+  width: 80%;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.arrow {
+  margin: 0 5px;
 }
 
 .projectTitle {
@@ -60,7 +75,7 @@
 .projectParagraph {
   font-size: 1rem;
   line-height: 1.3;
-  padding-bottom: 55px;
+  margin-bottom: 55px;
 }
 
 .projectButtonText {
@@ -70,14 +85,70 @@
 
 .projectInformation {
   width: 80%;
-  margin-bottom: 120px;
 }
 
+.show {
+  border: initial;
+}
+
+.dontShow {
+  display: none;
+}
+
+.circleButtonsContainer {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.circleButtons {
+  display: flex;
+}
+
+.arrow:hover,
+.circleButtons:hover,
+.featuredProjectImage:hover {
+  cursor: pointer;
+}
+
+.circle {
+  background-color: #000000;
+  border: 2px solid #fff;
+  border-radius: 18px;
+  height: 30px;
+  width: 30px;
+  margin-right: 4px;
+}
+
+.circleActive {
+  background-color: #ffffff;
+}
+
+.featuredProjectImage:hover{
+}
+
+.featuredProjectImage .imageSource{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// .hoverImage{
+//   display: none;
+//  }
+
+// .hoverImage:hover{
+//   display: block;
+//  }
+
+//  .hoverImage .imageSource{
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
 @media screen and (max-width: 756px) {
-
-  
-
-  .backgroundContainer{
+  .backgroundContainer {
     min-width: 320px;
   }
 
@@ -88,7 +159,7 @@
   }
   .featuredProjectDescription {
     width: 100%;
-    order: 2
+    order: 2;
   }
 
   .featuredProjectImage {
@@ -98,29 +169,25 @@
     margin-bottom: 20px;
   }
 
-  .projectNumber, .projectParagraph{
+  .projectNumber,
+  .projectParagraph {
     display: none;
   }
 
-  .projectInformation{
+  .projectInformation {
     width: 100%;
     margin-bottom: 0;
   }
 
-  .projectTitle{
+  .projectTitle {
     font-size: 2rem;
     width: 65%;
     margin-bottom: 36px;
   }
 
-  .projectButtonText{
+  .projectButtonText {
     display: block;
     font-size: 18px;
     margin-bottom: 50px;
   }
-
-
-
-
 }
-
