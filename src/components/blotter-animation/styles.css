@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  padding: 0px;
+  overflow: visible !important;
+}
+
+.App {
+  display: flex !important;
+ 
+}
+
+canvas {
+  margin-bottom: -35px;
+  overflow: visible !important;
+}

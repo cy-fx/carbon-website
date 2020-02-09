@@ -1,10 +1,12 @@
 import React from "react"
 import agencyPageStyle from "./style.module.scss"
+import BlotterAnimation from "../blotter-animation"
 
 const AgencyPage = ({ agencyPageData }) => {
-  console.log(agencyPageData)
   return (
     <div className={agencyPageStyle.backgroundContainer}>
+      <div className={agencyPageStyle.carbonAnimation}><BlotterAnimation/></div>
+      
       <div className={agencyPageStyle.componentContainer}>
         <section className={agencyPageStyle.whoWeAreSection}>
         <div className={agencyPageStyle.lsdContainerAbsolute}>
