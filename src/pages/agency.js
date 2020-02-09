@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import AgencyPage from "../components/agency-page"
 import FooterBlack from "../components/footer-black"
-import Header from "../components/header"
+import HeaderWhite from "../components/header-white"
 
 const Agency = () => (
   <StaticQuery
@@ -94,7 +94,7 @@ const Agency = () => (
       const agencyPageData = data.contentfulV1AgencyPage
       return (
         <React.Fragment>
-          <Header/>
+          <HeaderWhite></HeaderWhite>
           <SEO title="agency" />
           <AgencyPage agencyPageData={agencyPageData} />
           <FooterBlack/>

@@ -28,9 +28,29 @@ body {
 .backgroundContainer {
   background-color: #ffffff;
   overflow: hidden;
-
+  width: 100%;
 }
 
+.carbonAnimation {
+  position: absolute;
+  top: 200px;
+  left: -150px;
+  // display: inline-block; 
+  // animation: skew 25s infinite;
+  transform: skew(5deg, 10deg);
+  transform: rotate(10deg)
+
+  // animation-direction: alternate;
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(5deg);
+  }
+  100% {
+    transform: skew(-5deg);
+  }
+} 
 .componentContainer {
   display: flex;
   flex-direction: row;
@@ -42,18 +62,16 @@ body {
   margin-bottom: 60px;
 }
 
-.whoWeAreSection{
+.whoWeAreSection {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   position: relative;
-
 }
 
-.whoWeAreCard{
+.whoWeAreCard {
   margin: 185px 0 300px;
   width: 50%;
-  
 }
 
 .subtitle {
@@ -68,33 +86,33 @@ body {
   margin-bottom: 85px;
 }
 
-.paragraph{
+.paragraph {
   font-size: 23px;
   margin-bottom: 35px;
 }
 
-.whatWeBelieveInSection{
+.whatWeBelieveInSection {
   display: flex;
   margin-bottom: 160px;
 }
 
-.whatWeBelieveInCard{
+.whatWeBelieveInCard {
   width: 80%;
 }
 
-.word{
+.word {
   font-size: 130px;
   font-weight: lighter;
-  line-height: .8;
+  line-height: 0.8;
   padding-bottom: 80px;
 }
 
-.enLoQueCreemosCard{
+.enLoQueCreemosCard {
   width: 20%;
   margin-bottom: 80px;
 }
 
-.description{
+.description {
   margin-bottom: 80px;
 }
 
@@ -104,106 +122,100 @@ body {
   margin-bottom: 10px;
 }
 
-.listParagraph{
+.listParagraph {
   font-size: 16px;
   margin-bottom: 0;
   line-height: 1.3;
 }
 
-.whatWeDoSection{
+.whatWeDoSection {
   margin-bottom: 115px;
   position: relative;
-  
 }
 
-.whatWeDoCard{
+.whatWeDoCard {
   width: 50%;
-  
 }
 
-.servicesSection{
+.servicesSection {
   margin-bottom: 115px;
 }
 
-.servicesCard .title{
+.servicesCard .title {
   margin-bottom: 40px;
 }
 
-.servicesList{
+.servicesList {
   font-size: 23px;
   margin-bottom: 10px;
 }
 
-.viewWorkSection{
+.viewWorkSection {
   display: none;
 }
 
-.winWinContainerAbsolute{
+.winWinContainerAbsolute {
   position: absolute;
-  bottom:50px;
+  bottom: 50px;
   right: -300px;
 }
 
-.winWinContainerAbsolute .imageSource{
+.winWinContainerAbsolute .imageSource {
   width: 350px;
   height: 350px;
 }
 
-.lsdContainerAbsolute{
+.lsdContainerAbsolute {
   position: absolute;
-  top:-50px;
+  top: -50px;
   left: -200px;
+  visibility: hidden;
 }
 
-.lsdContainerAbsolute .imageSource{
+.lsdContainerAbsolute .imageSource {
   height: 1000px;
 }
 
-.carbonIconBlackContainerAbsolute{
+.carbonIconBlackContainerAbsolute {
   position: absolute;
-  top:0;
+  top: 0;
   right: -400px;
 }
 
-.carbonIconBlackContainerAbsolute .imageSource{
-  height: 933px;  animation-name: spin;
+.carbonIconBlackContainerAbsolute .imageSource {
+  height: 933px;
+  animation-name: spin;
   animation-duration: 99999ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
 }
-
-
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-
-
-
-
 @media screen and (max-width: 756px) {
-  .backgroundContainer{
+  .backgroundContainer {
     min-width: 320px;
   }
-.componentContainer {
+  .componentContainer {
     width: 90%;
     padding-bottom: 0;
   }
-  .whoWeAreSection{
+  .whoWeAreSection {
     width: 100%;
     justify-content: initial;
     margin-top: 40px;
     margin-bottom: 50px;
     flex-direction: column;
   }
-  
-  .whoWeAreCard{
+
+  .whoWeAreCard {
     margin: 0;
     width: 100%;
   }
@@ -220,108 +232,105 @@ body {
     line-height: 1;
   }
 
-  .whatWeBelieveInSection{
+  .whatWeBelieveInSection {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
   }
-  
-  .whatWeBelieveInCard{
+
+  .whatWeBelieveInCard {
     width: 100%;
     margin-bottom: 40px;
     height: 100%;
   }
-  
-  .word{
+
+  .word {
     font-size: 36px;
     font-weight: lighter;
-    line-height: .8;
+    line-height: 0.8;
     padding-bottom: 15px;
-    color: #0000FF;
+    color: #0000ff;
   }
 
-  .whatWeBelieveInSection .title{
-    margin-bottom:40px;
-  } 
+  .whatWeBelieveInSection .title {
+    margin-bottom: 40px;
+  }
 
-  .enLoQueCreemosCard{
+  .enLoQueCreemosCard {
     width: 100%;
     margin-top: 40px;
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 
-  .enLoQueCreemosCard .title{
-    margin-bottom:0;
+  .enLoQueCreemosCard .title {
+    margin-bottom: 0;
   }
 
-  .description{
+  .description {
     margin-top: 40px;
     margin-bottom: 40px;
   }
-  
+
   .listTitle {
     font-size: 23px;
     font-weight: initial;
     margin-bottom: 10px;
     margin-top: 0;
   }
-  
-  .listParagraph{
+
+  .listParagraph {
     font-size: 23px;
     margin-bottom: 0;
     line-height: 1.2;
   }
-  .description{
+  .description {
     display: inline-block;
   }
 
-  .whatWeDoSection{
+  .whatWeDoSection {
     display: none;
   }
-  .servicesSection{
+  .servicesSection {
     margin-top: 40px;
     margin-bottom: 0;
   }
-  .servicesCard .title{
+  .servicesCard .title {
     margin-bottom: 35px;
   }
 
-  .viewWorkSection{
-    background-color: #0000FF;
+  .viewWorkSection {
+    background-color: #0000ff;
     display: block;
     height: 400px;
     width: 100%;
   }
 
-  .viewWorkContainer{
+  .viewWorkContainer {
     width: 90%;
     margin: 0 auto;
     display: flex;
   }
 
-  .viewWorkSection .title{
+  .viewWorkSection .title {
     margin-top: 230px;
     padding: 40px 0;
-   font-weight: lighter;
+    font-weight: lighter;
   }
 
-  .lsdContainerAbsolute{
+  .lsdContainerAbsolute {
     display: none;
   }
-  
- 
-  
-  .winWinContainerAbsolute{
+
+  .winWinContainerAbsolute {
     position: relative;
-    bottom:0;
+    bottom: 0;
     right: 0;
   }
-  
-  .winWinContainerAbsolute .imageSource{
+
+  .winWinContainerAbsolute .imageSource {
     width: 100%;
     max-width: 250px;
     margin: 0 auto;
     display: flex;
-    
   }
 }

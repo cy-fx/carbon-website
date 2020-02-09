@@ -48,7 +48,6 @@ class Slider extends React.Component {
   }
 
   render() {
-    console.log(this.props.sliderData)
 
     const sliderData = this.props.sliderData
     return (
