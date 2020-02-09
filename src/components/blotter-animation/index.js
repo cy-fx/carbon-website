@@ -2,12 +2,12 @@ import React from "react"
 import { LiquidDistortionText } from "react-text-fun"
 import "./styles.css"
 
-const script = document.createElement("script")
-script.async = true
-script.src = "https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js"
-document.head.appendChild(script)
-
-
+if (typeof document !== "undefined") {
+  const script = document.createElement("script")
+  script.async = true
+  script.src = "https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js"
+  document.head.appendChild(script)
+}
 
 function BlotterAnimation() {
   const [value, setValue] = React.useState(0)
@@ -25,14 +25,13 @@ function BlotterAnimation() {
           fontFamily={"Helvetica"}
           fontSize={234}
           lineHeight={1}
-          
         />
       </div>
       <div className="App" onMouseMove={updateShader}>
         <LiquidDistortionText
           fill={"#000000"}
           speed={0.1}
-          volatility={0.1}
+          volatility={0.2}
           text={"Carbón"}
           paddingRight={900}
           fontFamily={"Helvetica"}
@@ -44,7 +43,7 @@ function BlotterAnimation() {
         <LiquidDistortionText
           fill={"#000000"}
           speed={0.1}
-          volatility={0.1}
+          volatility={0.2}
           text={"Carbón"}
           paddingRight={900}
           fontFamily={"Helvetica"}
@@ -56,7 +55,7 @@ function BlotterAnimation() {
         <LiquidDistortionText
           fill={"#000000"}
           speed={0.1}
-          volatility={0.1}
+          volatility={0.2}
           text={"Carbón"}
           paddingRight={900}
           fontFamily={"Helvetica"}
@@ -68,13 +67,12 @@ function BlotterAnimation() {
         <LiquidDistortionText
           fill={"#000000"}
           speed={0.1}
-          volatility={0.1}
+          volatility={0.23}
           text={"Carbón"}
           paddingRight={900}
           fontFamily={"Helvetica"}
           fontSize={234}
           lineHeight={1}
-          
         />
       </div>
     </div>

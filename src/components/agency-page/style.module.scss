@@ -34,10 +34,12 @@ body {
 .carbonAnimation {
   position: absolute;
   top: 200px;
-  left: -100px;
+  left: -150px;
   // display: inline-block; 
   // animation: skew 25s infinite;
   transform: skew(5deg, 10deg);
+  transform: rotate(10deg)
+
   // animation-direction: alternate;
 }
 
