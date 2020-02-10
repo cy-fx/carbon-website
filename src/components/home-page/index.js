@@ -25,10 +25,8 @@ const HomePage = ({ homePageData }) => {
                   {item.paragraph}
                 </p>
                 <Link className={homePageStyle.greetingsLink} to={item.link}>
-                  <span>
-                    {item.buttonText}
+                    <span className={homePageStyle.link}>{item.buttonText}</span>
                     <span className={homePageStyle.linkDecoration}></span>
-                  </span>
                 </Link>
               </div>
             </div>
