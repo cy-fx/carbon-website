@@ -1,9 +1,8 @@
 import React from "react"
 import headerStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
-import OffCanvas from "./../off-canvas"
 
-const Header = () => (
+const Header = ({navBarClicked}) => (
   <StaticQuery
     query={graphql`
       query {
@@ -18,7 +17,7 @@ const Header = () => (
         }
       }
     `}
-    render={data => {
+    render={(data ) => {
       const headerData = data.contentfulV1Header
 
       return (
@@ -26,7 +25,7 @@ const Header = () => (
           <div className={headerStyle.backgroundContainer}>
             <div className={headerStyle.headerContainer}>
               <section className={headerStyle.homeLogoContainer}>
-                <a className={headerStyle.homeLogoLink} href>
+                <a className={headerStyle.homeLogoLink} href="/">
                   <figure className={headerStyle.imageHolder}>
                     <img
                       className={headerStyle.imageSource}
@@ -58,15 +57,12 @@ const Header = () => (
                 </div>
               </section>
               <section className={headerStyle.navigationContainer}>
-                <button className={headerStyle.navigationButton}>
+                <button onClick={() => navBarClicked()} className={headerStyle.navigationButton}>
                   <div className={headerStyle.hamburger}>
                     <span className={headerStyle.hamburgerLine}></span>
                     <span className={headerStyle.hamburgerLine}></span>
                     <span className={headerStyle.hamburgerLine}></span>
                   </div>
-                  <section className={headerStyle.offCanvas}>
-                    <OffCanvas />
-                  </section>
                 </button>
               </section>
             </div>

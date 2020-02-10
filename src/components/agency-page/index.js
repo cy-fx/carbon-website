@@ -2,14 +2,17 @@ import React from "react"
 import agencyPageStyle from "./style.module.scss"
 import BlotterAnimation from "../blotter-animation"
 
+
 const AgencyPage = ({ agencyPageData }) => {
   return (
     <div className={agencyPageStyle.backgroundContainer}>
-      <div className={agencyPageStyle.carbonAnimation}><BlotterAnimation/></div>
-      
+      <div className={agencyPageStyle.carbonAnimation}>
+        <BlotterAnimation />
+      </div>
+
       <div className={agencyPageStyle.componentContainer}>
         <section className={agencyPageStyle.whoWeAreSection}>
-        <div className={agencyPageStyle.lsdContainerAbsolute}>
+          <div className={agencyPageStyle.lsdContainerAbsolute}>
             <figure className={agencyPageStyle.lsdSize}>
               <img
                 className={agencyPageStyle.imageSource}
@@ -17,7 +20,7 @@ const AgencyPage = ({ agencyPageData }) => {
               />
             </figure>
           </div>
-       
+
           <div className={agencyPageStyle.whoWeAreCard}>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whoWeAre.title}
@@ -65,16 +68,15 @@ const AgencyPage = ({ agencyPageData }) => {
           </div>
         </section>
         <section className={agencyPageStyle.whatWeDoSection}>
-       
           <div className={agencyPageStyle.whatWeDoCard}>
-          <div className={agencyPageStyle.carbonIconBlackContainerAbsolute}>
-            <figure className={agencyPageStyle.lsdSize}>
-              <img
-                className={agencyPageStyle.imageSource}
-                src={agencyPageData.carbonIconBlack.file.url}
-              />
-            </figure>
-          </div>
+            <div className={agencyPageStyle.carbonIconBlackContainerAbsolute}>
+              <figure className={agencyPageStyle.lsdSize}>
+                <img
+                  className={agencyPageStyle.imageSource}
+                  src={agencyPageData.carbonIconBlack.file.url}
+                />
+              </figure>
+            </div>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whatWeDo.title}
             </h4>

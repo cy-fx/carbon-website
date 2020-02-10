@@ -1,9 +1,8 @@
 import React from "react"
 import headerWhiteStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
-import OffCanvas from "./../off-canvas"
 
-const HeaderWhite = () => (
+const HeaderWhite = ({ navBarClicked }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -32,12 +31,12 @@ const HeaderWhite = () => (
           <div className={headerWhiteStyle.backgroundContainer}>
             <div className={headerWhiteStyle.headerWhiteContainer}>
               <section className={headerWhiteStyle.homeLogoContainer}>
-                <a className={headerWhiteStyle.homeLogoLink} href>
+                <a className={headerWhiteStyle.homeLogoLink} href="/">
                   <figure className={headerWhiteStyle.imageHolder}>
                     <img
                       className={headerWhiteStyle.imageSource}
                       src={headerWhiteData.logoWhite.file.url}
-                      alt={headerWhiteData.logoWhite.title}
+                      alt={headerWhiteData.logo.title}
                     />
                   </figure>
                 </a>
@@ -48,7 +47,9 @@ const HeaderWhite = () => (
                     {headerWhiteData.location}
                   </div>
                   <div className={headerWhiteStyle.timeAndWeather}>
-                    <span className={headerWhiteStyle.date}>2019 October 31 </span>
+                    <span className={headerWhiteStyle.date}>
+                      2019 October 31{" "}
+                    </span>
                     <span className={headerWhiteStyle.actualTime}>
                       {`{04:20 PM}`} //
                     </span>
@@ -64,15 +65,15 @@ const HeaderWhite = () => (
                 </div>
               </section>
               <section className={headerWhiteStyle.navigationContainer}>
-                <button className={headerWhiteStyle.navigationButton}>
+                <button
+                  onClick={() => navBarClicked()}
+                  className={headerWhiteStyle.navigationButton}
+                >
                   <div className={headerWhiteStyle.hamburger}>
                     <span className={headerWhiteStyle.hamburgerLine}></span>
                     <span className={headerWhiteStyle.hamburgerLine}></span>
                     <span className={headerWhiteStyle.hamburgerLine}></span>
                   </div>
-                  <section className={headerWhiteStyle.offCanvas}>
-                    <OffCanvas />
-                  </section>
                 </button>
               </section>
             </div>
