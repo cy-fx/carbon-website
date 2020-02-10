@@ -1,5 +1,6 @@
 import React from "react"
 import sliderStyle from "./style.module.scss"
+import {Link} from "gatsby"
 
 class Slider extends React.Component {
   constructor(props) {
@@ -89,9 +90,11 @@ class Slider extends React.Component {
                 <p className={sliderStyle.projectParagraph}>
                   {item.slideDescription.paragraph}
                 </p>
-                <span className={sliderStyle.projectButtonText}>
-                  {item.slideDescription.buttonText}
-                </span>
+                <Link className={sliderStyle.greetingsLink} to={item.link}>
+                    <span className={sliderStyle.link}>{item.slideDescription.buttonText}</span>
+                    <span className={sliderStyle.linkDecoration}></span>
+                </Link>
+        
               </div>
               <div className={sliderStyle.circleButtonsContainer}>
                 <div className={sliderStyle.circleButtons}>

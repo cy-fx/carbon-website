@@ -121,16 +121,7 @@ font-weight: 500;
   width: 100%;
 }
 
-.greetingsLink,
-.navigationLink {
-  color: #fff;
-  display: inline-block;
-}
 
-.greetingsLink {
-  font-weight: 600;
-  text-decoration: none;
-}
 
 .navigationLink {
   font-weight: 600;
@@ -146,6 +137,8 @@ font-weight: 500;
   text-decoration: underline;
 }
 
+
+
 .lineDecoratorContainer {
   display: flex;
 }
@@ -160,15 +153,7 @@ font-weight: 500;
   margin: 10px 0 80px;
 }
 
-.linkDecoration {
-  display: flex;
-  border: 5px solid blue;
-  margin-top: -10px
-}
 
-.greetingsLink:hover .linkDecoration {
-  border: 5px solid #0000bb;
-}
 
 .heroContainer {
   width: 100%;
@@ -179,6 +164,43 @@ font-weight: 500;
   margin-top: 180px;
   margin-bottom: 240px;
   width: 100%;
+}
+
+.greetingsLink,
+.navigationLink {
+  color: #fff;
+  display: inline-block;
+}
+
+.greetingsLink {
+  text-decoration: none;
+}
+
+
+.link{
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: -35px;
+}
+
+
+.linkDecoration {
+  display: flex;
+  height: 15px;
+  width: 100%;
+  background-color: #0000FF;
+  transition: .3s;
+  margin-top:25px;
+
+}
+
+.greetingsLink:hover .linkDecoration {
+  display: flex;
+  height: 40px;
+  background-image: linear-gradient(to right,#0000FF, #005aff);
+  transition: .3s;
+  margin-top: 0;
 }
 
 
