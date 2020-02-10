@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import WorkPage from "../components/work-page"
 import Footer from "../components/footer"
-import Header from "../components/header"
+import HeaderNavigation from "../components/header-navigation"
 
 const Work = () => (
   <StaticQuery
@@ -55,7 +55,7 @@ const Work = () => (
       const workPageData = data.contentfulV1WorkPage
       return (
         <React.Fragment>
-          <Header></Header>
+          <HeaderNavigation></HeaderNavigation>
           <SEO title="Work" />
           <WorkPage workPageData={workPageData} />
           <Footer />

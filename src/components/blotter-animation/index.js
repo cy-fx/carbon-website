@@ -22,6 +22,7 @@ function BlotterAnimation() {
           volatility={0.1}
           text={"Carbón"}
           paddingRight={900}
+          paddingLeft={900}
           fontFamily={"Helvetica"}
           fontSize={234}
           lineHeight={1}
@@ -34,6 +35,7 @@ function BlotterAnimation() {
           volatility={0.2}
           text={"Carbón"}
           paddingRight={900}
+          paddingLeft={900}
           fontFamily={"Helvetica"}
           fontSize={234}
           lineHeight={1}
@@ -46,6 +48,7 @@ function BlotterAnimation() {
           volatility={0.2}
           text={"Carbón"}
           paddingRight={900}
+          paddingLeft={900}
           fontFamily={"Helvetica"}
           fontSize={234}
           lineHeight={1}
@@ -58,6 +61,7 @@ function BlotterAnimation() {
           volatility={0.2}
           text={"Carbón"}
           paddingRight={900}
+          paddingLeft={900}
           fontFamily={"Helvetica"}
           fontSize={234}
           lineHeight={1}
@@ -70,6 +74,7 @@ function BlotterAnimation() {
           volatility={0.23}
           text={"Carbón"}
           paddingRight={900}
+          paddingLeft={900}
           fontFamily={"Helvetica"}
           fontSize={234}
           lineHeight={1}
@@ -118,7 +123,7 @@ export default BlotterAnimation
 //               speed={0.1}
 //               volatility={0.1}
 //               text={"Carbón"}
-//               // paddingRight={900}
+//               paddingRight={900}
 //             />
 //           </div>
 //         ) : (

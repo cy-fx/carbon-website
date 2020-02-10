@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import AgencyPage from "../components/agency-page"
 import FooterBlack from "../components/footer-black"
 import HeaderWhite from "../components/header-white"
+import HeaderNavigation from "../components/header-navigation"
 
 const Agency = () => (
   <StaticQuery
@@ -94,7 +95,7 @@ const Agency = () => (
       const agencyPageData = data.contentfulV1AgencyPage
       return (
         <React.Fragment>
-          <HeaderWhite></HeaderWhite>
+          <HeaderNavigation whiteNavBar={true}/>
           <SEO title="agency" />
           <AgencyPage agencyPageData={agencyPageData} />
           <FooterBlack/>

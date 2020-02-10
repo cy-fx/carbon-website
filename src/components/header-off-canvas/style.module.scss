@@ -1,7 +1,9 @@
 .backgroundContainer {
-  background-color: #000000;
+  background-color: white;
   width: 100%;
+  
 }
+
 
 button {
   border: none;
@@ -54,6 +56,15 @@ button {
   justify-content: flex-end;
 }
 
+.navigationButton {
+  width: 120px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .weatherIcon {
   margin: 0 5px;
 }
@@ -67,27 +78,20 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
+  color: black;
 }
 
-.headerContainer {
+.headerOffCanvasContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1180px;
-  background-color: #000000;
+  background-color: white;
 }
 
-.headerContainer {
+.headerOffCanvasContainer {
   display: flex;
-}
-
-.navigationButton {
-  width: 120px;
-  background-color: blue;
-  padding-top: 50px;
-  transition: .5s;
-
 }
 
 .hamburger {
@@ -101,7 +105,7 @@ button {
 }
 
 .location {
-  color: white;
+  color: black;
 }
 
 .homeLogoContainer .imageSource {
@@ -116,32 +120,44 @@ button {
   margin: 0 5px;
 }
 
-.navigationButton:hover{
-  cursor: pointer;
-  background-color: #005aff;
+.closeIcon {
+  width: 50px;
+  opacity: .5;
+  transition: .5s;
+}
+
+.navigationButton:hover .closeIcon,
+.navigationButton:hover .closeText {
+  opacity: 1;
+  transition: .5s;
+}
+
+.closeText {
+  font-size: 20px;
+  color: #000000;
+  margin-top:10px;
+  font-weight: bolder;
+  opacity: .5;
   transition: .5s;
 }
 
 @media screen and (max-width: 756px) {
-
-  .backgroundContainer{
+  .backgroundContainer {
     min-width: 320px;
   }
   .locationContainer {
     display: none;
   }
-  .headerContainer {
+  .headerOffCanvasContainer {
     width: 90%;
   }
-  
+
   .homeLogoContainer {
     width: 50%;
     margin: 20px 0;
-    
   }
   .navigationContainer {
     width: 50%;
-    
   }
   .homeLogoContainer .imageSource {
     width: 40px;
@@ -151,19 +167,16 @@ button {
     width: 56px;
     height: 60px;
     background-color: blue;
-    padding-top: 0;
   }
 
-  
   .hamburger {
     padding: 0 10px;
     margin-top: 25px;
   }
-  
+
   .hamburgerLine {
     display: flex;
     border-bottom: 1px solid white;
     margin: 3px 0;
   }
-  
 }

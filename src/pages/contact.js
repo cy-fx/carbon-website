@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import ContactPage from "../components/contact-page"
 import FooterContact from "../components/footer-contact"
 import Header from "../components/header"
+import HeaderNavigation from "../components/header-navigation"
 
 
 const Contact = () => (
@@ -41,7 +42,7 @@ const Contact = () => (
       const contactPageData = data.contentfulV1ContactPage
       return (
         <React.Fragment>
-          <Header></Header>
+          <HeaderNavigation></HeaderNavigation>
           <SEO title="Contact" />
           <ContactPage contactPageData={contactPageData} />
           <FooterContact/>

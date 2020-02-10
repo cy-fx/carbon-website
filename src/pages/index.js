@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import HomePage from "../components/home-page"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import HeaderNavigation from "../components/header-navigation"
 
 const IndexPage = () => (
   <StaticQuery
@@ -77,8 +78,9 @@ const IndexPage = () => (
       const homePageData = data.contentfulV1HomePage
       return (
         <React.Fragment>
-          <Header></Header>
+          
           <SEO title="Home" />
+          <HeaderNavigation></HeaderNavigation>
           <HomePage homePageData={homePageData} />
           <Footer />
         </React.Fragment>

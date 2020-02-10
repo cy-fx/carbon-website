@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import CaseStudyPage from "../components/case-study-page"
+import HeaderNavigation from "../components/header-navigation"
 
 const CaseStudy = () => (
   <StaticQuery
@@ -89,7 +90,7 @@ const CaseStudy = () => (
       const caseStudyData = data.contentfulV1CaseStudyPage
       return (
         <React.Fragment>
-          <Header></Header>
+          <HeaderNavigation></HeaderNavigation>
           <SEO title="Case Study" />
           <CaseStudyPage caseStudyData={caseStudyData} />
           <Footer />

@@ -2,8 +2,10 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import offCanvasStyle from "./style.module.scss"
+import CarbonAnimationBlue from "../carbon-animation-blue"
+import HeaderOffCanvas from "../header-off-canvas"
 
-const OffCanvas = () => (
+const OffCanvas = ({navBarClicked}) => (
   <StaticQuery
     query={graphql`
       query {
@@ -52,11 +54,14 @@ const OffCanvas = () => (
 
       return (
         <div className={offCanvasStyle.backgroundContainer}>
+          <div className={offCanvasStyle.carbonAnimation}>
+           <CarbonAnimationBlue/>
+          </div>
+          <HeaderOffCanvas navBarClicked={navBarClicked}/>
           <div className={offCanvasStyle.componentContainer}>
             <section className={offCanvasStyle.signOffContainer}>
               <span className={offCanvasStyle.whiteSpace}></span>
               <div className={offCanvasStyle.signOffContent}>
-               
                 <figure className={offCanvasStyle.imageHolder}>
                   <img
                     className={offCanvasStyle.imageSource}
@@ -85,7 +90,6 @@ const OffCanvas = () => (
                         />
                       </figure>
                     </a>
-                    
                   ))}
                 </nav>
               </div>
@@ -97,8 +101,15 @@ const OffCanvas = () => (
                     key={item.id}
                     className={offCanvasStyle.link}
                     to={item.link}
-                  >{item.title === "Home"?<img className={offCanvasStyle.homeIcon} src={item.icon.file.url}/>:item.title}
-                    
+                  >
+                    {item.title === "Home" ? (
+                      <img
+                        className={offCanvasStyle.homeIcon}
+                        src={item.icon.file.url}
+                      />
+                    ) : (
+                      item.title
+                    )}
                   </Link>
                 </div>
               ))}
