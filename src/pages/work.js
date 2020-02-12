@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import WorkPage from "../components/work-page"
 import Footer from "../components/footer"
 import HeaderNavigation from "../components/header-navigation"
+import FooterWork from "../components/footer-work"
 
 const Work = () => (
   <StaticQuery
@@ -58,7 +59,7 @@ const Work = () => (
           <HeaderNavigation></HeaderNavigation>
           <SEO title="Work" />
           <WorkPage workPageData={workPageData} />
-          <Footer />
+          <FooterWork></FooterWork>
         </React.Fragment>
       )
     }}

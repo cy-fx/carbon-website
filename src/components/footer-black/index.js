@@ -1,8 +1,8 @@
 import React from "react"
-import footerStyle from "./style.module.scss"
+import footerBlackStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
 
-const Footer = () => (
+const FooterBlack = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -37,44 +37,45 @@ const Footer = () => (
       }
     `}
     render={data => {
-      const footerData = data.contentfulV1Footer
+      const footerBlackData = data.contentfulV1Footer
 
       return (
-        <div className={footerStyle.footerContainer}>
-          <div className={footerStyle.marginContainer}>
-            <section className={footerStyle.countriesContainer}>
-              <span className={footerStyle.countries}>
-                {footerData.countries}
+        <div className={footerBlackStyle.footerBlackContainer}>
+          <div className={footerBlackStyle.backgroundContainer}>
+          <div className={footerBlackStyle.marginContainer}>
+            <section className={footerBlackStyle.countriesContainer}>
+              <span className={footerBlackStyle.countries}>
+                {footerBlackData.countries}
               </span>
             </section>
-            <div className={footerStyle.legalAndTextContainer}>
-              <section className={footerStyle.signOffContainer}>
-                <div className={footerStyle.signOffContent}>
+            <div className={footerBlackStyle.legalAndTextContainer}>
+              <section className={footerBlackStyle.signOffContainer}>
+                <div className={footerBlackStyle.signOffContent}>
                   <figure
-                    className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
+                    className={`${footerBlackStyle.logo} ${footerBlackStyle.imageHolder}`}
                   >
                     <img
-                      className={footerStyle.imageSource}
-                      src={footerData.signOff.carbonWordmarkWhite.file.url}
-                      alt={footerData.signOff.carbonWordmarkWhite.title}
+                      className={footerBlackStyle.imageSource}
+                      src={footerBlackData.signOff.carbonWordmarkWhite.file.url}
+                      alt={footerBlackData.signOff.carbonWordmarkWhite.title}
                     />
                   </figure>
-                  <span className={footerStyle.multiCultural}>
-                    {footerData.signOff.multiCultural}
+                  <span className={footerBlackStyle.multiCultural}>
+                    {footerBlackData.signOff.multiCultural}
                   </span>
-                  <span className={footerStyle.legal}>
-                    {footerData.signOff.legal}
+                  <span className={footerBlackStyle.legal}>
+                    {footerBlackData.signOff.legal}
                   </span>
-                  <nav className={footerStyle.socialMediaNavigation}>
-                    {footerData.socialMediaNavigationWhite.navigation.map(item => (
+                  <nav className={footerBlackStyle.socialMediaNavigation}>
+                    {footerBlackData.socialMediaNavigationWhite.navigation.map(item => (
                       <a
-                        className={footerStyle.socialMediaLink}
+                        className={footerBlackStyle.socialMediaLink}
                         href={item.link}
                         key={item.id}
                       >
-                        <figure className={footerStyle.imageHolder}>
+                        <figure className={footerBlackStyle.imageHolder}>
                           <img
-                            className={footerStyle.imageSource}
+                            className={footerBlackStyle.imageSource}
                             src={item.icon.file.url}
                             alt={item.title}
                           />
@@ -84,32 +85,33 @@ const Footer = () => (
                   </nav>
                 </div>
               </section>
-              <section className={footerStyle.contactMessageContainer}>
+              <section className={footerBlackStyle.contactMessageContainer}>
                 <figure
-                  className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
+                  className={`${footerBlackStyle.logo} ${footerBlackStyle.imageHolder}`}
                 >
                   <img
-                    className={footerStyle.imageSource}
-                    src={footerData.signOff.carbonWordmarkWhite.file.url}
-                    alt={footerData.signOff.carbonWordmarkWhite.title}
+                    className={footerBlackStyle.imageSource}
+                    src={footerBlackData.signOff.carbonWordmarkWhite.file.url}
+                    alt={footerBlackData.signOff.carbonWordmarkWhite.title}
                   />
                 </figure>
-                <p className={footerStyle.contactMessageText}>
-                  {footerData.paragraph}
+                <p className={footerBlackStyle.contactMessageText}>
+                  {footerBlackData.paragraph}
                 </p>
-                <span className={footerStyle.contactMessageEmail}>
-                  {footerData.email}
+                <span className={footerBlackStyle.contactMessageEmail}>
+                  {footerBlackData.email}
                 </span>
-                <p className={footerStyle.hablamosEspanol}>
-             {`{ Hablamos `}{<span className={footerStyle.arrow}>-></span>}{` Español }`}
+                <p className={footerBlackStyle.hablamosEspanol}>
+             {`{ Hablamos `}{<span className={footerBlackStyle.arrow}>-></span>}{` Español }`}
             </p>
               </section>
             </div>
           </div>
+        </div>
         </div>
       )
     }}
   />
 )
 
-export default Footer
+export default FooterBlack

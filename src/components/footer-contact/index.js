@@ -41,6 +41,7 @@ const Footer = () => (
 
       return (
         <div className={footerStyle.footerContainer}>
+          <div className={footerStyle.backgroundContainer}>
           <div className={footerStyle.marginContainer}>
             <section className={footerStyle.signOffContainer}>
                 <figure
@@ -67,6 +68,7 @@ const Footer = () => (
                 </section>
             </section>
           </div>
+        </div>
         </div>
       )
     }}

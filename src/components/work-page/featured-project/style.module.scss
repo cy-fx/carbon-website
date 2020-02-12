@@ -17,7 +17,7 @@
 .featuredProjectContainer {
   display: flex;
   flex-direction: row;
-  height: 650px;
+  height: 680px;
   width: 100%;
   border-bottom: 1px solid #444444;
   margin-bottom: 5px;
@@ -31,7 +31,7 @@
 
 .featuredProjectImage {
   height: 100%;
-  width: 66%;
+  width: 67%;
   background-color: #222222;
 }
 
@@ -42,6 +42,7 @@
 .imageSource {
   width: 100%;
 }
+
 
 .projectNumber {
   padding-bottom: 60px;
@@ -82,11 +83,33 @@
 .buttonLink:hover {
   transition: 0.3s;
   background-color: #005aff;
+  cursor: pointer;
 }
 
 .buttonImage {
   line-height: 0.7;
 }
+
+
+
+.imageHolder {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.featuredProjectImage .imageSource{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featuredProjectContainer:last-child{
+  border-bottom: initial;
+  margin-bottom: 0;
+}
+
 
 @media screen and (max-width: 756px) {
   .backgroundContainer {
@@ -135,10 +158,16 @@
   }
 
   .imageHolder {
-    height: 400px;
+    height: 280px;
   }
   .projectParagraph {
     font-size: 23px;
     margin-bottom: 24px;
   }
+
+  .featuredProjectContainer {
+    
+    border-bottom: initial;
+  }
+  
 }

@@ -111,6 +111,10 @@
   cursor: pointer;
 }
 
+.arrow:hover{
+  color: #0000FF;
+}
+
 .circle {
   background-color: #000000;
   border: 2px solid #fff;
@@ -120,9 +124,19 @@
   margin-right: 4px;
 }
 
+.circle:hover{
+  background-color: #333333;
+}
+
 .circleActive {
   background-color: #ffffff;
 }
+
+.circleActive:hover {
+  background-color: #ffffff;
+  cursor: initial;
+}
+
 
 
 
@@ -132,19 +146,6 @@
   object-fit: cover;
 }
 
-
-
-
-
-// .lineDecoratorContainer {
-//   display: flex;
-// }
-
-// .lineDecoratorWhite {
-//   border-bottom: 1px solid white;
-//   width: 14px;
-//   margin: 45px 0;
-// }
 
 .greetingsLink,
 .navigationLink {
@@ -240,4 +241,29 @@
     font-size: 18px;
     margin-bottom: 50px;
   }
+
+  .imageHolder {
+    width: 100%;
+    height: 280px;
+  }
+
+  .link{
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .linkDecoration {
+    height: 8px;
+    transition: initial;
+    margin-top: 25px;
+  }
+  .circleButtonsContainer{
+    margin-top: 45px;
+  }
+
+  .circle{
+    width: 20px;
+    height: 20px;
+  }
+  
 }

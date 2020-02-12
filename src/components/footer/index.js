@@ -53,15 +53,51 @@ const Footer = () => (
 
       return (
         <div className={footerStyle.footerContainer}>
-          <div className={footerStyle.marginContainer}>
-            <section className={footerStyle.countriesContainer}>
-              <span className={footerStyle.countries}>
-                {footerData.countries}
-              </span>
-            </section>
-            <div className={footerStyle.legalAndTextContainer}>
-              <section className={footerStyle.signOffContainer}>
-                <div className={footerStyle.signOffContent}>
+          <div className={footerStyle.backgroundContainer}>
+            <div className={footerStyle.marginContainer}>
+              <section className={footerStyle.countriesContainer}>
+                <span className={footerStyle.countries}>
+                  {footerData.countries}
+                </span>
+              </section>
+              <div className={footerStyle.legalAndTextContainer}>
+                <section className={footerStyle.signOffContainer}>
+                  <div className={footerStyle.signOffContent}>
+                    <figure
+                      className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
+                    >
+                      <img
+                        className={footerStyle.imageSource}
+                        src={footerData.signOff.carbonWordmark.file.url}
+                        alt={footerData.signOff.carbonWordmark.title}
+                      />
+                    </figure>
+                    <span className={footerStyle.multiCultural}>
+                      {footerData.signOff.multiCultural}
+                    </span>
+                    <span className={footerStyle.legal}>
+                      {footerData.signOff.legal}
+                    </span>
+                    <nav className={footerStyle.socialMediaNavigation}>
+                      {footerData.socialMediaNavigation.navigation.map(item => (
+                        <a
+                          className={footerStyle.socialMediaLink}
+                          href={item.link}
+                          key={item.id}
+                        >
+                          <figure className={footerStyle.imageHolder}>
+                            <img
+                              className={footerStyle.imageSource}
+                              src={item.icon.file.url}
+                              alt={item.title}
+                            />
+                          </figure>
+                        </a>
+                      ))}
+                    </nav>
+                  </div>
+                </section>
+                <section className={footerStyle.contactMessageContainer}>
                   <figure
                     className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
                   >
@@ -71,51 +107,19 @@ const Footer = () => (
                       alt={footerData.signOff.carbonWordmark.title}
                     />
                   </figure>
-                  <span className={footerStyle.multiCultural}>
-                    {footerData.signOff.multiCultural}
+                  <p className={footerStyle.contactMessageText}>
+                    {footerData.paragraph}
+                  </p>
+                  <span className={footerStyle.contactMessageEmail}>
+                    {footerData.email}
                   </span>
-                  <span className={footerStyle.legal}>
-                    {footerData.signOff.legal}
-                  </span>
-                  <nav className={footerStyle.socialMediaNavigation}>
-                    {footerData.socialMediaNavigation.navigation.map(item => (
-                      <a
-                        className={footerStyle.socialMediaLink}
-                        href={item.link}
-                        key={item.id}
-                      >
-                        <figure className={footerStyle.imageHolder}>
-                          <img
-                            className={footerStyle.imageSource}
-                            src={item.icon.file.url}
-                            alt={item.title}
-                          />
-                        </figure>
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-              </section>
-              <section className={footerStyle.contactMessageContainer}>
-                <figure
-                  className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
-                >
-                  <img
-                    className={footerStyle.imageSource}
-                    src={footerData.signOff.carbonWordmark.file.url}
-                    alt={footerData.signOff.carbonWordmark.title}
-                  />
-                </figure>
-                <p className={footerStyle.contactMessageText}>
-                  {footerData.paragraph}
-                </p>
-                <span className={footerStyle.contactMessageEmail}>
-                  {footerData.email}
-                </span>
-                <p className={footerStyle.hablamosEspanol}>
-             {`{ Hablamos `}{<span className={footerStyle.arrow}>-></span>}{` Español }`}
-            </p>
-              </section>
+                  <p className={footerStyle.hablamosEspanol}>
+                    {`{ Hablamos `}
+                    {<span className={footerStyle.arrow}>-></span>}
+                    {` Español }`}
+                  </p>
+                </section>
+              </div>
             </div>
           </div>
         </div>

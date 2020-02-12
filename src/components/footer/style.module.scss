@@ -1,21 +1,25 @@
+
 .footerContainer {
-  color: #000000;
+  color: #000;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
-  background-color: #ffffff;
-  padding-top:90px;
-  padding-bottom: 120px;
 }
+
+.backgroundContainer {
+  max-width: 1366px;
+  background-color: #fff;
+  margin: 0 auto;
+  min-height: 500px;
+  padding-top: 90px;
+}
+
 
 .marginContainer {
   max-width: 1180px;
-  background-color: #ffffff;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
+
 
 .legalAndTextContainer {
   margin-top: 100px;
@@ -130,6 +134,7 @@
 
 .hablamosEspanol{
   display: none;
+  font-weight: bolder;
 }
 
 .arrow {
@@ -139,17 +144,30 @@
 @media screen and (max-width: 756px) {
   .footerContainer {
     width: 100%;
-    padding-top: 50px;
+    padding-top: 0;
     margin-bottom: 0;
     margin-top: 0;
     padding-bottom: 0;
   }
+
+
+.backgroundContainer {
+  max-width: 1366px;
+  background-color: #fff;
+  margin: 0 auto;
+  min-height: 500px;
+  padding-top: 60px;
+}
+
+
 
   .marginContainer {
    width: 90%;
    padding-bottom: 0;
    padding-top: 0;
    margin-top: 0;
+   display: flex;
+    flex-direction: column;
   }
 
   .signOffContainer {

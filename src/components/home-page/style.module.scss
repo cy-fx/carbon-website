@@ -24,7 +24,7 @@ body {
   font-weight: 300;
 }
 
-.backgroundContainer{
+.backgroundContainer {
   background-color: #000000;
   width: 100%;
 }
@@ -60,7 +60,6 @@ body {
 .greetingsLineHoleder {
   display: flex;
   width: 30%;
-  
 }
 
 .greetingsCard {
@@ -69,7 +68,6 @@ body {
   width: 30%;
   font-size: 1.3rem;
   line-height: 1.3;
-
 }
 
 .greetingsParagraph {
@@ -104,9 +102,9 @@ body {
   font-size: 1.3rem;
 }
 
-.aboutTitle{
-margin-bottom: 55px;
-font-weight: 500;
+.aboutTitle {
+  margin-bottom: 55px;
+  font-weight: 500;
 }
 
 .aboutParagraph {
@@ -120,8 +118,6 @@ font-weight: 500;
 .imageSource {
   width: 100%;
 }
-
-
 
 .navigationLink {
   font-weight: 600;
@@ -137,8 +133,6 @@ font-weight: 500;
   text-decoration: underline;
 }
 
-
-
 .lineDecoratorContainer {
   display: flex;
 }
@@ -152,8 +146,6 @@ font-weight: 500;
 .aboutContent {
   margin: 10px 0 80px;
 }
-
-
 
 .heroContainer {
   width: 100%;
@@ -176,42 +168,35 @@ font-weight: 500;
   text-decoration: none;
 }
 
-
-.link{
+.link {
   display: flex;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: -35px;
 }
 
-
 .linkDecoration {
   display: flex;
   height: 15px;
   width: 100%;
-  background-color: #0000FF;
-  transition: .3s;
-  margin-top:25px;
-
+  background-color: #0000ff;
+  transition: 0.3s;
+  margin-top: 25px;
 }
 
 .greetingsLink:hover .linkDecoration {
   display: flex;
   height: 40px;
-  background-image: linear-gradient(to right,#0000FF, #005aff);
-  transition: .3s;
+  background-image: linear-gradient(to right, #0000ff, #005aff);
+  transition: 0.3s;
   margin-top: 0;
 }
 
-
-
-
-
 @media screen and (max-width: 756px) {
-  .backgroundContainer{
+  .backgroundContainer {
     min-width: 320px;
   }
-.componentContainer {
+  .componentContainer {
     width: 90%;
     padding-bottom: 0;
   }
@@ -243,11 +228,11 @@ font-weight: 500;
     margin-bottom: 40px;
   }
 
-  .greetingsLink{
+  .greetingsLink {
     font-size: 18px;
   }
 
-  .sliderContainer{
+  .sliderContainer {
     width: 100%;
     margin-bottom: 0;
     margin-top: 40px;
@@ -261,34 +246,42 @@ font-weight: 500;
     justify-content: initial;
   }
 
-  .aboutContainer{
+  .aboutContainer {
     margin-bottom: 0;
   }
 
-  .aboutContent{
+  .aboutContent {
     margin-top: 0px;
     margin-bottom: 50px;
   }
-  
+
   .aboutCard {
-   display: none;
-    
+    display: none;
   }
 
-  .aboutCard:nth-child(-n+2){
+  .aboutCard:nth-child(-n + 2) {
     display: block;
     width: 100%;
-   }
+  }
 
-   .aboutTitle{
+  .aboutTitle {
     margin-bottom: 30px;
   }
 
-   .aboutParagraph{
-     font-size: 1.4rem;
-     width: 100%;
-   }
+  .aboutParagraph {
+    font-size: 1.4rem;
+    width: 100%;
+  }
 
-  
-  
+  .link {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .linkDecoration {
+    height: 8px;
+    transition: initial;
+    margin-top: 25px;
+  }
+
 }
