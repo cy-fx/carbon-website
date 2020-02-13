@@ -22,15 +22,18 @@ const featuredProject = ({ featuredProjectData }) => {
                 {item.slideDescription.paragraph}
               </p>
               <div className={workPageStyle.buttonLinkContainer}>
-            <figure className={workPageStyle.buttonLink}>
-              <span className={workPageStyle.buttonImage}>></span>
-            </figure>
-          </div>
+                <figure className={workPageStyle.buttonLink}>
+                  <span className={workPageStyle.buttonImage}>></span>
+                </figure>
+              </div>
             </div>
           </div>
-          <div className={workPageStyle.featuredProjectImage}>
+          <div className={`${workPageStyle.featuredProjectImage}`}>
             <figure className={workPageStyle.imageHolder}>
-              {/* <img className={workPageStyle.imageSource} src={item.featuredImage.file.url} /> */}
+              <img
+                className={workPageStyle.imageSource}
+                src={item.featuredImage.file.url}
+              />
             </figure>
           </div>
         </div>

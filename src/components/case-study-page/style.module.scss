@@ -1,6 +1,27 @@
-.backgroundContainer {
+body {
   background-color: #000000;
 }
+
+.absoluteImage{
+  position: absolute;
+  top: -150px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.absoluteImage .imageSource{
+  width: 100%;
+  height: 970px;
+  object-fit: cover;
+}
+
+
+.backgroundContainer {
+  margin-bottom: -150px;
+  position: relative;
+}
+
 .componentContainer {
   display: flex;
   flex-direction: row;
@@ -26,13 +47,15 @@
 
 .imageSource {
   width: 100%;
+  height: 100%;
+  object-fit: cover
 }
 
 .greeting {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 200px 0;
+  margin: 400px 0 126px;
 }
 
 .projectOverview {
@@ -42,9 +65,22 @@
   margin: 200px 0;
 }
 
-.winWinContainer {
+.projectOverview .winWinContainer {
+  margin: 0;
   width: 33%;
-  margin-bottom: 125px;
+
+}
+
+.projectOverview .getInTouch {
+  margin: 0;
+  width: 66%;
+}
+
+
+
+
+.greeting .winWinContainer {
+  width: 33%;
 }
 
 .testimonial .winWinContainer {
@@ -61,6 +97,7 @@
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 300;
+  margin: 50px 0;
 }
 
 .eMail {
@@ -102,6 +139,12 @@
   width: 100%;
   height: 600px;
   background-color: #222222;
+}
+
+.fullWidthImage .imageSource{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .halfWidthImage {
@@ -149,25 +192,166 @@
   margin: 0 auto;
   max-width: 1180px;
   color: #ffffff;
-  min-height: 590px;
+  min-height: 730px;
 }
 
 .nextProjectBackground {
   width: 100%;
   background-color: #333333;
+  margin: 0 auto;
+  max-width: 1566px;
+  position: relative;
+  z-index: -3;
 }
 
 .nextProjectContainer .winWinContainer {
-  margin: 145px 0 125px 0;
+  margin: 150px 0 80px 0;
 }
 
 .nextProjectContainer .title {
   margin: 0;
 }
 
+.nextProjectContainer .getInTouch {
+  font-size: 3.5rem;
+  line-height: .9;
+}
+
+
+
+.halfWidthImage .imageSource{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leadInImage .imageHolder{
+  width: 100%;
+  height: 100%;
+}
+
+.leadInImage .imageSource{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.fullWidth{
+  width: 100%;
+  margin-bottom: 30px;
+}
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1180px;
+  color: #ffffff;
+  
+}
+
+.leadInContainer {
+  display: flex;
+  flex-direction: row;
+  height: 650px;
+  width: 100%;
+}
+.leadInDescription {
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  width: 50%;
+}
+
+.leadInImage {
+  height: 100%;
+  width: 50%;
+  background-color: #222222;
+}
+
+.imageHolder {
+  width: 100%;
+}
+
+.imageSource {
+  width: 100%;
+}
+
+.projectNumber {
+  padding-bottom: 60px;
+}
+
+.projectTitle {
+  font-size: 16px;
+ margin-bottom: 70px;
+ font-weight: lighter;
+}
+.projectsubtitle {
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+
+.projectParagraph {
+  font-size: 23px;
+}
+
+
+
+.projectInformation {
+  width: 50%;
+  margin-left: 100px;
+}
+
+
+
+
+
 @media screen and (max-width: 756px) {
+
+  .fullWidth{
+    margin-bottom: 20px;
+  }
+
+  
+ 
+  .leadInContainer {
+    height: auto;
+    width: 100% !important;
+    flex-direction: column;
+
+  }
+
+  .leadInDescription {
+    padding-top: 0;
+    width: 100% !important;
+  }
+  
+  .projectInformation {
+    margin-left: 0;
+    width: 100% !important;
+  }
+
+  .leadInImage {
+    height: 400px;
+    width: 100%;
+  }
+
+  .projectTitle{
+    margin-bottom: 20px;
+      font-size: 23px;
+      font-weight: bolder;
+    
+  }
+
+  .projectParagraph{
+    margin: 45px 0;
+  }
   .backgroundContainer {
     min-width: 320px;
+    margin-bottom: 0;
+  position: initial;
   }
   .componentContainer {
     width: 90%;
@@ -179,6 +363,11 @@
     flex-direction: column;
     width: 100%;
     margin: 150px 0 45px;
+  }
+
+  .greeting .winWinContainer {
+  
+    width: 100%;
   }
 
   .winWinContainer {
@@ -215,6 +404,7 @@
 
   .projectOverview .winWinContainer {
     margin: 45px 0;
+    width: 100%;
   }
 
   .services{
@@ -227,7 +417,6 @@
     
   }
 
-  
 
   .halfWidthImage{
     width: 100%;
@@ -271,6 +460,7 @@
 
   .nextProjectContainer{
     width: 90%;
+    
   }
 
   .nextProjectContainer .winWinContainer{
@@ -279,8 +469,32 @@
 
   .nextProjectContainer .getInTouch{
     margin: 45px 0;
+    font-size: 1.7rem;
   }
 
- 
-  
+  .absoluteImage .imageSource{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  .absoluteImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+  }
+
+  .projectOverview{
+    flex-direction: column;
+  }
+
+ .projectOverview .winWinContainer{
+    margin-top: 0;
+  }
+
+  .projectOverview .getInTouch{
+    width: 100%;
+  }
 }

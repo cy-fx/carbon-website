@@ -17,6 +17,9 @@ const CaseStudy = () => (
               fluid(maxWidth: 1400, quality: 100) {
                 ...GatsbyContentfulFluid_withWebp_noBase64
               }
+              file{
+                url
+              }
               title
             }
             clientName
@@ -28,6 +31,9 @@ const CaseStudy = () => (
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
             title
+            file{
+              url
+            }
           }
           halfWidthImageRight {
             description
@@ -35,6 +41,9 @@ const CaseStudy = () => (
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
             title
+            file{
+              url
+            }
           }
           halfWidthImageLeft {
             description
@@ -42,6 +51,9 @@ const CaseStudy = () => (
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
             title
+            file{
+              url
+            }
           }
           fullWidthImage2 {
             description
@@ -49,6 +61,9 @@ const CaseStudy = () => (
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
             title
+            file{
+              url
+            }
           }
           leadIn {
             title
@@ -82,6 +97,9 @@ const CaseStudy = () => (
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
             title
+            file{
+              url
+            }
           }
         }
       }
