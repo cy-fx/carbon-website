@@ -77,17 +77,16 @@ const CaseStudy = () => (
           services {
             listName
             items {
-                
-                ... on ContentfulV1Item {
-                  id
-                  name
-                  text
-                }
+              ... on ContentfulV1Item {
+                id
+                name
+                text
               }
+            }
           }
           projectOverview {
             title
-            paragraph{
+            paragraph {
               paragraph
             }
           }
@@ -108,10 +107,12 @@ const CaseStudy = () => (
       const caseStudyData = data.contentfulV1CaseStudyPage
       return (
         <React.Fragment>
-          <HeaderNavigation></HeaderNavigation>
           <SEO title="Case Study" />
-          <CaseStudyPage caseStudyData={caseStudyData} />
-          <Footer />
+          <HeaderNavigation></HeaderNavigation>
+          <div className="disable">
+            <CaseStudyPage caseStudyData={caseStudyData} />
+            <Footer />
+          </div>
         </React.Fragment>
       )
     }}

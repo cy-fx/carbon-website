@@ -35,7 +35,8 @@ const IndexPage = () => (
                 description
                 fluid(maxWidth: 1400, quality: 100) {
                   ...GatsbyContentfulFluid_withWebp_noBase64
-                }file {
+                }
+                file {
                   url
                 }
                 title
@@ -78,11 +79,12 @@ const IndexPage = () => (
       const homePageData = data.contentfulV1HomePage
       return (
         <React.Fragment>
-          
           <SEO title="Home" />
           <HeaderNavigation></HeaderNavigation>
-          <HomePage homePageData={homePageData} />
-          <Footer />
+          <div className="disable">
+            <HomePage homePageData={homePageData} />
+            <Footer />
+          </div>
         </React.Fragment>
       )
     }}

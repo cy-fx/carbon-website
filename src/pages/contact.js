@@ -6,7 +6,6 @@ import FooterContact from "../components/footer-contact"
 import Header from "../components/header"
 import HeaderNavigation from "../components/header-navigation"
 
-
 const Contact = () => (
   <StaticQuery
     query={graphql`
@@ -42,10 +41,12 @@ const Contact = () => (
       const contactPageData = data.contentfulV1ContactPage
       return (
         <React.Fragment>
-          <HeaderNavigation></HeaderNavigation>
           <SEO title="Contact" />
-          <ContactPage contactPageData={contactPageData} />
-          <FooterContact/>
+          <HeaderNavigation></HeaderNavigation>
+          <div className="disable">
+            <ContactPage contactPageData={contactPageData} />
+            <FooterContact />
+          </div>
         </React.Fragment>
       )
     }}
