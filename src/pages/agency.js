@@ -95,10 +95,12 @@ const Agency = () => (
       const agencyPageData = data.contentfulV1AgencyPage
       return (
         <React.Fragment>
-          <HeaderNavigation whiteNavBar={true}/>
+          <HeaderNavigation whiteNavBar={true} />
           <SEO title="agency" />
-          <AgencyPage agencyPageData={agencyPageData} />
-          <FooterBlack/>
+          <div className="disable">
+            <AgencyPage agencyPageData={agencyPageData} />
+            <FooterBlack />
+          </div>
         </React.Fragment>
       )
     }}
