@@ -58,15 +58,10 @@ const Work = () => (
         <React.Fragment>
           <HeaderNavigation></HeaderNavigation>
           <SEO title="Work" />
-<<<<<<< HEAD
-          <WorkPage workPageData={workPageData} />
-          <FooterWork></FooterWork>
-=======
           <div className="disable">
             <WorkPage workPageData={workPageData} />
             <Footer />
           </div>
->>>>>>> Fix Off Canvas - Hide Page
         </React.Fragment>
       )
     }}
