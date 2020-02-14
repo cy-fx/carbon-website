@@ -33,6 +33,7 @@ const featuredProject = ({ featuredProjectData }) => {
               <img
                 className={workPageStyle.imageSource}
                 src={item.featuredImage.file.url}
+                alt="Carbón"
               />
             </figure>
           </div>

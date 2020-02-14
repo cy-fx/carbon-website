@@ -2,10 +2,9 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import offCanvasStyle from "./style.module.scss"
-import CarbonAnimationBlue from "../carbon-animation-blue"
 import HeaderOffCanvas from "../header-off-canvas"
 
-const OffCanvas = ({navBarClicked}) => (
+const OffCanvas = ({ navBarClicked }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -51,14 +50,20 @@ const OffCanvas = ({navBarClicked}) => (
     `}
     render={data => {
       const offCanvasData = data.contentfulV1OffCanvas
-
       return (
         <div className={offCanvasStyle.backgroundContainer}>
-          <div className={offCanvasStyle.carbonAnimation}>
-           <CarbonAnimationBlue/>
+          <div className={offCanvasStyle.lsdContainerAbsolute}>
+            <figure className={offCanvasStyle.lsdSize}>
+              <img
+                className={offCanvasStyle.imageSource}
+                src={offCanvasData.backgroundImage.file.url}
+                alt="Carbón"
+              />
+            </figure>
           </div>
-          <HeaderOffCanvas navBarClicked={navBarClicked}/>
+          <HeaderOffCanvas navBarClicked={navBarClicked} />
           <div className={offCanvasStyle.componentContainer}>
+          
             <section className={offCanvasStyle.signOffContainer}>
               <span className={offCanvasStyle.whiteSpace}></span>
               <div className={offCanvasStyle.signOffContent}>
@@ -106,6 +111,7 @@ const OffCanvas = ({navBarClicked}) => (
                       <img
                         className={offCanvasStyle.homeIcon}
                         src={item.icon.file.url}
+                        alt="Carbón"
                       />
                     ) : (
                       item.title

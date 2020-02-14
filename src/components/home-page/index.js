@@ -13,6 +13,7 @@ const HomePage = ({ homePageData }) => {
             <img
               className={homePageStyle.imageSource}
               src={homePageData.heroImage.file.url}
+              alt="Carbón"
             />
           </figure>
         </section>

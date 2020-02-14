@@ -72,6 +72,22 @@
   color: #0000ff;
 }
 
+.winWinContainer .imageSource {
+  animation-name: spin;
+  animation-duration: 99999ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 756px) {
   .backgroundContainer {
     min-width: 320px;

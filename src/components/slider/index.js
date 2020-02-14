@@ -90,7 +90,7 @@ class Slider extends React.Component {
                 <p className={sliderStyle.projectParagraph}>
                   {item.slideDescription.paragraph}
                 </p>
-                <Link className={sliderStyle.greetingsLink} to={item.link}>
+                <Link className={sliderStyle.greetingsLink} to="/case-study">
                     <span className={sliderStyle.link}>{item.slideDescription.buttonText}</span>
                     <span className={sliderStyle.linkDecoration}></span>
                 </Link>
@@ -119,6 +119,7 @@ class Slider extends React.Component {
                 <img
                   className={sliderStyle.imageSource}
                   src={item.featuredImage.file.url}
+                  alt="Carbón"
                 />
               </figure>
             </div>

@@ -2,7 +2,7 @@ import React from "react"
 import headerOffCanvasStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
 
-const HeaderOffCanvas = ({navBarClicked}) => (
+const HeaderOffCanvas = ({ navBarClicked }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -59,7 +59,9 @@ const HeaderOffCanvas = ({navBarClicked}) => (
                     {headerOffCanvasData.location}
                   </div>
                   <div className={headerOffCanvasStyle.timeAndWeather}>
-                    <span className={headerOffCanvasStyle.date}>2019 October 31 </span>
+                    <span className={headerOffCanvasStyle.date}>
+                      2019 October 31{" "}
+                    </span>
                     <span className={headerOffCanvasStyle.actualTime}>
                       {`{04:20 PM}`} //
                     </span>
@@ -70,17 +72,27 @@ const HeaderOffCanvas = ({navBarClicked}) => (
                         alt={headerOffCanvasData.logo.title}
                       />
                     </span>
-                    <span className={headerOffCanvasStyle.temperature}>69°</span>
+                    <span className={headerOffCanvasStyle.temperature}>
+                      69°
+                    </span>
                   </div>
                 </div>
               </section>
               <section className={headerOffCanvasStyle.navigationContainer}>
-                <button  onClick={() => navBarClicked()} className={headerOffCanvasStyle.navigationButton}>
-                  
+                <button
+                  onClick={() => navBarClicked()}
+                  className={headerOffCanvasStyle.navigationButton}
+                >
                   <figure className={headerOffCanvasStyle.close}>
-                    <img className={headerOffCanvasStyle.closeIcon} src={headerOffCanvasData.closeIcon.file.url}/>
+                    <img
+                      className={headerOffCanvasStyle.closeIcon}
+                      src={headerOffCanvasData.closeIcon.file.url}
+                      alt="Carbón"
+                    />
                   </figure>
-                  <span className={headerOffCanvasStyle.closeText}>{headerOffCanvasData.closeNavigation}</span>
+                  <span className={headerOffCanvasStyle.closeText}>
+                    {headerOffCanvasData.closeNavigation}
+                  </span>
                 </button>
               </section>
             </div>
