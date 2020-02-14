@@ -67,18 +67,18 @@ class Slider extends React.Component {
                   Featured Project No. {`{00${index + 1}}`}
                 </div>
                 <div className={sliderStyle.arrows}>
-                  <button
+                  <div
                     onClick={() => this.previousSlide()}
                     className={sliderStyle.arrow}
                   >
                     ←
-                  </button>
-                  <button
+                  </div>
+                  <div
                     onClick={() => this.nextSlide()}
                     className={sliderStyle.arrow}
                   >
                     →
-                  </button>
+                  </div>
                 </div>
               </div>
 

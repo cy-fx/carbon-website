@@ -65,7 +65,7 @@ const HeaderWhite = ({ navBarClicked }) => (
                 </div>
               </section>
               <section className={headerWhiteStyle.navigationContainer}>
-                <button
+                <div
                   onClick={() => navBarClicked()}
                   className={headerWhiteStyle.navigationButton}
                 >
@@ -74,7 +74,7 @@ const HeaderWhite = ({ navBarClicked }) => (
                     <span className={headerWhiteStyle.hamburgerLine}></span>
                     <span className={headerWhiteStyle.hamburgerLine}></span>
                   </div>
-                </button>
+                </div>
               </section>
             </div>
           </div>

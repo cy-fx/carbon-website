@@ -79,7 +79,7 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
                 </div>
               </section>
               <section className={headerOffCanvasStyle.navigationContainer}>
-                <button
+                <div
                   onClick={() => navBarClicked()}
                   className={headerOffCanvasStyle.navigationButton}
                 >
@@ -93,7 +93,7 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
                   <span className={headerOffCanvasStyle.closeText}>
                     {headerOffCanvasData.closeNavigation}
                   </span>
-                </button>
+                </div>
               </section>
             </div>
           </div>
