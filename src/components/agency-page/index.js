@@ -1,15 +1,10 @@
 import React from "react"
 import agencyPageStyle from "./style.module.scss"
-import BlotterAnimation from "../blotter-animation"
-
+import { Link } from "gatsby"
 
 const AgencyPage = ({ agencyPageData }) => {
   return (
     <div className={agencyPageStyle.backgroundContainer}>
-      <div className={agencyPageStyle.carbonAnimation}>
-        <BlotterAnimation />
-      </div>
-
       <div className={agencyPageStyle.componentContainer}>
         <section className={agencyPageStyle.whoWeAreSection}>
           <div className={agencyPageStyle.lsdContainerAbsolute}>
@@ -17,6 +12,7 @@ const AgencyPage = ({ agencyPageData }) => {
               <img
                 className={agencyPageStyle.imageSource}
                 src={agencyPageData.backgroundImage.file.url}
+                alt="Carbón"
               />
             </figure>
           </div>
@@ -40,6 +36,7 @@ const AgencyPage = ({ agencyPageData }) => {
               <img
                 className={agencyPageStyle.imageSource}
                 src={agencyPageData.winWinGif.file.url}
+                alt="Carbón"
               />
             </figure>
           </div>
@@ -74,6 +71,7 @@ const AgencyPage = ({ agencyPageData }) => {
                 <img
                   className={agencyPageStyle.imageSource}
                   src={agencyPageData.carbonIconBlack.file.url}
+                  alt="Carbón"
                 />
               </figure>
             </div>
@@ -98,7 +96,9 @@ const AgencyPage = ({ agencyPageData }) => {
       </div>
       <section className={agencyPageStyle.viewWorkSection}>
         <div className={agencyPageStyle.viewWorkContainer}>
-          <h2 className={agencyPageStyle.title}>View Work -></h2>
+          <Link  className={agencyPageStyle.linkContainer} to="/work">
+            <h2 className={agencyPageStyle.title}>View Work -></h2>
+          </Link>
         </div>
       </section>
     </div>

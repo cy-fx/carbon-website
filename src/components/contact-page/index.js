@@ -11,6 +11,7 @@ const ContactPage = ({ contactPageData }) => {
               <img
                 className={contactPageStyle.imageSource}
                 src={contactPageData.winWinIcon.file.url}
+                alt="Carbón"
               />
             </figure>
           </div>
@@ -30,6 +31,7 @@ const ContactPage = ({ contactPageData }) => {
                       className={contactPageStyle.imageSource}
                       src={item.icon.file.url}
                       alt={item.title}
+                      alt="Carbón"
                     />
                   </figure>
                 </a>

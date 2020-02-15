@@ -1,6 +1,5 @@
 import React from "react"
 import caseStudyPageStyle from "./style.module.scss"
-// import LeadIn from "./lead-in"
 
 const CaseStudyPage = ({ caseStudyData }) => {
   return (
@@ -10,6 +9,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
           <img
             className={caseStudyPageStyle.imageSource}
             src={caseStudyData.jumbotron.heroImage.file.url}
+            alt="Carbón"
           />
         </span>
 
@@ -47,41 +47,60 @@ const CaseStudyPage = ({ caseStudyData }) => {
         </section>
         <section className={caseStudyPageStyle.showCase}>
           <figure className={caseStudyPageStyle.fullWidthImage}>
-          <img className={caseStudyPageStyle.imageSource} src={caseStudyData.fullWidthImage1.file.url} />
+            <img
+              className={caseStudyPageStyle.imageSource}
+              src={caseStudyData.fullWidthImage1.file.url}
+              alt="Carbón"
+            />
           </figure>
         </section>
         <div className={caseStudyPageStyle.fullWidth}>
-      <div className={caseStudyPageStyle.leadInContainer}>
-        <div className={caseStudyPageStyle.leadInDescription}>
-          
-          <div className={caseStudyPageStyle.projectInformation}>
-            <h2 className={caseStudyPageStyle.projectTitle}>
-              {caseStudyData.leadIn.title}
-            </h2>
-           
-            <p className={caseStudyPageStyle.projectParagraph}>
-              {caseStudyData.leadIn.paragraph}
-            </p>
+          <div className={caseStudyPageStyle.leadInContainer}>
+            <div className={caseStudyPageStyle.leadInDescription}>
+              <div className={caseStudyPageStyle.projectInformation}>
+                <h2 className={caseStudyPageStyle.projectTitle}>
+                  {caseStudyData.leadIn.title}
+                </h2>
+
+                <p className={caseStudyPageStyle.projectParagraph}>
+                  {caseStudyData.leadIn.paragraph}
+                </p>
+              </div>
+            </div>
+            <div className={caseStudyPageStyle.leadInImage}>
+              <figure className={caseStudyPageStyle.imageHolder}>
+                <img
+                  className={caseStudyPageStyle.imageSource}
+                  src={caseStudyData.leadInImage.file.url}
+                  alt="Carbón"
+                />
+              </figure>
+            </div>
           </div>
         </div>
-        <div className={caseStudyPageStyle.leadInImage}>
-          <figure className={caseStudyPageStyle.imageHolder}>
-          <img className={caseStudyPageStyle.imageSource} src={caseStudyData.leadInImage.file.url} />
-          </figure>
-        </div>
-      </div>
-    </div>
         <section className={caseStudyPageStyle.showCase}>
           <figure className={caseStudyPageStyle.fullWidthImage}>
-          <img className={caseStudyPageStyle.imageSource} src={caseStudyData.fullWidthImage2.file.url} />
+            <img
+              className={caseStudyPageStyle.imageSource}
+              src={caseStudyData.fullWidthImage2.file.url}
+              alt="Carbón"
+            />
           </figure>
         </section>
         <section className={caseStudyPageStyle.showCaseHalf}>
           <figure className={`${caseStudyPageStyle.halfWidthImage}`}>
-            <img className={caseStudyPageStyle.imageSource} src={caseStudyData.halfWidthImageLeft.file.url} />
+            <img
+              className={caseStudyPageStyle.imageSource}
+              src={caseStudyData.halfWidthImageLeft.file.url}
+              alt="Carbón"
+            />
           </figure>
           <figure className={`${caseStudyPageStyle.halfWidthImage}`}>
-            <img className={caseStudyPageStyle.imageSource} src={caseStudyData.halfWidthImageRight.file.url} />
+            <img
+              className={caseStudyPageStyle.imageSource}
+              src={caseStudyData.halfWidthImageRight.file.url}
+              alt="Carbón"
+            />
           </figure>
         </section>
         <section className={caseStudyPageStyle.testimonial}>

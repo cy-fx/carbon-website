@@ -167,9 +167,9 @@ body {
 
 .lsdContainerAbsolute {
   position: absolute;
-  top: -50px;
+  top: 0;
   left: -200px;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .lsdContainerAbsolute .imageSource {
@@ -180,6 +180,10 @@ body {
   position: absolute;
   top: 0;
   right: -400px;
+}
+
+.linkContainer {
+  text-decoration: none;
 }
 
 .carbonIconBlackContainerAbsolute .imageSource {
@@ -220,10 +224,13 @@ body {
     width: 100%;
   }
 
+  
+
   .title {
-    font-size: 23px;
+    font-size: 30px;
     font-weight: initial;
     margin-bottom: 20px;
+    color: white;
   }
   .subtitle {
     font-size: 36px;

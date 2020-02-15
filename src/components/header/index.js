@@ -57,13 +57,13 @@ const Header = ({navBarClicked}) => (
                 </div>
               </section>
               <section className={headerStyle.navigationContainer}>
-                <button onClick={() => navBarClicked()} className={headerStyle.navigationButton}>
+                <div onClick={() => navBarClicked()} className={headerStyle.navigationButton}>
                   <div className={headerStyle.hamburger}>
                     <span className={headerStyle.hamburgerLine}></span>
                     <span className={headerStyle.hamburgerLine}></span>
                     <span className={headerStyle.hamburgerLine}></span>
                   </div>
-                </button>
+                </div>
               </section>
             </div>
           </div>

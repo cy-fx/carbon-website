@@ -67,18 +67,18 @@ class Slider extends React.Component {
                   Featured Project No. {`{00${index + 1}}`}
                 </div>
                 <div className={sliderStyle.arrows}>
-                  <button
+                  <div
                     onClick={() => this.previousSlide()}
                     className={sliderStyle.arrow}
                   >
                     ←
-                  </button>
-                  <button
+                  </div>
+                  <div
                     onClick={() => this.nextSlide()}
                     className={sliderStyle.arrow}
                   >
                     →
-                  </button>
+                  </div>
                 </div>
               </div>
 
@@ -90,7 +90,7 @@ class Slider extends React.Component {
                 <p className={sliderStyle.projectParagraph}>
                   {item.slideDescription.paragraph}
                 </p>
-                <Link className={sliderStyle.greetingsLink} to={item.link}>
+                <Link className={sliderStyle.greetingsLink} to="/case-study">
                     <span className={sliderStyle.link}>{item.slideDescription.buttonText}</span>
                     <span className={sliderStyle.linkDecoration}></span>
                 </Link>
@@ -119,6 +119,7 @@ class Slider extends React.Component {
                 <img
                   className={sliderStyle.imageSource}
                   src={item.featuredImage.file.url}
+                  alt="Carbón"
                 />
               </figure>
             </div>

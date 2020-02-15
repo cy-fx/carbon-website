@@ -65,6 +65,7 @@ body {
   color: #000000;
   margin: 0 auto;
   max-width: 1180px;
+  
 }
 
 .whoWeAreSection {
@@ -288,6 +289,18 @@ body {
   width: 110px;
 }
 
+.lsdContainerAbsolute {
+  position: absolute;
+  top: -50px;
+  right: -400px;
+  visibility: visible;
+  z-index: -1;
+}
+
+.lsdContainerAbsolute .imageSource {
+  height: 1000px;
+}
+
 @media screen and (max-width: 756px) {
   .backgroundContainer {
     min-width: 320px;
@@ -346,5 +359,20 @@ body {
 
   .carbonAnimation{
     display: none;
+  }
+
+  .lsdContainerAbsolute {
+    top: 50px;
+    right: -300px;
+    visibility: visible;
+    z-index: -1;
+  }
+  
+  .lsdContainerAbsolute .imageSource {
+    height: 450px;
+  }
+
+  .link:hover {
+    text-decoration: initial;
   }
 }
