@@ -2,6 +2,7 @@ import React from "react"
 import sliderStyle from "./style.module.scss"
 import { Link } from "gatsby"
 
+
 class Slider extends React.Component {
   constructor(props) {
     super(props)
@@ -16,6 +17,7 @@ class Slider extends React.Component {
   }
 
   componentDidMount() {
+   
     let animacion = document.getElementById("animationEvent")
 
     const totalSlides = this.props.sliderData.featuredProjects.length - 1

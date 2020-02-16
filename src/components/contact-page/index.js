@@ -1,9 +1,20 @@
-import React from "react"
 import contactPageStyle from "./style.module.scss"
+import React, { useEffect } from "react"
+
+import "../../reusable-styles/styles.scss"
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 
 
 
 const ContactPage = ({ contactPageData }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    })
+  })
+  
   return (
     <div className={contactPageStyle.backgroundContainer}>
       <div className={contactPageStyle.componentContainer}>

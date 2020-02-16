@@ -13,9 +13,7 @@ class HeaderNavigation extends React.Component {
   }
 
   navBarClicked = () => {
-    // this.state.offCanvas
-    //   ? this.setState({ offCanvas: false })
-    //   : this.setState({ offCanvas: true })
+    
     if(this.state.offCanvas){
       this.setState({ offCanvas: false })
       document.getElementsByClassName("disable")[0].style.display= "block"
