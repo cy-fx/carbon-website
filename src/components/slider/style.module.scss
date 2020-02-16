@@ -96,8 +96,8 @@
 .projectInformation {
   width: 80%;
   animation: textOpacity 0.7s;
-  margin-left: -20px;
-  padding-left: 20px;
+  margin-left: -6%;
+  padding-left: 6%;
 }
 
 @keyframes textOpacity {
@@ -107,11 +107,9 @@
   }
   to {
     opacity: 1;
-    margin-left: -20px;
+    margin-left: -6%;
   }
 }
-
-
 
 
 .show {
@@ -129,7 +127,7 @@
   animation-timing-function: ease-in;
   opacity: 1;
   transition: 1s;
-  left: -800px
+  left: -120%
   
 }
 
@@ -142,7 +140,7 @@
     left: 0px;
   }
   to {
-    left: -800px;
+    left: -120%;
   }
 }
 
@@ -168,7 +166,7 @@
 
 @keyframes mymove {
   from {
-    left: 200px
+    left: 30%
   }
   to {
     left: 0px;
@@ -222,8 +220,6 @@
   background-color: #ffffff;
   cursor: initial;
 }
-
-
 
 .greetingsLink,
 .navigationLink {
@@ -335,7 +331,7 @@
 
 
   .grow{
-    transform:scale(1);
+    transform:scale(1.1);
     transform-origin: center;
     transition: .4s ;
     transition-timing-function: ease-out;
@@ -349,24 +345,6 @@
 }
 
   
-
-  @keyframes otherMove {
-    from {
-      left: 0;
-    }
-    to {
-      left: -100%;
-    }
-  }
-  
-  @keyframes mymove {
-    from {
-      left: 10%
-    }
-    to {
-      left: 0;
-    }
-  }
 
   .circleButtonsContainer {
     position: absolute;
