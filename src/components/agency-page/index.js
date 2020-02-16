@@ -6,7 +6,7 @@ const AgencyPage = ({ agencyPageData }) => {
   return (
     <div className={agencyPageStyle.backgroundContainer}>
       <div className={agencyPageStyle.componentContainer}>
-        <section className={agencyPageStyle.whoWeAreSection}>
+        <section className={agencyPageStyle.whoWeAreSection} data-aos="example-anim1" data-aos-once="true">
           <div className={agencyPageStyle.lsdContainerAbsolute}>
             <figure className={agencyPageStyle.lsdSize}>
               <img
@@ -41,7 +41,7 @@ const AgencyPage = ({ agencyPageData }) => {
             </figure>
           </div>
         </section>
-        <section className={agencyPageStyle.whatWeBelieveInSection}>
+        <section className={agencyPageStyle.whatWeBelieveInSection} data-aos="example-anim1" data-aos-once="true">
           <div className={agencyPageStyle.whatWeBelieveInCard}>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whatWeBelieveIn.listName}
@@ -65,7 +65,7 @@ const AgencyPage = ({ agencyPageData }) => {
           </div>
         </section>
         <section className={agencyPageStyle.whatWeDoSection}>
-          <div className={agencyPageStyle.whatWeDoCard}>
+          <div className={agencyPageStyle.whatWeDoCard} data-aos="example-anim1" data-aos-once="true">
             <div className={agencyPageStyle.carbonIconBlackContainerAbsolute}>
               <figure className={agencyPageStyle.lsdSize}>
                 <img
@@ -84,7 +84,7 @@ const AgencyPage = ({ agencyPageData }) => {
           </div>
         </section>
         <section className={agencyPageStyle.servicesSection}>
-          <div className={agencyPageStyle.servicesCard}>
+          <div className={agencyPageStyle.servicesCard} data-aos="example-anim1" data-aos-once="true">
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.services.listName}
             </h4>

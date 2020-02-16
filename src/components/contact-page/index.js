@@ -1,11 +1,13 @@
 import React from "react"
 import contactPageStyle from "./style.module.scss"
 
+
+
 const ContactPage = ({ contactPageData }) => {
   return (
     <div className={contactPageStyle.backgroundContainer}>
       <div className={contactPageStyle.componentContainer}>
-        <div className={contactPageStyle.greeting}>
+        <div className={contactPageStyle.greeting} data-aos="example-anim1" data-aos-once="true">
           <div className={contactPageStyle.winWinContainer}>
             <figure className={contactPageStyle.winWinSize}>
               <img

@@ -13,7 +13,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
           />
         </span>
 
-        <section className={caseStudyPageStyle.greeting}>
+        <section className={caseStudyPageStyle.greeting}  data-aos="example-anim1" data-aos-once="true">
           <div className={caseStudyPageStyle.winWinContainer}>
             <p className={caseStudyPageStyle.title}>
               {caseStudyData.jumbotron.clientName}
@@ -25,7 +25,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
             </p>
           </div>
         </section>
-        <section className={caseStudyPageStyle.projectOverview}>
+        <section className={caseStudyPageStyle.projectOverview}  data-aos="example-anim1" data-aos-once="true">
           <div className={caseStudyPageStyle.winWinContainer}>
             <p className={caseStudyPageStyle.title}>
               {caseStudyData.services.listName}
@@ -46,7 +46,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
           </div>
         </section>
         <section className={caseStudyPageStyle.showCase}>
-          <figure className={caseStudyPageStyle.fullWidthImage}>
+          <figure className={caseStudyPageStyle.fullWidthImage}  data-aos="example-anim1" data-aos-once="true">
             <img
               className={caseStudyPageStyle.imageSource}
               src={caseStudyData.fullWidthImage1.file.url}
@@ -54,7 +54,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
             />
           </figure>
         </section>
-        <div className={caseStudyPageStyle.fullWidth}>
+        <div className={caseStudyPageStyle.fullWidth}  data-aos="example-anim1" data-aos-once="true">
           <div className={caseStudyPageStyle.leadInContainer}>
             <div className={caseStudyPageStyle.leadInDescription}>
               <div className={caseStudyPageStyle.projectInformation}>
@@ -68,7 +68,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
               </div>
             </div>
             <div className={caseStudyPageStyle.leadInImage}>
-              <figure className={caseStudyPageStyle.imageHolder}>
+              <figure className={caseStudyPageStyle.imageHolder}  data-aos="example-anim1" data-aos-once="true">
                 <img
                   className={caseStudyPageStyle.imageSource}
                   src={caseStudyData.leadInImage.file.url}
@@ -79,7 +79,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
           </div>
         </div>
         <section className={caseStudyPageStyle.showCase}>
-          <figure className={caseStudyPageStyle.fullWidthImage}>
+          <figure className={caseStudyPageStyle.fullWidthImage}  data-aos="example-anim1" data-aos-once="true">
             <img
               className={caseStudyPageStyle.imageSource}
               src={caseStudyData.fullWidthImage2.file.url}
@@ -87,7 +87,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
             />
           </figure>
         </section>
-        <section className={caseStudyPageStyle.showCaseHalf}>
+        <section className={caseStudyPageStyle.showCaseHalf}  data-aos="example-anim1" data-aos-once="true">
           <figure className={`${caseStudyPageStyle.halfWidthImage}`}>
             <img
               className={caseStudyPageStyle.imageSource}
@@ -103,7 +103,7 @@ const CaseStudyPage = ({ caseStudyData }) => {
             />
           </figure>
         </section>
-        <section className={caseStudyPageStyle.testimonial}>
+        <section className={caseStudyPageStyle.testimonial} data-aos="example-anim1" data-aos-once="true">
           <div className={caseStudyPageStyle.centerBlock}>
             <div className={caseStudyPageStyle.getInTouch}>
               <p className={caseStudyPageStyle.testimonialParagraph}>

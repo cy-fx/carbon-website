@@ -1,0 +1,9 @@
+[data-aos="example-anim1"] {
+  opacity: 0;
+  padding-top: 30px;
+  &.aos-animate {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+
