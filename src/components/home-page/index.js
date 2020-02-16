@@ -1,15 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import homePageStyle from "./style.module.scss"
-import Img from "gatsby-image"
 import Slider from "../slider"
 
+import "../../reusable-styles/styles.scss"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const HomePage = ({ homePageData }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    })
+  })
   return (
     <div className={homePageStyle.backgroundContainer}>
       <div className={homePageStyle.componentContainer}>
-        <section className={`${homePageStyle.heroContainer} apearOnScroll`} data-aos="example-anim1" data-aos-once="true" >
+        <section
+          className={`${homePageStyle.heroContainer} apearOnScroll`}
+          data-aos="example-anim1"
+          data-aos-once="true"
+        >
           <figure className={homePageStyle.imageHolder}>
             <img
               className={homePageStyle.imageSource}
@@ -19,7 +30,11 @@ const HomePage = ({ homePageData }) => {
           </figure>
         </section>
 
-        <section className={`${homePageStyle.greetingsContainer} apearOnScroll`} data-aos="example-anim1"  data-aos-once="true">
+        <section
+          className={`${homePageStyle.greetingsContainer} apearOnScroll`}
+          data-aos="example-anim1"
+          data-aos-once="true"
+        >
           {homePageData.greetings.map(item => (
             <div className={homePageStyle.greetingsCard} key={item.id}>
               <div className={homePageStyle.greetingsContent}>
@@ -27,8 +42,8 @@ const HomePage = ({ homePageData }) => {
                   {item.paragraph}
                 </p>
                 <Link className={homePageStyle.greetingsLink} to={item.link}>
-                    <span className={homePageStyle.link}>{item.buttonText}</span>
-                    <span className={homePageStyle.linkDecoration}></span>
+                  <span className={homePageStyle.link}>{item.buttonText}</span>
+                  <span className={homePageStyle.linkDecoration}></span>
                 </Link>
               </div>
             </div>
@@ -50,10 +65,18 @@ const HomePage = ({ homePageData }) => {
           </div>
         </section>
 
-        <section className={homePageStyle.sliderContainer} data-aos="example-anim1" data-aos-once="true">
+        <section
+          className={homePageStyle.sliderContainer}
+          data-aos="example-anim1"
+          data-aos-once="true"
+        >
           <Slider sliderData={homePageData.slider} />
         </section>
-        <section className={`${homePageStyle.aboutContainer} apearOnScroll`} data-aos="example-anim1" data-aos-once="true">
+        <section
+          className={`${homePageStyle.aboutContainer} apearOnScroll`}
+          data-aos="example-anim1"
+          data-aos-once="true"
+        >
           {homePageData.about.map(item => (
             <div className={homePageStyle.aboutCard} key={item.id}>
               <div className={homePageStyle.aboutContent}>

@@ -1,12 +1,26 @@
-import React from "react"
 import agencyPageStyle from "./style.module.scss"
 import { Link } from "gatsby"
+import React, { useEffect } from "react"
+
+import "../../reusable-styles/styles.scss"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const AgencyPage = ({ agencyPageData }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    })
+  })
+
   return (
     <div className={agencyPageStyle.backgroundContainer}>
       <div className={agencyPageStyle.componentContainer}>
-        <section className={agencyPageStyle.whoWeAreSection} data-aos="example-anim1" data-aos-once="true">
+        <section
+          className={agencyPageStyle.whoWeAreSection}
+          data-aos="example-anim1"
+          data-aos-once="true"
+        >
           <div className={agencyPageStyle.lsdContainerAbsolute}>
             <figure className={agencyPageStyle.lsdSize}>
               <img
@@ -41,7 +55,11 @@ const AgencyPage = ({ agencyPageData }) => {
             </figure>
           </div>
         </section>
-        <section className={agencyPageStyle.whatWeBelieveInSection} data-aos="example-anim1" data-aos-once="true">
+        <section
+          className={agencyPageStyle.whatWeBelieveInSection}
+          data-aos="example-anim1"
+          data-aos-once="true"
+        >
           <div className={agencyPageStyle.whatWeBelieveInCard}>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whatWeBelieveIn.listName}
@@ -65,7 +83,11 @@ const AgencyPage = ({ agencyPageData }) => {
           </div>
         </section>
         <section className={agencyPageStyle.whatWeDoSection}>
-          <div className={agencyPageStyle.whatWeDoCard} data-aos="example-anim1" data-aos-once="true">
+          <div
+            className={agencyPageStyle.whatWeDoCard}
+            data-aos="example-anim1"
+            data-aos-once="true"
+          >
             <div className={agencyPageStyle.carbonIconBlackContainerAbsolute}>
               <figure className={agencyPageStyle.lsdSize}>
                 <img
@@ -84,7 +106,11 @@ const AgencyPage = ({ agencyPageData }) => {
           </div>
         </section>
         <section className={agencyPageStyle.servicesSection}>
-          <div className={agencyPageStyle.servicesCard} data-aos="example-anim1" data-aos-once="true">
+          <div
+            className={agencyPageStyle.servicesCard}
+            data-aos="example-anim1"
+            data-aos-once="true"
+          >
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.services.listName}
             </h4>
@@ -96,7 +122,7 @@ const AgencyPage = ({ agencyPageData }) => {
       </div>
       <section className={agencyPageStyle.viewWorkSection}>
         <div className={agencyPageStyle.viewWorkContainer}>
-          <Link  className={agencyPageStyle.linkContainer} to="/work">
+          <Link className={agencyPageStyle.linkContainer} to="/work">
             <h2 className={agencyPageStyle.title}>View Work -></h2>
           </Link>
         </div>

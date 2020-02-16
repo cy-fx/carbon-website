@@ -6,14 +6,7 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import HeaderNavigation from "../components/header-navigation"
 
-import "../reusable-styles/styles.scss"
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
 
-AOS.init({
-  duration: 800,
-  
-})
 
 const IndexPage = () => (
   <StaticQuery
