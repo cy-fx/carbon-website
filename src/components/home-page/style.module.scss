@@ -27,6 +27,7 @@ body {
 .backgroundContainer {
   background-color: #000000;
   width: 100%;
+  overflow: hidden;
 }
 
 .componentContainer {
@@ -155,7 +156,9 @@ body {
 .sliderContainer {
   margin-top: 180px;
   margin-bottom: 240px;
-  width: 100%;
+  min-width: 1180px;
+  position: relative;
+  min-height: 670px;
 }
 
 .greetingsLink,
@@ -234,8 +237,11 @@ body {
 
   .sliderContainer {
     width: 100%;
+    min-width: 100%;
     margin-bottom: 0;
     margin-top: 40px;
+    overflow: hidden;
+    min-height: 550px;
   }
 
   .aboutContainer {
@@ -283,5 +289,4 @@ body {
     transition: initial;
     margin-top: 25px;
   }
-
 }
