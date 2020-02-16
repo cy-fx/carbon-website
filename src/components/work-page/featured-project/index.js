@@ -2,11 +2,12 @@ import React from "react"
 import Img from "gatsby-image"
 import workPageStyle from "./style.module.scss"
 
+
 const featuredProject = ({ featuredProjectData }) => {
   return (
     <div className={workPageStyle.fullWidth}>
       {featuredProjectData.map((item, index) => (
-        <div className={workPageStyle.featuredProjectContainer}>
+        <div className={workPageStyle.featuredProjectContainer} data-aos="example-anim1" data-aos-once="true">
           <div className={workPageStyle.featuredProjectDescription}>
             <div className={workPageStyle.projectNumber}>
               Project No. {`{00${index + 1}}`}
