@@ -7,3 +7,64 @@
   }
 }
 
+
+.lineDecoratorWhite {
+  display: flex;
+  border-bottom: 1px solid white;
+  width: 14px;
+}
+
+.lineDecorator {
+  display: flex;
+  border-bottom: 1px solid;
+  width: 14px;
+}
+
+.white {
+  border-color: white;
+}
+
+.black {
+  border-color: black;
+}
+
+.start{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.decoratorContainer{
+  display: flex;
+}
+
+.margin-70{
+  margin-right: 70%;
+}
+
+.mobile{
+  display: none;
+}
+
+
+@media screen and (max-width: 756px) {
+  .decoratorContainer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lineDecorator {
+    display: flex;
+    border-bottom: 2px solid;
+    width: 20px;
+  }
+  .mobile{
+    display: flex;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+

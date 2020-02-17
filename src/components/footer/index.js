@@ -1,6 +1,7 @@
 import React from "react"
 import footerStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
+import "../../reusable-styles/styles.scss"
 
 const Footer = () => (
   <StaticQuery
@@ -56,12 +57,23 @@ const Footer = () => (
           <div className={footerStyle.backgroundContainer}>
             <div className={footerStyle.marginContainer}>
               <section className={footerStyle.countriesContainer}>
-                <span className={footerStyle.countries}>
-                  {footerData.countries}
-                </span>
+                <div>
+                  <span className={footerStyle.countries}>
+                    {footerData.countries}
+                  </span>
+                  <span className="decoratorContainer desktop">
+                <span className="lineDecorator white start"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
+                </div>
               </section>
               <div className={footerStyle.legalAndTextContainer}>
                 <section className={footerStyle.signOffContainer}>
+                <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
+
                   <div className={footerStyle.signOffContent}>
                     <figure
                       className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
@@ -98,6 +110,11 @@ const Footer = () => (
                   </div>
                 </section>
                 <section className={footerStyle.contactMessageContainer}>
+                  <span className="decoratorContainer">
+                    <span className="lineDecorator black margin-70"></span>
+                    <span className="lineDecorator black"></span>
+                  </span>
+
                   <figure
                     className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
                   >

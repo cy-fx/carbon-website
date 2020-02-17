@@ -2,6 +2,7 @@ import React from "react"
 import sliderStyle from "./style.module.scss"
 import { Link } from "gatsby"
 
+import "../../reusable-styles/styles.scss"
 
 class Slider extends React.Component {
   constructor(props) {
@@ -17,7 +18,6 @@ class Slider extends React.Component {
   }
 
   componentDidMount() {
-   
     let animacion = document.getElementById("animationEvent")
 
     const totalSlides = this.props.sliderData.featuredProjects.length - 1
@@ -77,8 +77,24 @@ class Slider extends React.Component {
 
   render() {
     const sliderData = this.props.sliderData
+    console.log(sliderData)
     return (
       <div id="animationEvent" className={sliderStyle.play}>
+        <div className={sliderStyle.sliderAbsoluteImages}>
+          <figure className={sliderStyle.halftoneContainer}>
+            <img
+              className={sliderStyle.imageSource}
+              src={sliderData.halftone.file.url}
+            />
+          </figure>
+          <figure className={sliderStyle.logoIconContainer}>
+            <img
+              className={sliderStyle.imageSource}
+              src={sliderData.logoIcon.file.url}
+            />
+          </figure>
+        </div>
+
         <div className={sliderStyle.fullWidth}>
           {sliderData.featuredProjects.map((item, index) => (
             <div
@@ -109,6 +125,10 @@ class Slider extends React.Component {
                       </div>
                     </div>
                   </div>
+                  <span className="decoratorContainer desktop">
+                    <span className="lineDecorator white"></span>
+                    <span className="lineDecorator white mobile"></span>
+                  </span>
 
                   <div
                     className={
@@ -120,7 +140,10 @@ class Slider extends React.Component {
                     <h2 className={sliderStyle.projectTitle}>
                       {item.slideDescription.title}
                     </h2>
-
+                    <span className="decoratorContainer desktop">
+                      <span className="lineDecorator white"></span>
+                      <span className="lineDecorator white mobile"></span>
+                    </span>
                     <p className={sliderStyle.projectParagraph}>
                       {item.slideDescription.paragraph}
                     </p>
@@ -172,9 +195,9 @@ class Slider extends React.Component {
                     src={
                       this.state.backButton
                         ? index === sliderData.featuredProjects.length - 1
-                          ? sliderData.featuredProjects[0].featuredImage
-                          .file.url
-                          : sliderData.featuredProjects[index+1].featuredImage
+                          ? sliderData.featuredProjects[0].featuredImage.file
+                              .url
+                          : sliderData.featuredProjects[index + 1].featuredImage
                               .file.url
                         : index === 0 // NEXT
                         ? sliderData.featuredProjects[
