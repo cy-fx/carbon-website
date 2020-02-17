@@ -20,6 +20,7 @@ const HomePage = ({ homePageData }) => {
           className={`${homePageStyle.heroContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <figure className={homePageStyle.imageHolder}>
             <img
@@ -34,6 +35,7 @@ const HomePage = ({ homePageData }) => {
           className={`${homePageStyle.greetingsContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           {homePageData.greetings.map(item => (
             <div className={homePageStyle.greetingsCard} key={item.id}>
@@ -86,6 +88,7 @@ const HomePage = ({ homePageData }) => {
           className={homePageStyle.sliderContainer}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <Slider sliderData={homePageData.slider} />
         </section>
@@ -93,6 +96,7 @@ const HomePage = ({ homePageData }) => {
           className={`${homePageStyle.aboutContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           {homePageData.about.map(item => (
             <div className={homePageStyle.aboutCard} key={item.id}>

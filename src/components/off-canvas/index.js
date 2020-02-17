@@ -4,8 +4,6 @@ import { Link } from "gatsby"
 import offCanvasStyle from "./style.module.scss"
 import HeaderOffCanvas from "../header-off-canvas"
 
-
-
 const OffCanvas = ({ navBarClicked }) => (
   <StaticQuery
     query={graphql`
@@ -53,8 +51,8 @@ const OffCanvas = ({ navBarClicked }) => (
     render={data => {
       const offCanvasData = data.contentfulV1OffCanvas
       return (
-        <div className={offCanvasStyle.backgroundContainer} >
-          <div className={offCanvasStyle.lsdContainerAbsolute} >
+        <div className={offCanvasStyle.backgroundContainer}>
+          <div className={offCanvasStyle.lsdContainerAbsolute}>
             <figure className={offCanvasStyle.lsdSize}>
               <img
                 className={offCanvasStyle.imageSource}
@@ -64,8 +62,12 @@ const OffCanvas = ({ navBarClicked }) => (
             </figure>
           </div>
           <HeaderOffCanvas navBarClicked={navBarClicked} />
-          <div className={offCanvasStyle.componentContainer} data-aos="example-anim1" data-aos-once="true">
-          
+          <div
+            className={offCanvasStyle.componentContainer}
+            data-aos="example-anim1"
+            data-aos-once="true"
+            data-aos-anchor-placement="top"
+          >
             <section className={offCanvasStyle.signOffContainer}>
               <span className={offCanvasStyle.whiteSpace}></span>
               <div className={offCanvasStyle.signOffContent}>

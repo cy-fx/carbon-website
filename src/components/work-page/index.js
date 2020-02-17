@@ -19,6 +19,7 @@ const WorkPage = ({ workPageData }) => {
           className={workPageStyle.greeting}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <div className={workPageStyle.winWinContainer}>
             <p className={workPageStyle.title}>

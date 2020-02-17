@@ -20,6 +20,7 @@ const AgencyPage = ({ agencyPageData }) => {
           className={agencyPageStyle.whoWeAreSection}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <div className={agencyPageStyle.lsdContainerAbsolute}>
             <figure className={agencyPageStyle.lsdSize}>
@@ -59,6 +60,7 @@ const AgencyPage = ({ agencyPageData }) => {
           className={agencyPageStyle.whatWeBelieveInSection}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <div className={agencyPageStyle.whatWeBelieveInCard}>
             <h4 className={agencyPageStyle.title}>
@@ -87,6 +89,7 @@ const AgencyPage = ({ agencyPageData }) => {
             className={agencyPageStyle.whatWeDoCard}
             data-aos="example-anim1"
             data-aos-once="true"
+            data-aos-anchor-placement="top"
           >
             <div className={agencyPageStyle.carbonIconBlackContainerAbsolute}>
               <figure className={agencyPageStyle.lsdSize}>
@@ -110,6 +113,7 @@ const AgencyPage = ({ agencyPageData }) => {
             className={agencyPageStyle.servicesCard}
             data-aos="example-anim1"
             data-aos-once="true"
+            data-aos-anchor-placement="top"
           >
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.services.listName}

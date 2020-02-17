@@ -5,20 +5,17 @@ import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-
-
-
 const ContactPage = ({ contactPageData }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
   })
-  
+
   return (
     <div className={contactPageStyle.backgroundContainer}>
       <div className={contactPageStyle.componentContainer}>
-        <div className={contactPageStyle.greeting} data-aos="example-anim1" data-aos-once="true">
+        <div className={contactPageStyle.greeting}>
           <div className={contactPageStyle.winWinContainer}>
             <figure className={contactPageStyle.winWinSize}>
               <img
@@ -29,7 +26,12 @@ const ContactPage = ({ contactPageData }) => {
             </figure>
           </div>
 
-          <div className={contactPageStyle.getInTouch}>
+          <div
+            className={contactPageStyle.getInTouch}
+            data-aos="example-anim1"
+            data-aos-once="true"
+            data-aos-anchor-placement="top"
+          >
             <p className={contactPageStyle.paragraph}>{contactPageData.text}</p>
             <p className={contactPageStyle.eMail}>{contactPageData.email}</p>
             <nav className={contactPageStyle.socialMediaNavigation}>
@@ -51,7 +53,9 @@ const ContactPage = ({ contactPageData }) => {
               ))}
             </nav>
             <p className={contactPageStyle.hablamosEspanol}>
-             {`{ Hablamos `}{<span className={contactPageStyle.arrow}>-></span>}{` Español }`}
+              {`{ Hablamos `}
+              {<span className={contactPageStyle.arrow}>-></span>}
+              {` Español }`}
             </p>
           </div>
         </div>
