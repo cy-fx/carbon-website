@@ -36,7 +36,6 @@ class Slider extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state)
   }
 
   nextSlide() {
@@ -77,7 +76,6 @@ class Slider extends React.Component {
 
   render() {
     const sliderData = this.props.sliderData
-    console.log(sliderData)
     return (
       <div id="animationEvent" className={sliderStyle.play}>
         <div className={sliderStyle.sliderAbsoluteImages}>

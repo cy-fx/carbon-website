@@ -34,7 +34,6 @@ class Slider extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state)
   }
 
   nextSlide() {
