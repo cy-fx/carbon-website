@@ -62,17 +62,17 @@ const Footer = () => (
                     {footerData.countries}
                   </span>
                   <span className="decoratorContainer desktop">
-                <span className="lineDecorator white start"></span>
-                <span className="lineDecorator white mobile"></span>
-              </span>
+                    <span className="lineDecorator black start"></span>
+                    <span className="lineDecorator black mobile"></span>
+                  </span>
                 </div>
               </section>
               <div className={footerStyle.legalAndTextContainer}>
                 <section className={footerStyle.signOffContainer}>
-                <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
-              </span>
+                  <span className="decoratorContainer">
+                    <span className="lineDecorator black"></span>
+                    <span className="lineDecorator black mobile"></span>
+                  </span>
 
                   <div className={footerStyle.signOffContent}>
                     <figure
