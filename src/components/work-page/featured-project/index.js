@@ -2,6 +2,9 @@ import React from "react"
 import Img from "gatsby-image"
 import workPageStyle from "./style.module.scss"
 
+import "../../../reusable-styles/styles.scss"
+
+
 const featuredProject = ({ featuredProjectData }) => {
   return (
     <div className={workPageStyle.fullWidth}>
@@ -16,6 +19,9 @@ const featuredProject = ({ featuredProjectData }) => {
             <div className={workPageStyle.projectNumber}>
               Project No. {`{00${index + 1}}`}
             </div>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+            </span>
             <div className={workPageStyle.projectInformation}>
               <h2 className={workPageStyle.projectTitle}>
                 {item.slideDescription.title}

@@ -25,11 +25,19 @@ const WorkPage = ({ workPageData }) => {
             <p className={workPageStyle.title}>
               {workPageData.introduction.title}
             </p>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
           </div>
           <div className={workPageStyle.getInTouch}>
             <p className={workPageStyle.paragraph}>
               {workPageData.introduction.paragraph}
             </p>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
           </div>
         </section>
         <FeaturedProject featuredProjectData={workPageData.projects} />

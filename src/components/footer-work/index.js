@@ -1,6 +1,7 @@
 import React from "react"
-import footerWorkStyle from "./style.module.scss"
+import footerStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
+import "../../reusable-styles/styles.scss"
 
 const FooterWork = () => (
   <StaticQuery
@@ -49,77 +50,95 @@ const FooterWork = () => (
       }
     `}
     render={data => {
-      const footerWorkData = data.contentfulV1Footer
+      const footerData = data.contentfulV1Footer
 
       return (
-        <div className={footerWorkStyle.footerWorkContainer}>
-          <div className={footerWorkStyle.backgroundContainer}>
-          <div className={footerWorkStyle.marginContainer}>
-            <section className={footerWorkStyle.countriesContainer}>
-              <span className={footerWorkStyle.countries}>
-                {footerWorkData.countries}
-              </span>
-            </section>
-            <div className={footerWorkStyle.legalAndTextContainer}>
-              <section className={footerWorkStyle.signOffContainer}>
-                <div className={footerWorkStyle.signOffContent}>
-                  <figure
-                    className={`${footerWorkStyle.logo} ${footerWorkStyle.imageHolder}`}
-                  >
-                    <img
-                      className={footerWorkStyle.imageSource}
-                      src={footerWorkData.signOff.carbonWordmark.file.url}
-                      alt={footerWorkData.signOff.carbonWordmark.title}
-                    />
-                  </figure>
-                  <span className={footerWorkStyle.multiCultural}>
-                    {footerWorkData.signOff.multiCultural}
+        <div className={footerStyle.footerContainer}>
+          <div className={footerStyle.backgroundContainer}>
+            <div className={footerStyle.marginContainer}>
+              <section className={footerStyle.countriesContainer}>
+                <div>
+                  <span className={footerStyle.countries}>
+                    {footerData.countries}
                   </span>
-                  <span className={footerWorkStyle.legal}>
-                    {footerWorkData.signOff.legal}
+                  <span className="decoratorContainer desktop">
+                    <span className="lineDecorator black start"></span>
+                    <span className="lineDecorator black mobile"></span>
                   </span>
-                  <nav className={footerWorkStyle.socialMediaNavigation}>
-                    {footerWorkData.socialMediaNavigation.navigation.map(item => (
-                      <a
-                        className={footerWorkStyle.socialMediaLink}
-                        href={item.link}
-                        key={item.id}
-                      >
-                        <figure className={footerWorkStyle.imageHolder}>
-                          <img
-                            className={footerWorkStyle.imageSource}
-                            src={item.icon.file.url}
-                            alt={item.title}
-                          />
-                        </figure>
-                      </a>
-                    ))}
-                  </nav>
                 </div>
               </section>
-              <section className={footerWorkStyle.contactMessageContainer}>
-                <figure
-                  className={`${footerWorkStyle.logo} ${footerWorkStyle.imageHolder}`}
-                >
-                  <img
-                    className={footerWorkStyle.imageSource}
-                    src={footerWorkData.signOff.carbonWordmark.file.url}
-                    alt={footerWorkData.signOff.carbonWordmark.title}
-                  />
-                </figure>
-                <p className={footerWorkStyle.contactMessageText}>
-                  {footerWorkData.paragraph}
-                </p>
-                <span className={footerWorkStyle.contactMessageEmail}>
-                  {footerWorkData.email}
-                </span>
-                <p className={footerWorkStyle.hablamosEspanol}>
-             {`{ Hablamos `}{<span className={footerWorkStyle.arrow}>-></span>}{` Español }`}
-            </p>
-              </section>
+              <div className={footerStyle.legalAndTextContainer}>
+                <section className={footerStyle.signOffContainer}>
+                  <span className="decoratorContainer">
+                    <span className="lineDecorator black"></span>
+                    <span className="lineDecorator black mobile"></span>
+                  </span>
+
+                  <div className={footerStyle.signOffContent}>
+                    <figure
+                      className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
+                    >
+                      <img
+                        className={footerStyle.imageSource}
+                        src={footerData.signOff.carbonWordmark.file.url}
+                        alt={footerData.signOff.carbonWordmark.title}
+                      />
+                    </figure>
+                    <span className={footerStyle.multiCultural}>
+                      {footerData.signOff.multiCultural}
+                    </span>
+                    <span className={footerStyle.legal}>
+                      {footerData.signOff.legal}
+                    </span>
+                    <nav className={footerStyle.socialMediaNavigation}>
+                      {footerData.socialMediaNavigation.navigation.map(item => (
+                        <a
+                          className={footerStyle.socialMediaLink}
+                          href={item.link}
+                          key={item.id}
+                        >
+                          <figure className={footerStyle.imageHolder}>
+                            <img
+                              className={footerStyle.imageSource}
+                              src={item.icon.file.url}
+                              alt={item.title}
+                            />
+                          </figure>
+                        </a>
+                      ))}
+                    </nav>
+                  </div>
+                </section>
+                <section className={footerStyle.contactMessageContainer}>
+                  <span className="decoratorContainer">
+                    <span className="lineDecorator black margin-70"></span>
+                    <span className="lineDecorator black"></span>
+                  </span>
+
+                  <figure
+                    className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
+                  >
+                    <img
+                      className={footerStyle.imageSource}
+                      src={footerData.signOff.carbonWordmark.file.url}
+                      alt={footerData.signOff.carbonWordmark.title}
+                    />
+                  </figure>
+                  <p className={footerStyle.contactMessageText}>
+                    {footerData.paragraph}
+                  </p>
+                  <span className={footerStyle.contactMessageEmail}>
+                    {footerData.email}
+                  </span>
+                  <p className={footerStyle.hablamosEspanol}>
+                    {`{ Hablamos `}
+                    {<span className={footerStyle.arrow}>-></span>}
+                    {` Español }`}
+                  </p>
+                </section>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       )
     }}

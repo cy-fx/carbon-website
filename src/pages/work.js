@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import WorkPage from "../components/work-page"
-import Footer from "../components/footer"
 import HeaderNavigation from "../components/header-navigation"
 import FooterWork from "../components/footer-work"
 
@@ -60,7 +59,7 @@ const Work = () => (
           <SEO title="Work" />
           <div className="disable">
             <WorkPage workPageData={workPageData} />
-            <Footer />
+            <FooterWork/>
           </div>
         </React.Fragment>
       )
