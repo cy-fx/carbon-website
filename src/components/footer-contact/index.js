@@ -42,11 +42,16 @@ const Footer = () => (
       return (
         <div className={footerStyle.footerContainer}>
           <div className={footerStyle.backgroundContainer}>
-          <div className={footerStyle.marginContainer}>
-            <section className={footerStyle.signOffContainer}>
+            <div className={footerStyle.marginContainer}>
+              <section className={footerStyle.signOffContainer}>
+                
                 <figure
                   className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
                 >
+                  <span className="decoratorContainer">
+                    <span className="lineDecorator black"></span>
+                    <span className="lineDecorator black mobile"></span>
+                  </span>
                   <img
                     className={footerStyle.imageSource}
                     src={footerData.signOff.carbonWordmark.file.url}
@@ -54,6 +59,11 @@ const Footer = () => (
                   />
                 </figure>
                 <div className={footerStyle.multiLegal}>
+                <span className="decoratorContainer">
+              <span className="lineDecorator black  margin-66 desktop"></span>
+              <span className="lineDecorator black"></span>
+              <span className="lineDecorator black mobile"></span>
+            </span>
                   <span className={footerStyle.multiCultural}>
                     {footerData.signOff.multiCultural}
                   </span>
@@ -62,13 +72,17 @@ const Footer = () => (
                   </span>
                 </div>
                 <section className={footerStyle.countriesContainer}>
+                <span className="decoratorContainer desktop">
+                    <span className="lineDecorator black"></span>
+                    <span className="lineDecorator black mobile"></span>
+                  </span>
                   <span className={footerStyle.countries}>
                     {footerData.countries}
                   </span>
                 </section>
-            </section>
+              </section>
+            </div>
           </div>
-        </div>
         </div>
       )
     }}

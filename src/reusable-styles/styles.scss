@@ -42,9 +42,27 @@
   margin-right: 70%;
 }
 
+.margin-66{
+  margin-right: 66%;
+}
+
+.margin-55{
+  margin-right: 55%;
+}
+
 .margin-50{
   margin-right: 50%;
 }
+
+.margin-30{
+  margin-right: 30%;
+}
+
+.margin-22{
+  margin-right: 22.5%;
+}
+
+
 
 .mobile{
   display: none;
@@ -54,6 +72,9 @@
   margin: 140px 0;
 }
 
+.hidden{
+  visibility: hidden;
+}
 
 @media screen and (max-width: 756px) {
   .decoratorContainer{

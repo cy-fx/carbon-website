@@ -17,6 +17,10 @@ const ContactPage = ({ contactPageData }) => {
       <div className={contactPageStyle.componentContainer}>
         <div className={contactPageStyle.greeting}>
           <div className={contactPageStyle.winWinContainer}>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
             <figure className={contactPageStyle.winWinSize}>
               <img
                 className={contactPageStyle.imageSource}
@@ -24,6 +28,10 @@ const ContactPage = ({ contactPageData }) => {
                 alt="Carbón"
               />
             </figure>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
           </div>
 
           <div
@@ -32,6 +40,12 @@ const ContactPage = ({ contactPageData }) => {
             data-aos-once="true"
             data-aos-anchor-placement="top"
           >
+            <span className="decoratorContainer">
+              <span className="lineDecorator white margin-55 desktop"></span>
+              <span className="lineDecorator white margin-22 desktop"></span>
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
             <p className={contactPageStyle.paragraph}>{contactPageData.text}</p>
             <p className={contactPageStyle.eMail}>{contactPageData.email}</p>
             <nav className={contactPageStyle.socialMediaNavigation}>
@@ -52,11 +66,19 @@ const ContactPage = ({ contactPageData }) => {
                 </a>
               ))}
             </nav>
+            <figure>
+              <img className={contactPageStyle.halftone} src={contactPageData.dots.file.url}/>
+            </figure>
             <p className={contactPageStyle.hablamosEspanol}>
               {`{ Hablamos `}
               {<span className={contactPageStyle.arrow}>-></span>}
               {` Español }`}
             </p>
+            <span className="decoratorContainer desktop">
+              <span className="lineDecorator white margin-55 hidden"></span>
+              <span className="lineDecorator white margin-22"></span>
+              <span className="lineDecorator white"></span>
+            </span>
           </div>
         </div>
       </div>
