@@ -180,12 +180,15 @@ const AgencyPage = ({ agencyPageData }) => {
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
-            <h2 className={agencyPageStyle.title}>View Work -></h2>
+            <h2 className={agencyPageStyle.title}>{agencyPageData.viewWork} -></h2>
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
           </Link>
         </div>
+        <figure className={agencyPageStyle.viewWorkImageHolder}>
+          <img  className={agencyPageStyle.viewWorkImage} src={agencyPageData.viewWorkImage.file.url}/>
+        </figure>
       </section>
     </div>
   )
