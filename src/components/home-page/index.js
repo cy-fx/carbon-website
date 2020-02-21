@@ -3,9 +3,12 @@ import { Link } from "gatsby"
 import homePageStyle from "./style.module.scss"
 import Slider from "../slider"
 
+
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
+
+
 
 const HomePage = ({ homePageData }) => {
   useEffect(() => {
