@@ -1,6 +1,7 @@
 import React from "react"
 import headerStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
+import {setTime, setDate} from "../../utils/date-and-time"
 
 const Header = ({navBarClicked}) => (
   <StaticQuery
@@ -41,9 +42,9 @@ const Header = ({navBarClicked}) => (
                     {headerData.location}
                   </div>
                   <div className={headerStyle.timeAndWeather}>
-                    <span className={headerStyle.date}>2019 October 31 </span>
+                    <span className={headerStyle.date}>{setDate()}</span>
                     <span className={headerStyle.actualTime}>
-                      {`{04:20 PM}`} //
+                      {`{${setTime()}}`} //
                     </span>
                     <span className={headerStyle.weatherIcon}>
                       <img

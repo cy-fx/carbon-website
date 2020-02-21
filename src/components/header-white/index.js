@@ -1,6 +1,8 @@
 import React from "react"
 import headerWhiteStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
+import {setTime, setDate} from "../../utils/date-and-time"
+
 
 const HeaderWhite = ({ navBarClicked }) => (
   <StaticQuery
@@ -48,10 +50,10 @@ const HeaderWhite = ({ navBarClicked }) => (
                   </div>
                   <div className={headerWhiteStyle.timeAndWeather}>
                     <span className={headerWhiteStyle.date}>
-                      2019 October 31{" "}
+                     {setDate()}
                     </span>
                     <span className={headerWhiteStyle.actualTime}>
-                      {`{04:20 PM}`} //
+                    {`{${setTime()}}`} //
                     </span>
                     <span className={headerWhiteStyle.weatherIcon}>
                       <img
