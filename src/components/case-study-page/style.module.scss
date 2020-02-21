@@ -56,14 +56,19 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 400px 0 126px;
+  margin: 200px 0 126px;
 }
 
 .projectOverview {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin: 200px 0;
+  margin: 100px 0;
+}
+
+.projectOverview .title {
+  
+  margin-top: 45px;
 }
 
 .projectOverview .winWinContainer {
@@ -82,12 +87,11 @@ body {
 
 .greeting .winWinContainer {
   width: 33%;
+  margin-top: 200px;
+
 }
 
-.testimonial .winWinContainer {
-  width: 100%;
-  margin-bottom: 125px;
-}
+
 
 .winWinSize {
   width: 160px;
@@ -98,7 +102,7 @@ body {
   font-size: 2.5rem;
   line-height: 1.2;
   font-weight: 300;
-  margin: 50px 0;
+  
 }
 
 .eMail {
@@ -165,12 +169,13 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 140px 0;
+  margin: 140px 0 175px;
 }
 
 .testimonialTitle {
   font-weight: bolder;
   font-size: 24px;
+  margin-top: 45px;
 }
 
 .testimonialSubtitle {
@@ -179,7 +184,7 @@ body {
 }
 
 .testimonialParagraph {
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 }
 
 .centerBlock {
@@ -286,7 +291,7 @@ body {
 
 .projectTitle {
   font-size: 16px;
- margin-bottom: 70px;
+ margin-bottom: 20px;
  font-weight: lighter;
 }
 .projectsubtitle {
@@ -296,6 +301,7 @@ body {
 
 .projectParagraph {
   font-size: 23px;
+  margin-top: 40px;
 }
 
 
@@ -303,6 +309,10 @@ body {
 .projectInformation {
   width: 50%;
   margin-left: 100px;
+}
+
+.paragraph{
+  margin: 50px 0;
 }
 
 
@@ -363,17 +373,17 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 150px 0 45px;
+    margin: 15px 0 45px;
   }
 
   .greeting .winWinContainer {
-  
+  margin-top: 130px;
     width: 100%;
   }
 
   .winWinContainer {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .title {
@@ -383,14 +393,19 @@ body {
 
   .getInTouch {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 23px;
     display: flex;
+    flex-direction: column;
+  }
+
+  .getInTouch .paragraph{
+    margin-top: 15px;
   }
   
   .projectOverview {
     flex-wrap: wrap;
-    margin: 45px 0;
+    margin: 0;
   }
 
   .projectOverview .getInTouch{
@@ -453,6 +468,8 @@ body {
   .testimonial .winWinContainer{
     margin: 0;
     margin-top: 45px;
+    width: 100%;
+
   }
 
   .nextProjectBackground{
@@ -461,7 +478,7 @@ body {
 
   .nextProjectContainer{
     width: 90%;
-    
+    min-height: initial;
   }
 
   .nextProjectContainer .winWinContainer{
@@ -469,8 +486,13 @@ body {
   }
 
   .nextProjectContainer .getInTouch{
-    margin: 45px 0;
+    margin: 0 0;
     font-size: 1.7rem;
+  }
+
+  .nextProjectContainer .paragraph{
+    margin-top: 45px;
+    margin-bottom: 45px;
   }
 
   .absoluteImage .imageSource{
@@ -497,5 +519,6 @@ body {
 
   .projectOverview .getInTouch{
     width: 100%;
+    margin-top: 0;
   }
 }

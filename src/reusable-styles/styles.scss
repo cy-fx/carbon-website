@@ -54,6 +54,19 @@
   margin-right: 50%;
 }
 
+.margin-33{
+  margin-right: 33%;
+}
+
+.col-33{
+  width: 33%;
+}
+
+.col-67{
+  width: 67%;
+}
+
+
 .margin-30{
   margin-right: 30%;
 }
@@ -62,7 +75,10 @@
   margin-right: 22.5%;
 }
 
-
+.displayRow{
+  display: flex;
+  flex-direction: row;
+}
 
 .mobile{
   display: none;
@@ -95,7 +111,7 @@
   }
 
   .desktop {
-    display: none;
+    display: none !important;
   }
 }
 

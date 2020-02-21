@@ -28,15 +28,40 @@ const CaseStudyPage = ({ caseStudyData }) => {
           data-aos-once="true"
           data-aos-anchor-placement="top"
         >
+          <div className="displayRow desktop">
+            <span className="decoratorContainer col-33">
+              <span className="lineDecorator white desktop"></span>
+            </span>
+
+            <span className="decoratorContainer col-67">
+              <span className="lineDecorator white margin-55 desktop"></span>
+              <span className="lineDecorator white margin-22 desktop"></span>
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
+          </div>
+          <span className="decoratorContainer">
+             
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
+
           <div className={caseStudyPageStyle.winWinContainer}>
             <p className={caseStudyPageStyle.title}>
               {caseStudyData.jumbotron.clientName}
             </p>
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
+          <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+              </span>
             <p className={caseStudyPageStyle.paragraph}>
               {caseStudyData.jumbotron.headline}
             </p>
+            <span className="decoratorContainer desktop">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
           </div>
         </section>
         <section
@@ -46,6 +71,10 @@ const CaseStudyPage = ({ caseStudyData }) => {
           data-aos-anchor-placement="top"
         >
           <div className={caseStudyPageStyle.winWinContainer}>
+          <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
             <p className={caseStudyPageStyle.title}>
               {caseStudyData.services.listName}
             </p>
@@ -56,9 +85,14 @@ const CaseStudyPage = ({ caseStudyData }) => {
             ))}
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
+          <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
             <p className={caseStudyPageStyle.title}>
               {caseStudyData.projectOverview.title}
             </p>
+           
             <p className={caseStudyPageStyle.paragraph}>
               {caseStudyData.projectOverview.paragraph.paragraph}
             </p>
@@ -90,7 +124,9 @@ const CaseStudyPage = ({ caseStudyData }) => {
                 <h2 className={caseStudyPageStyle.projectTitle}>
                   {caseStudyData.leadIn.title}
                 </h2>
-
+                <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+              </span>
                 <p className={caseStudyPageStyle.projectParagraph}>
                   {caseStudyData.leadIn.paragraph}
                 </p>
@@ -159,6 +195,9 @@ const CaseStudyPage = ({ caseStudyData }) => {
                 {caseStudyData.testimonial.testimonial}
               </p>
             </div>
+            <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+              </span>
             <div className={caseStudyPageStyle.winWinContainer}>
               <p className={caseStudyPageStyle.testimonialTitle}>
                 {caseStudyData.testimonial.personName}
@@ -176,7 +215,13 @@ const CaseStudyPage = ({ caseStudyData }) => {
             <p className={caseStudyPageStyle.title}>Client Name</p>
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
+          <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+              </span>
             <p className={caseStudyPageStyle.paragraph}>Next Project ➝</p>
+            <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+              </span>
           </div>
         </section>
       </div>
