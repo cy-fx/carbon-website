@@ -30,11 +30,20 @@ module.exports = {
         name: `carbon-website`,
         short_name: `carbon`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/carbon-agency-favicon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['HelveticaNowDisplay', 'HelveticaNow'],
+          urls: ["src/static/fonts/Helvetica-Now", "src/reusable-styles/carbon-font.css"],
+        }
+      }
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

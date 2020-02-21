@@ -200,6 +200,7 @@ body {
 .signOffContent {
   display: flex;
   flex-direction: column;
+  margin-top: 135px;
 }
 
 .signOffContent .imageHolder {
@@ -286,7 +287,7 @@ body {
 }
 
 .homeIcon {
-  width: 110px;
+  width: 125px;
 }
 
 .lsdContainerAbsolute {
@@ -299,6 +300,33 @@ body {
 
 .lsdContainerAbsolute .imageSource {
   height: 1000px;
+}
+
+.navigationContainer{
+  margin-top: 125px;
+}
+
+.homeNavSlash{
+  width: 80px;
+  height: 4px ;
+  background-color: black;
+  display: flex;
+  margin-left: 5px;
+  margin-top: 40px;
+}
+
+.navSlash{
+  width: 80px;
+  height: 4px ;
+  background-color: black;
+  display: flex;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.navItem{
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 756px) {
@@ -316,16 +344,16 @@ body {
   .signOffContainer {
     width: 100%;
     order: 2;
-    margin-top: 45px;
+    margin-top: 0;
   }
   .navigationSection {
     order: 1;
-    margin-top: 35px;
+    margin-top: 30px;
     margin-bottom: 50px;
   }
 
   .link {
-    font-size: 60px;
+    font-size: 48px;
     margin-bottom: 15px;
     font-weight: lighter;
   }
@@ -340,6 +368,7 @@ body {
 
   .signOffContent {
     font-size: 16px;
+    margin-top: 0;
   }
 
   .whiteSpace {
@@ -348,13 +377,14 @@ body {
 
   .multiCultural {
     margin-bottom: 2px;
+    margin-top: 45px;
   }
 
   .legal {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
   .homeIcon {
-    width: 55px;
+    width: 50px;
   }
 
   .carbonAnimation{
@@ -375,4 +405,27 @@ body {
   .link:hover {
     text-decoration: initial;
   }
+
+  .navigationContainer{
+    margin-top: 0;
+  }
+
+  .navSlash{
+    width: 40px;
+    height: 2px ;
+   
+  }
+  
+  .navItem{
+    display: flex;
+    align-items: center;
+  }
+
+  .homeNavSlash{
+    width: 40px;
+    height: 2px ;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+  
 }

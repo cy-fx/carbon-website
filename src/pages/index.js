@@ -32,6 +32,18 @@ const IndexPage = () => (
             }
           }
           slider {
+            halftone {
+              file {
+                url
+              }
+              title
+            }
+            logoIcon {
+              file {
+                url
+              }
+              title
+            }
             featuredProjects {
               hoverImage {
                 description

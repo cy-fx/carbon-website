@@ -3,8 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import offCanvasStyle from "./style.module.scss"
 import HeaderOffCanvas from "../header-off-canvas"
-
-
+import "../../reusable-styles/styles.scss"
 
 const OffCanvas = ({ navBarClicked }) => (
   <StaticQuery
@@ -53,8 +52,8 @@ const OffCanvas = ({ navBarClicked }) => (
     render={data => {
       const offCanvasData = data.contentfulV1OffCanvas
       return (
-        <div className={offCanvasStyle.backgroundContainer} >
-          <div className={offCanvasStyle.lsdContainerAbsolute} >
+        <div className={offCanvasStyle.backgroundContainer}>
+          <div className={offCanvasStyle.lsdContainerAbsolute}>
             <figure className={offCanvasStyle.lsdSize}>
               <img
                 className={offCanvasStyle.imageSource}
@@ -64,11 +63,21 @@ const OffCanvas = ({ navBarClicked }) => (
             </figure>
           </div>
           <HeaderOffCanvas navBarClicked={navBarClicked} />
-          <div className={offCanvasStyle.componentContainer} data-aos="example-anim1" data-aos-once="true">
-          
+          <div
+            className={offCanvasStyle.componentContainer}
+            data-aos="example-anim1"
+            data-aos-once="true"
+            data-aos-anchor-placement="top"
+          >
             <section className={offCanvasStyle.signOffContainer}>
-              <span className={offCanvasStyle.whiteSpace}></span>
               <div className={offCanvasStyle.signOffContent}>
+                <span className="decoratorContainer desktop">
+                  <span className="lineDecorator black"></span>
+                  <span className="lineDecorator black mobile"></span>
+                </span>
+                <span className="decoratorContainer desktop space-y-195-185">
+                  <span className="lineDecorator black "></span>
+                </span>
                 <figure className={offCanvasStyle.imageHolder}>
                   <img
                     className={offCanvasStyle.imageSource}
@@ -76,6 +85,10 @@ const OffCanvas = ({ navBarClicked }) => (
                     alt={offCanvasData.signOff.carbonWordmark.title}
                   />
                 </figure>
+                <span className="decoratorContainer mobile">
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
+              </span>
                 <span className={offCanvasStyle.multiCultural}>
                   {offCanvasData.signOff.multiCultural}
                 </span>
@@ -102,25 +115,41 @@ const OffCanvas = ({ navBarClicked }) => (
               </div>
             </section>
             <section className={offCanvasStyle.navigationSection}>
-              {offCanvasData.navigationItems.map(item => (
-                <div className={offCanvasStyle.navigationList}>
-                  <Link
-                    key={item.id}
-                    className={offCanvasStyle.link}
-                    to={item.link}
-                  >
-                    {item.title === "Home" ? (
-                      <img
-                        className={offCanvasStyle.homeIcon}
-                        src={item.icon.file.url}
-                        alt="Carbón"
-                      />
-                    ) : (
-                      item.title
-                    )}
-                  </Link>
-                </div>
-              ))}
+              <span className="decoratorContainer desktop">
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
+              </span>
+              <div className={offCanvasStyle.navigationContainer}>
+                {offCanvasData.navigationItems.map(item => (
+                  <div className={offCanvasStyle.navigationList}>
+                    <Link
+                      key={item.id}
+                      className={offCanvasStyle.link}
+                      to={item.link}
+                    >
+                      {item.title === "Home" ? (
+                        <span className={offCanvasStyle.navItem}>
+                        <img
+                          className={offCanvasStyle.homeIcon}
+                          src={item.icon.file.url}
+                          alt="Carbón"
+                        />
+                        <span className={offCanvasStyle.homeNavSlash}></span>
+                      </span>
+                       
+                      ) : (
+                        <span className={offCanvasStyle.navItem}>
+                          <span>
+                            {item.title}
+                            
+                          </span>
+                          <span className={offCanvasStyle.navSlash}></span>
+                        </span>
+                      )}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </section>
           </div>
         </div>

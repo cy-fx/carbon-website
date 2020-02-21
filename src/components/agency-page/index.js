@@ -20,6 +20,7 @@ const AgencyPage = ({ agencyPageData }) => {
           className={agencyPageStyle.whoWeAreSection}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <div className={agencyPageStyle.lsdContainerAbsolute}>
             <figure className={agencyPageStyle.lsdSize}>
@@ -31,20 +32,41 @@ const AgencyPage = ({ agencyPageData }) => {
             </figure>
           </div>
 
-          <div className={agencyPageStyle.whoWeAreCard}>
-            <h4 className={agencyPageStyle.title}>
-              {agencyPageData.whoWeAre.title}
-            </h4>
-            <h2 className={agencyPageStyle.subtitle}>
-              {agencyPageData.whoWeAre.subtitle}
-            </h2>
-            <p className={agencyPageStyle.paragraph}>
-              {agencyPageData.whoWeAre.paragraph}
-            </p>
-            <p className={agencyPageStyle.paragraph}>
-              {agencyPageData.whoWeAre.buttonText}
-            </p>
+          <div className={agencyPageStyle.whoWeAreContainer}>
+            <div className={agencyPageStyle.whoWeAreCard}>
+              <span className="decoratorContainer">
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
+              </span>
+              <h4 className={agencyPageStyle.title}>
+                {agencyPageData.whoWeAre.title}
+              </h4>
+              <h2 className={agencyPageStyle.subtitle}>
+                {agencyPageData.whoWeAre.subtitle}
+              </h2>
+              <span className="decoratorContainer desktop">
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
+              </span>
+
+              <p className={agencyPageStyle.paragraph}>
+                {agencyPageData.whoWeAre.paragraph}
+              </p>
+
+              <p className={agencyPageStyle.paragraphWinWin}>
+                {agencyPageData.whoWeAre.buttonText}
+              </p>
+              <span className="decoratorContainer">
+                <span className="lineDecorator black margin-50"></span>
+                <span className="lineDecorator black "></span>
+              </span>
+              <span className="decoratorContainer desktop space-y-140">
+                <span className="lineDecorator black margin-50"></span>
+                <span className="lineDecorator black "></span>
+              </span>
+            </div>
           </div>
+
           <div className={agencyPageStyle.winWinContainerAbsolute}>
             <figure className={agencyPageStyle.winWinSize}>
               <img
@@ -59,8 +81,13 @@ const AgencyPage = ({ agencyPageData }) => {
           className={agencyPageStyle.whatWeBelieveInSection}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <div className={agencyPageStyle.whatWeBelieveInCard}>
+            <span className="decoratorContainer">
+              <span className="lineDecorator black"></span>
+              <span className="lineDecorator black mobile"></span>
+            </span>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whatWeBelieveIn.listName}
             </h4>
@@ -69,15 +96,32 @@ const AgencyPage = ({ agencyPageData }) => {
             ))}
           </div>
           <div className={agencyPageStyle.enLoQueCreemosCard}>
+            <span className="decoratorContainer">
+              <span className="lineDecorator black"></span>
+              <span className="lineDecorator black mobile"></span>
+            </span>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.enLoQueCreemos.listName}
             </h4>
-            {agencyPageData.enLoQueCreemos.items.map(item => (
-              <div className={agencyPageStyle.description}>
-                <h5 className={agencyPageStyle.listTitle}>{item.title}</h5>
-                <p className={agencyPageStyle.listParagraph}>
-                  {item.paragraph}
-                </p>
+            {agencyPageData.enLoQueCreemos.items.map((item, index) => (
+              <div className={agencyPageStyle.enLoQueCreemosItem}>
+                <span
+                  className={
+                    index === 0
+                      ? "decoratorContainer desktop"
+                      : "decoratorContainer"
+                  }
+                >
+                  <span className="lineDecorator black"></span>
+                  <span className="lineDecorator black mobile"></span>
+                </span>
+
+                <div className={agencyPageStyle.description}>
+                  <h5 className={agencyPageStyle.listTitle}>{item.title}</h5>
+                  <p className={agencyPageStyle.listParagraph}>
+                    {item.paragraph}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -87,6 +131,7 @@ const AgencyPage = ({ agencyPageData }) => {
             className={agencyPageStyle.whatWeDoCard}
             data-aos="example-anim1"
             data-aos-once="true"
+            data-aos-anchor-placement="top"
           >
             <div className={agencyPageStyle.carbonIconBlackContainerAbsolute}>
               <figure className={agencyPageStyle.lsdSize}>
@@ -97,6 +142,10 @@ const AgencyPage = ({ agencyPageData }) => {
                 />
               </figure>
             </div>
+            <span className="decoratorContainer">
+              <span className="lineDecorator black"></span>
+              <span className="lineDecorator black mobile"></span>
+            </span>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whatWeDo.title}
             </h4>
@@ -110,7 +159,12 @@ const AgencyPage = ({ agencyPageData }) => {
             className={agencyPageStyle.servicesCard}
             data-aos="example-anim1"
             data-aos-once="true"
+            data-aos-anchor-placement="top"
           >
+            <span className="decoratorContainer">
+              <span className="lineDecorator black"></span>
+              <span className="lineDecorator black mobile"></span>
+            </span>
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.services.listName}
             </h4>
@@ -123,9 +177,18 @@ const AgencyPage = ({ agencyPageData }) => {
       <section className={agencyPageStyle.viewWorkSection}>
         <div className={agencyPageStyle.viewWorkContainer}>
           <Link className={agencyPageStyle.linkContainer} to="/work">
-            <h2 className={agencyPageStyle.title}>View Work -></h2>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+            </span>
+            <h2 className={agencyPageStyle.title}>{agencyPageData.viewWork} -></h2>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+            </span>
           </Link>
         </div>
+        <figure className={agencyPageStyle.viewWorkImageHolder}>
+          <img  className={agencyPageStyle.viewWorkImage} src={agencyPageData.viewWorkImage.file.url}/>
+        </figure>
       </section>
     </div>
   )

@@ -88,6 +88,18 @@ const Agency = () => (
               url
             }
           }
+          arrowIcon {
+            file {
+              url
+            }
+          }
+          viewWorkImage {
+            file {
+              url
+            }
+          }
+          viewWorkLink
+          viewWork
         }
       }
     `}

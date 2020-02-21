@@ -3,9 +3,12 @@ import { Link } from "gatsby"
 import homePageStyle from "./style.module.scss"
 import Slider from "../slider"
 
+
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
+
+
 
 const HomePage = ({ homePageData }) => {
   useEffect(() => {
@@ -17,9 +20,10 @@ const HomePage = ({ homePageData }) => {
     <div className={homePageStyle.backgroundContainer}>
       <div className={homePageStyle.componentContainer}>
         <section
-          className={`${homePageStyle.heroContainer} apearOnScroll`}
+          className={`${homePageStyle.heroContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <figure className={homePageStyle.imageHolder}>
             <img
@@ -31,12 +35,18 @@ const HomePage = ({ homePageData }) => {
         </section>
 
         <section
-          className={`${homePageStyle.greetingsContainer} apearOnScroll`}
+          className={`${homePageStyle.greetingsContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           {homePageData.greetings.map(item => (
             <div className={homePageStyle.greetingsCard} key={item.id}>
+              <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
+
               <div className={homePageStyle.greetingsContent}>
                 <p className={homePageStyle.greetingsParagraph}>
                   {item.paragraph}
@@ -46,9 +56,17 @@ const HomePage = ({ homePageData }) => {
                   <span className={homePageStyle.linkDecoration}></span>
                 </Link>
               </div>
+              <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
             </div>
           ))}
           <div className={homePageStyle.greetingsCard}>
+          <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
             <nav className={homePageStyle.navigationContainer}>
               <div className={homePageStyle.navigationPages}>
                 {homePageData.pages.navigation.map(item => (
@@ -62,6 +80,10 @@ const HomePage = ({ homePageData }) => {
                 ))}
               </div>
             </nav>
+            <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
           </div>
         </section>
 
@@ -69,20 +91,31 @@ const HomePage = ({ homePageData }) => {
           className={homePageStyle.sliderContainer}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           <Slider sliderData={homePageData.slider} />
         </section>
         <section
-          className={`${homePageStyle.aboutContainer} apearOnScroll`}
+          className={`${homePageStyle.aboutContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
+          data-aos-anchor-placement="top"
         >
           {homePageData.about.map(item => (
             <div className={homePageStyle.aboutCard} key={item.id}>
+              <span className="decoratorContainer">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
               <div className={homePageStyle.aboutContent}>
                 <h3 className={homePageStyle.aboutTitle}>{item.title}</h3>
                 <p className={homePageStyle.aboutParagraph}>{item.paragraph}</p>
               </div>
+
+              <span className="decoratorContainer desktop">
+                <span className="lineDecorator white"></span>
+                <span className="lineDecorator white mobile"></span>
+              </span>
             </div>
           ))}
         </section>

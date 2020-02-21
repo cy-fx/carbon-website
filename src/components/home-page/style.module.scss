@@ -13,6 +13,9 @@ figure {
   margin: 0;
 }
 
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,12 +24,7 @@ img {
   vertical-align: middle;
 }
 
-body {
-  color: #fff;
-  font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-}
+
 
 .backgroundContainer {
   background-color: #000000;
@@ -44,14 +42,23 @@ body {
   padding-bottom: 100px;
 }
 
+.greetingsContent{
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.navigationPages{
+  margin-top: 45px;
+}
+
+
+
 .greetingsContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 35px;
   justify-content: space-between;
   width: 100%;
-  margin-top: 30px;
 }
 
 .greetingsLineDecorationContainer {
@@ -83,6 +90,7 @@ body {
 .navigationContainer {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .navigationPages {
@@ -97,7 +105,6 @@ body {
   flex-wrap: wrap;
   margin-bottom: 100px;
   justify-content: space-between;
-  margin-top: 35px;
 }
 
 .aboutCard {
@@ -142,24 +149,20 @@ body {
   display: flex;
 }
 
-.lineDecoratorWhite {
-  border-bottom: 1px solid white;
-  width: 14px;
-  margin: 45px 0;
-}
 
 .aboutContent {
-  margin: 10px 0 80px;
+  margin: 40px 0 100px;
+  height: 100%;
 }
 
 .heroContainer {
   width: 100%;
-  margin: 250px 0 75px;
+  margin: 250px 0 85px;
 }
 
 .sliderContainer {
-  margin-top: 180px;
-  margin-bottom: 240px;
+  margin-top: 170px;
+  margin-bottom: 190px;
   min-width: 1180px;
   position: relative;
   min-height: 670px;
@@ -199,6 +202,7 @@ body {
   margin-top: 0;
 }
 
+
 @media screen and (max-width: 756px) {
   .backgroundContainer {
     min-width: 320px;
@@ -212,7 +216,6 @@ body {
     margin: 30px 0 40px;
   }
   .greetingsContainer {
-    margin-top: 40px;
     margin-bottom: 40px;
     width: 100%;
   }
@@ -243,9 +246,9 @@ body {
     width: 100%;
     min-width: 100%;
     margin-bottom: 0;
-    margin-top: 40px;
-    overflow: hidden;
-    min-height: 550px;
+    margin-top: 0;
+    overflow: visible;
+    min-height: 500px;
   }
 
   .aboutContainer {
@@ -258,11 +261,13 @@ body {
 
   .aboutContainer {
     margin-bottom: 0;
+    
   }
 
   .aboutContent {
-    margin-top: 0px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: initial;
   }
 
   .aboutCard {

@@ -1,3 +1,14 @@
+body{
+  min-width: 1180px;
+  color: #fff;
+  font-family:  "Helvetica-Now";
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+
+
+
 [data-aos="example-anim1"] {
   opacity: 0;
   padding-top: 30px;
@@ -6,4 +17,119 @@
     padding-top: 0;
   }
 }
+
+@font-face {
+  font-family: 'Helvetica-Now';
+  src: local('Helvetica-Now'), url("../static/fonts/Helvetica-Now/Monotype\ \ -\ Helvetica\ Now\ Display.otf") format('truetype');
+}
+
+
+
+.lineDecoratorWhite {
+  display: flex;
+  border-bottom: 2px solid white;
+  width: 20px;
+}
+
+.lineDecorator {
+  display: flex;
+  border-bottom: 2px solid;
+  width: 20px;
+}
+
+.white {
+  border-color: white;
+}
+
+.black {
+  border-color: black;
+}
+
+.start{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.decoratorContainer{
+  display: flex;
+}
+
+.margin-70{
+  margin-right: 70%;
+}
+
+.margin-66{
+  margin-right: 66%;
+}
+
+.margin-55{
+  margin-right: 55%;
+}
+
+.margin-50{
+  margin-right: 50%;
+}
+
+.margin-33{
+  margin-right: 33%;
+}
+
+.col-33{
+  width: 33%;
+}
+
+.col-67{
+  width: 67%;
+}
+
+
+.margin-30{
+  margin-right: 30%;
+}
+
+.margin-22{
+  margin-right: 22.5%;
+}
+
+.displayRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.mobile{
+  display: none;
+}
+
+.space-y-140{
+  margin: 140px 0;
+}
+.space-y-195-185{
+  margin: 195px 0 185px;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+@media screen and (max-width: 756px) {
+  .decoratorContainer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .lineDecorator {
+    display: flex;
+    border-bottom: 2px solid;
+    width: 20px;
+  }
+  .mobile{
+    display: flex;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+}
+
 
