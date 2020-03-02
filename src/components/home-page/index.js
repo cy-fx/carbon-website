@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import homePageStyle from "./style.module.scss"
 import Slider from "../slider"
-
+import SlideSwipe from "../slider-swipe"
 
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
@@ -95,6 +95,16 @@ const HomePage = ({ homePageData }) => {
         >
           <Slider sliderData={homePageData.slider} />
         </section>
+
+        <section
+          className={homePageStyle.sliderSwipeContainer}
+          data-aos="example-anim1"
+          data-aos-once="true"
+          data-aos-anchor-placement="top"
+        >
+          <SlideSwipe sliderSwipeData={homePageData.slider}/>
+        </section>
+        
         <section
           className={`${homePageStyle.aboutContainer}`}
           data-aos="example-anim1"
