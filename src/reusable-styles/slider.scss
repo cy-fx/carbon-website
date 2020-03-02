@@ -1,0 +1,41 @@
+
+.container{
+   
+    background-color: #eee;
+    color: black;
+    height: 100vh;
+
+}
+
+.scroller {
+    scroll-snap-type: x mandatory;
+    scroll-snap-destination: 50% 50%;
+    
+    overflow-x: scroll;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+
+    
+}
+
+.scroller .snap {
+    scroll-snap-stop: always;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.disable-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* Chrome/Safari/Webkit */
+    }
+  }
