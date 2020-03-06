@@ -187,7 +187,7 @@ class SliderSwipe extends React.Component {
                     </p>
                     <Link
                       className={sliderSwipeStyle.greetingsLink}
-                      to="/case-study"
+                      to={`/work${item.slideDescription.link}`}
                     >
                       <span className={sliderSwipeStyle.link}>
                         {item.slideDescription.buttonText}
@@ -197,9 +197,9 @@ class SliderSwipe extends React.Component {
                   </div>
                 </div>
               </div>
-              <a
+              <Link
                 className={`${sliderSwipeStyle.featuredProjectImage}`}
-                href="/work"
+                to={`/work${item.slideDescription.link}`}
               >
                 <figure className={sliderSwipeStyle.imageHolder}>
                   <img
@@ -212,7 +212,7 @@ class SliderSwipe extends React.Component {
                     alt="Carbón"
                   />
                 </figure>
-              </a>
+              </Link>
             </div>
           ))}
         </div>
