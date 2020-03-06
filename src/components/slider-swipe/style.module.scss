@@ -1,0 +1,462 @@
+.backgroundContainer {
+  background-color: #000000;
+  width: 100%;
+  min-height: 670px;
+}
+
+.play {
+  position: absolute;
+  min-width: 1180px;
+}
+
+.fullWidth {
+  width: 100%;
+  display: flex;
+}
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1180px;
+  color: #ffffff;
+}
+
+.featuredProjectContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.featuredProjectDescription {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.featuredProjectImage {
+  height: 100%;
+  width: 66%;
+}
+
+.imageHolder,
+.descriptionHolder,
+.previousImage {
+  width: 100%;
+  height: 670px;
+}
+
+.imageSource {
+  width: 100%;
+}
+
+.projectNumber {
+  font-size: 23px;
+  display: flex;
+}
+
+.projectNumber {
+  margin-bottom: 50px;
+}
+
+.featuredProjectTitle {
+  width: 80%;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.arrow {
+  margin: 0 5px;
+}
+
+.projectTitle {
+  font-size: 55px;
+  font-weight: bolder;
+  line-height: 1;
+  margin-top: 125px;
+  margin-bottom: 20px;
+}
+.projectsubtitle {
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+}
+
+.projectParagraph {
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.projectButtonText {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.projectInformation {
+  width: 80%;
+  animation: textOpacity 0.8s;
+  margin-left: -6%;
+  padding-left: 6%;
+}
+
+@keyframes textOpacity {
+  from {
+    opacity: 0;
+    margin-left: 0px;
+    // filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    margin-left: -6%;
+    // filter: blur(0);
+  }
+}
+
+.show {
+  border: initial;
+}
+
+.dontShow {
+  display: none;
+  opacity: 0.5;
+}
+
+.previousImage {
+  position: absolute;
+  animation: otherMove 0.6s;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  transition: 1s;
+  left: -100%;
+}
+
+.animacion {
+  transition: 0s;
+}
+
+@keyframes otherMove {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+.featuredProjectImage {
+  overflow: hidden;
+  position: relative;
+}
+
+.featuredProjectImage .imageHolder {
+  position: absolute;
+ 
+}
+
+.featuredProjectImage .imageSource {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes mymove {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+// .grow{
+//   transform:scale(1.05);
+//   transform-origin: center;
+//   transition: .4s ;
+//   transition-timing-function: ease-out;
+// }
+
+.circleButtonsContainer {
+  position: absolute;
+  top: 640px;
+}
+
+.circleButtons {
+  display: flex;
+}
+
+.arrow:hover,
+.circleButtons:hover,
+.featuredProjectImage:hover {
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: #0000ff;
+}
+
+.circle {
+  background-color: #000000;
+  border: 2px solid #fff;
+  border-radius: 18px;
+  height: 30px;
+  width: 30px;
+  margin-right: 4px;
+}
+
+.circle:hover {
+  background-color: #333333;
+}
+
+.circleActive {
+  background-color: #ffffff;
+}
+
+.circleActive:hover {
+  background-color: #ffffff;
+  cursor: initial;
+}
+
+.greetingsLink,
+.navigationLink {
+  color: #fff;
+  display: inline-block;
+}
+
+.greetingsLink {
+  text-decoration: none;
+}
+
+.link {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: -35px;
+}
+
+.linkDecoration {
+  display: flex;
+  height: 15px;
+  width: 100%;
+  background-color: #0000ff;
+  transition: 0.3s;
+  margin-top: 25px;
+}
+
+.greetingsLink:hover .linkDecoration {
+  display: flex;
+  height: 40px;
+  background-image: linear-gradient(to right, #0000ff, #005aff);
+  transition: 0.3s;
+  margin-top: 0;
+}
+
+.sliderSwipeAbsoluteImages {
+  position: absolute;
+  top: 0;
+}
+
+.halftoneContainer {
+  position: absolute;
+  top: 112px;
+  left: 345px;
+  z-index: 3;
+  width: 250px;
+}
+
+.logoIconContainer {
+  position: absolute;
+  top: 550px;
+  left: 425px;
+  z-index: 3;
+}
+
+.halftoneContainer .imageSource {
+  width: 250px;
+  height: 100%;
+}
+.logoIconContainer .imageSource {
+  width: 200px;
+  height: 100%;
+}
+
+.featuredProjectImage .imageHolder {
+  display: flex;
+}
+
+.hoverHolder {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  margin-left: -30px;
+  transition: 0.5s;
+  top: 0;
+  z-index: 1;
+  
+}
+
+.hoverHolder:hover {
+  opacity: 1;
+  margin-left: 0;
+  transition: 0.5s;
+  display: flex;
+  
+}
+
+.showHover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 756px) {
+  .play {
+    position: absolute;
+    min-width: 100%;
+  }
+  .backgroundContainer {
+    min-width: 320px;
+  }
+
+  .featuredProjectContainer {
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 45px;
+    margin: 0 10px;
+
+  }
+  .featuredProjectDescription {
+    width: 100%;
+    order: 2;
+  }
+
+  .featuredProjectImage {
+    height: 280px;
+    width: 100%;
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .projectNumber,
+  .projectParagraph {
+    display: none;
+  }
+
+  .projectInformation {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .projectTitle {
+    font-size: 2rem;
+    width: 65%;
+    margin-bottom: 36px;
+
+    margin-top: 0;
+  }
+
+  .projectButtonText {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .imageHolder {
+    width: 100%;
+    height: 280px;
+  }
+
+  .link {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .linkDecoration {
+    height: 8px;
+    transition: initial;
+    margin-top: 25px;
+  }
+  .circleButtonsContainer {
+    margin-top: 15px;
+  }
+
+  .circle {
+    width: 15px;
+    height: 15px;
+  }
+
+  // .grow{
+  //   transform:scale(1.1);
+  //   transform-origin: center;
+  //   transition: .4s ;
+  //   transition-timing-function: ease-out;
+  // }
+
+  .imageHolder,
+  .descriptionHolder,
+  .previousImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .circleButtonsContainer {
+    position: absolute;
+    top: 440px;
+    z-index: 10;
+  }
+  
+.circleButtons:hover {
+  cursor: initial;
+}
+
+.circle:hover {
+  background-color: #000;
+}
+
+.circleActive:hover {
+  background-color: #fff;
+  cursor: initial;
+}
+
+
+  .halftoneContainer {
+    top: 150px;
+  left: -200px;
+  }
+  
+  .logoIconContainer {
+    top:200px;
+    left: 250px;
+  }
+  
+  .halftoneContainer .imageSource {
+    width: 250px;
+    height: 100%;
+  }
+  .logoIconContainer .imageSource {
+    width: 150px;
+    height: 100%;
+  }
+
+  .hoverHolder {
+    display: none;
+  }
+  
+  .hoverHolder:hover {
+    display: none;
+  }
+
+  .index{
+    display: flex;
+  }
+
+  #scrollin{
+    scroll-behavior: smooth;
+  }
+}
