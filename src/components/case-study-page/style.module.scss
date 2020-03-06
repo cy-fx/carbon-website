@@ -197,8 +197,7 @@ body {
   background-color: #333333;
   margin: 0 auto;
   max-width: 1566px;
-  position: relative;
-  z-index: -3;
+ 
 }
 
 .nextProjectContainer .winWinContainer {
@@ -299,12 +298,21 @@ body {
 }
 
 .textAndArrow {
+  display: inline-block
+}
+
+.textAndArrowLink {
   display: flex;
   align-items: center;
+  color: white;
   .nextArrow {
     width: 45px;
     margin: 0 30px;
   }
+}
+
+.textAndArrow:hover{
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 756px) {

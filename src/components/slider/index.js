@@ -2,6 +2,7 @@ import React from "react"
 import sliderStyle from "./style.module.scss"
 import { Link } from "gatsby"
 
+
 import "../../reusable-styles/styles.scss"
 
 class Slider extends React.Component {
@@ -160,7 +161,7 @@ class Slider extends React.Component {
                     </p>
                     <Link
                       className={sliderStyle.greetingsLink}
-                      to="/case-study"
+                      to={`/work${item.slideDescription.link}`}
                     >
                       <span className={sliderStyle.link}>
                         {item.slideDescription.buttonText}
@@ -172,7 +173,7 @@ class Slider extends React.Component {
                     <div className={sliderStyle.circleButtons}>
                       {sliderData.featuredProjects.map((item, index) => (
                         <span
-                          onClick={() => this.goToThisSlide(index)}
+                          // onClick={() => this.goToThisSlide(index)}
                           className={`${sliderStyle.circle} ${
                             this.state.activeItem === index
                               ? sliderStyle.circleActive
