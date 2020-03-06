@@ -1,26 +1,3 @@
-h1,
-h2,
-h3,
-h4,
-a,
-p,
-div,
-nav,
-img,
-body,
-figure {
-  padding: 0;
-  margin: 0;
-}
-
-img {
-  vertical-align: middle;
-}
-
-body {
-  font-size: 14px;
-  font-weight: 300;
-}
 
 .backgroundContainer {
   background-color: #ffffff;
@@ -80,13 +57,11 @@ body {
 
 .subtitle {
   font-size: 55px;
-  font-weight: normal;
   margin-bottom: 85px;
 }
 
 .title {
   font-size: 23px;
-  font-weight: bold;
   margin-bottom: 85px;
 }
 
@@ -106,7 +81,6 @@ body {
 
 .word {
   font-size: 130px;
-  font-weight: lighter;
   line-height: 0.8;
   padding-bottom: 80px;
 }
@@ -122,7 +96,6 @@ body {
 
 .listTitle {
   font-size: 16px;
-  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -156,7 +129,6 @@ body {
   text-decoration: none;
   color: black;
   line-height: 0.9;
-  font-weight: bolder;
 }
 
 .link:hover {
@@ -169,8 +141,7 @@ body {
 
 .footerContainer {
   color: #000;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
   background-color: #fff;
 }
 
@@ -199,14 +170,16 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 135px;
+  line-height: 1.2;
 }
 
 .signOffContent .imageHolder {
-  margin-bottom: 90px;
+  margin-bottom: 110px;
 }
 
 .multiCultural {
-  font-weight: 600;
+  font-family:  "Helvetica-Now-Bold";
+  font-weight: normal;
 }
 
 .contactMessageContainer {
@@ -217,9 +190,8 @@ body {
 
 .contactMessageText,
 .contactMessageEmail {
-  font-size: 3.5rem;
+  font-size: 55px;
   line-height: 1;
-  font-weight: 300;
 }
 
 .contactMessageEmail {
@@ -242,8 +214,9 @@ body {
 
 .countries {
   margin: 47px 0;
-  font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
+  font-family:  "Helvetica-Now-Bold";
+  font-weight: normal;
 }
 
 .lineDecoratorContainer {
@@ -353,7 +326,6 @@ body {
   .link {
     font-size: 48px;
     margin-bottom: 15px;
-    font-weight: lighter;
   }
 
   .signOffContent .imageHolder {

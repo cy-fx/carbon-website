@@ -41,10 +41,9 @@ const CaseStudyPage = ({ caseStudyData }) => {
             </span>
           </div>
           <span className="decoratorContainer">
-             
-              <span className="lineDecorator white"></span>
-              <span className="lineDecorator white mobile"></span>
-            </span>
+            <span className="lineDecorator white"></span>
+            <span className="lineDecorator white mobile"></span>
+          </span>
 
           <div className={caseStudyPageStyle.winWinContainer}>
             <p className={caseStudyPageStyle.title}>
@@ -52,16 +51,16 @@ const CaseStudyPage = ({ caseStudyData }) => {
             </p>
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
-          <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-              </span>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+            </span>
             <p className={caseStudyPageStyle.paragraph}>
               {caseStudyData.jumbotron.headline}
             </p>
             <span className="decoratorContainer desktop">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
-              </span>
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
           </div>
         </section>
         <section
@@ -71,10 +70,10 @@ const CaseStudyPage = ({ caseStudyData }) => {
           data-aos-anchor-placement="top"
         >
           <div className={caseStudyPageStyle.winWinContainer}>
-          <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
-              </span>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
             <p className={caseStudyPageStyle.title}>
               {caseStudyData.services.listName}
             </p>
@@ -85,14 +84,14 @@ const CaseStudyPage = ({ caseStudyData }) => {
             ))}
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
-          <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
-              </span>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
             <p className={caseStudyPageStyle.title}>
               {caseStudyData.projectOverview.title}
             </p>
-           
+
             <p className={caseStudyPageStyle.paragraph}>
               {caseStudyData.projectOverview.paragraph.paragraph}
             </p>
@@ -125,8 +124,8 @@ const CaseStudyPage = ({ caseStudyData }) => {
                   {caseStudyData.leadIn.title}
                 </h2>
                 <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-              </span>
+                  <span className="lineDecorator white"></span>
+                </span>
                 <p className={caseStudyPageStyle.projectParagraph}>
                   {caseStudyData.leadIn.paragraph}
                 </p>
@@ -196,8 +195,8 @@ const CaseStudyPage = ({ caseStudyData }) => {
               </p>
             </div>
             <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-              </span>
+              <span className="lineDecorator white"></span>
+            </span>
             <div className={caseStudyPageStyle.winWinContainer}>
               <p className={caseStudyPageStyle.testimonialTitle}>
                 {caseStudyData.testimonial.personName}
@@ -215,13 +214,23 @@ const CaseStudyPage = ({ caseStudyData }) => {
             <p className={caseStudyPageStyle.title}>Client Name</p>
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
-          <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-              </span>
-            <p className={caseStudyPageStyle.paragraph}>Next Project ➝</p>
             <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-              </span>
+              <span className="lineDecorator white"></span>
+            </span>
+            <div className={caseStudyPageStyle.textAndArrow}>
+              <p className={caseStudyPageStyle.paragraph}>Next Project</p>
+              <div className={caseStudyPageStyle.nextArrow}>
+                <figure className={caseStudyPageStyle.imageHolder}>
+                  <img
+                    className={caseStudyPageStyle.imageSource}
+                    src={caseStudyData.nextArrow.file.url}
+                  />
+                </figure>
+              </div>
+            </div>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+            </span>
           </div>
         </section>
       </div>

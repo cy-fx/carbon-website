@@ -15,6 +15,11 @@ const Work = () => (
             paragraph
             title
           }
+          rightArrow{
+            file{
+              url
+            }
+          }
           projects {
             featuredImage {
               fluid(maxWidth: 1400, quality: 100) {

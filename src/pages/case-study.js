@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Footer from "../components/footer"
-import Header from "../components/header"
 import CaseStudyPage from "../components/case-study-page"
 import HeaderNavigation from "../components/header-navigation"
 
@@ -96,6 +95,11 @@ const CaseStudy = () => (
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
             title
+            file{
+              url
+            }
+          }
+          nextArrow{
             file{
               url
             }

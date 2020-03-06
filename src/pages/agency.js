@@ -27,18 +27,20 @@ const Agency = () => (
             listName
           }
           services {
+            listName
             items {
-              ... on ContentfulV1CardType1 {
+              ... on ContentfulV1List {
                 id
-                title
-                paragraph
-              }
-              ... on ContentfulV1Item {
-                id
-                text
+                name
+                items {
+                  ... on ContentfulV1Item {
+                    id
+                    name
+                    text
+                  }
+                }
               }
             }
-            listName
           }
           whatWeBelieveIn {
             items {
@@ -61,11 +63,22 @@ const Agency = () => (
             title
           }
           whoWeAre {
-            buttonText
-            link
-            subtitle
+            subtitle1
+            subtitle2
+            paragraph3
+            paragraph2
+            paragraph1
             title
-            paragraph
+            image2 {
+              file {
+                url
+              }
+            }
+            image1 {
+              file {
+                url
+              }
+            }
           }
           winWinMindset
           winWinMindsetImage {

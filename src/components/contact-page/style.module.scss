@@ -46,15 +46,14 @@
 }
 
 .winWinSize .imageSource{
-  width: 160px;
+  width: 140px;
   margin-top: 80px;
 }
 
 .getInTouch {
   width: 60%;
-  font-size: 3.4rem;
+  font-size: 55px;
   line-height: 1;
-  font-weight: 300;
 }
 
 .eMail {
@@ -78,12 +77,6 @@
   color: #0000ff;
 }
 
-.winWinContainer .imageSource {
-  animation-name: spin;
-  animation-duration: 99999ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
 
 .paragraph{
   margin-top: 80px;
@@ -94,14 +87,6 @@
   margin-top: 70px;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media screen and (max-width: 756px) {
   .backgroundContainer {
