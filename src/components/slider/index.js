@@ -185,7 +185,8 @@ class Slider extends React.Component {
                   </div>
                 </div>
               </div>
-              <a className={`${sliderStyle.featuredProjectImage}`} href="/work">
+              
+              <Link className={`${sliderStyle.featuredProjectImage}`} to={`/work${item.slideDescription.link}`}>
                 <figure className={sliderStyle.hoverHolder}>
                   <img
                     className={sliderStyle.showHover}
@@ -226,7 +227,7 @@ class Slider extends React.Component {
                     alt="Carbón"
                   />
                 </figure>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

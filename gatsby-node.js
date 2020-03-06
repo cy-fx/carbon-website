@@ -23,7 +23,6 @@ exports.createPages = ({ graphql, actions }) => {
     const caseStudyProjects = result.data.contentfulV1WorkPage.projects
 
     caseStudyProjects.map((caseStudy, index) => {
-      console.log("///////////////", caseStudy.slideDescription.link)
       createPage({
         path: `/work${caseStudy.slideDescription.link}`,
         component: path.resolve(`./src/templates/case-study-pages.js`),

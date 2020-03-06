@@ -3,7 +3,6 @@ import sliderSwipeStyle from "./style.module.scss"
 import { Link } from "gatsby"
 
 import "../../reusable-styles/styles.scss"
-import "../../reusable-styles/slider.scss"
 
 class SliderSwipe extends React.Component {
   constructor(props) {
@@ -48,12 +47,6 @@ class SliderSwipe extends React.Component {
     } else {
       this.setState({ activeItem: 1 })
     }
-    console.log(
-      element.target.scrollWidth,
-      element.target.scrollLeft,
-      element.target.clientWidth,
-      element.target.offsetWidth
-    )
   }
 
   starts = e => {
@@ -65,7 +58,6 @@ class SliderSwipe extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state.activeItem, this.state.scrollWidth)
   }
 
   nextSlide() {
