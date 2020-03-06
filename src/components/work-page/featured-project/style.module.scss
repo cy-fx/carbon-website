@@ -45,20 +45,20 @@
 
 
 .projectNumber {
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
 .projectTitle {
-  font-size: 1.5rem;
-  font-weight: lighter;
+  font-size: 23px;
 }
 .projectsubtitle {
-  font-size: 1.5rem;
+  font-size: 23px;
   padding-bottom: 30px;
 }
 
 .projectParagraph {
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .projectInformation {
@@ -80,6 +80,11 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  .imageSource{
+    width: 16px;
+    margin-left: 1px;
+    margin-top: 1px;
+  }
 }
 
 .buttonLink:hover {
@@ -88,9 +93,7 @@
   cursor: pointer;
 }
 
-.buttonImage {
-  line-height: 0.7;
-}
+
 
 
 

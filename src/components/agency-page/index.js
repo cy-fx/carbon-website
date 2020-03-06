@@ -42,16 +42,41 @@ const AgencyPage = ({ agencyPageData }) => {
                 {agencyPageData.whoWeAre.title}
               </h4>
               <h2 className={agencyPageStyle.subtitle}>
-                {agencyPageData.whoWeAre.subtitle}
+                {agencyPageData.whoWeAre.subtitle1}
+              </h2>
+              <h2
+                className={`${agencyPageStyle.subtitle} ${agencyPageStyle.blue}`}
+              >
+                {agencyPageData.whoWeAre.subtitle2}
               </h2>
               <span className="decoratorContainer desktop">
                 <span className="lineDecorator black"></span>
                 <span className="lineDecorator black mobile"></span>
               </span>
 
-              <p className={agencyPageStyle.paragraph}>
-                {agencyPageData.whoWeAre.paragraph}
+              <p className={agencyPageStyle.paragraph1}>
+                {agencyPageData.whoWeAre.paragraph1}
               </p>
+              <div className={agencyPageStyle.paragraph2}>
+                <span>{agencyPageData.whoWeAre.paragraph2}</span>
+                <span className={agencyPageStyle.winWinHolder}>
+                  <figure className={agencyPageStyle.imageHolder}>
+                    <img
+                      className={agencyPageStyle.imageSource}
+                      src={agencyPageData.whoWeAre.image2.file.url}
+                      alt="Win-Win"
+                    />
+                    <img
+                      className={`${agencyPageStyle.imageSourrce} ${agencyPageStyle.circleAbsolute}`}
+                      src={agencyPageData.whoWeAre.image1.file.url}
+                      alt="Win-Win"
+                    />
+                  </figure>
+                </span>
+                <span className={agencyPageStyle.paragraph}>
+                  {agencyPageData.whoWeAre.paragraph3}
+                </span>
+              </div>
 
               <p className={agencyPageStyle.paragraphWinWin}>
                 {agencyPageData.whoWeAre.buttonText}
@@ -168,9 +193,15 @@ const AgencyPage = ({ agencyPageData }) => {
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.services.listName}
             </h4>
-            {agencyPageData.services.items.map(item => (
-              <p className={agencyPageStyle.servicesList}>{item.text}</p>
+            <div className={agencyPageStyle.servicesLists}>
+            {agencyPageData.services.items.map(list => (
+              <div className={agencyPageStyle.servicesColumn}>
+                {list.items.map(item => (
+                  <p className={agencyPageStyle.servicesList}>{item.text}</p>
+                ))}
+              </div>
             ))}
+            </div>
           </div>
         </section>
       </div>
@@ -180,14 +211,19 @@ const AgencyPage = ({ agencyPageData }) => {
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
-            <h2 className={agencyPageStyle.title}>{agencyPageData.viewWork} -></h2>
+            <h2 className={agencyPageStyle.title}>
+              {agencyPageData.viewWork} ->
+            </h2>
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
           </Link>
         </div>
         <figure className={agencyPageStyle.viewWorkImageHolder}>
-          <img  className={agencyPageStyle.viewWorkImage} src={agencyPageData.viewWorkImage.file.url}/>
+          <img
+            className={agencyPageStyle.viewWorkImage}
+            src={agencyPageData.viewWorkImage.file.url}
+          />
         </figure>
       </section>
     </div>

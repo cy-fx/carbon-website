@@ -29,6 +29,11 @@ const IndexPage = () => (
             navigation {
               title
               link
+              icon{
+                file{
+                  url
+                }
+              }
             }
           }
           slider {
@@ -79,6 +84,16 @@ const IndexPage = () => (
                 }
                 paragraph
                 title
+              }
+            }
+            leftArrow{
+              file{
+                url
+              }
+            }
+            rightArrow{
+              file{
+                url
               }
             }
           }

@@ -35,8 +35,7 @@ class Slider extends React.Component {
     this.setState({ animationEnd: true })
   }
 
-  componentDidUpdate() {
-  }
+  componentDidUpdate() {}
 
   nextSlide() {
     this.setState({ backButton: false })
@@ -113,13 +112,27 @@ class Slider extends React.Component {
                         onClick={() => this.previousSlide(index)}
                         className={sliderStyle.arrow}
                       >
-                        ←
+                        <div className={sliderStyle.leftArrow}>
+                          <figure className={sliderStyle.imageHolder}>
+                            <img
+                              className={sliderStyle.imageSource}
+                              src={sliderData.leftArrow.file.url}
+                            />
+                          </figure>
+                        </div>
                       </div>
                       <div
                         onClick={() => this.nextSlide()}
                         className={sliderStyle.arrow}
                       >
-                        →
+                        <div className={sliderStyle.rightArrow}>
+                          <figure className={sliderStyle.imageHolder}>
+                            <img
+                              className={sliderStyle.imageSource}
+                              src={sliderData.rightArrow.file.url}
+                            />
+                          </figure>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -171,21 +184,15 @@ class Slider extends React.Component {
                   </div>
                 </div>
               </div>
-              <a
-                className={`${sliderStyle.featuredProjectImage}`}
-                href="/work"
-              >
+              <a className={`${sliderStyle.featuredProjectImage}`} href="/work">
                 <figure className={sliderStyle.hoverHolder}>
                   <img
-                    className={sliderStyle.showHover
-                        
-                    }
+                    className={sliderStyle.showHover}
                     src={item.hoverImage.file.url}
                     alt="Carbón"
                   />
                 </figure>
 
-               
                 <figure className={sliderStyle.imageHolder}>
                   <img
                     className={

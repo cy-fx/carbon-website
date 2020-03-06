@@ -40,7 +40,7 @@ const WorkPage = ({ workPageData }) => {
             </span>
           </div>
         </section>
-        <FeaturedProject featuredProjectData={workPageData.projects} />
+        <FeaturedProject featuredProjectData={workPageData.projects} rightArrow={workPageData.rightArrow}/>
       </div>
     </div>
   )

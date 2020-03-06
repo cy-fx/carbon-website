@@ -78,7 +78,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 30%;
-  font-size: 1.3rem;
+  font-size: 23px;
   line-height: 1.3;
 }
 
@@ -96,7 +96,7 @@ img {
 .navigationPages {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 32px;
 }
 
 .aboutContainer {
@@ -111,12 +111,12 @@ img {
   display: flex;
   flex-direction: column;
   width: 30%;
-  font-size: 1.3rem;
+  font-size: 23px;
 }
 
 .aboutTitle {
+  font-size: 23px;
   margin-bottom: 55px;
-  font-weight: 500;
 }
 
 .aboutParagraph {
@@ -132,8 +132,11 @@ img {
 }
 
 .navigationLink {
-  font-weight: 600;
+  font-family:  "Helvetica-Now-Bold";
+  font-weight: normal;
   text-decoration: none;
+  position: relative;
+  z-index: 3;
 }
 
 .greetingsLink:hover {
@@ -142,7 +145,6 @@ img {
 
 .navigationLink:hover {
   color: #ffffff;
-  text-decoration: underline;
 }
 
 .lineDecoratorContainer {
@@ -180,9 +182,10 @@ img {
 
 .link {
   display: flex;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 23px;
   margin-bottom: -35px;
+  font-family:  "Helvetica-Now-Bold";
+  font-weight: normal;
 }
 
 .linkDecoration {
@@ -200,6 +203,25 @@ img {
   background-image: linear-gradient(to right, #0000ff, #005aff);
   transition: 0.3s;
   margin-top: 0;
+}
+
+.linkHolder{
+  position: relative;
+  z-index: 1;
+  .circle{
+    top:-10px;
+    left: -30px;
+    position: absolute;
+    display: none;
+    width: 150px;
+    z-index: 0;
+    
+  }
+}
+
+.navigationLink:hover .circle{
+  display: flex;
+  
 }
 
 
@@ -290,7 +312,6 @@ img {
 
   .link {
     font-size: 20px;
-    font-weight: normal;
   }
 
   .linkDecoration {

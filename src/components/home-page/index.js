@@ -3,12 +3,9 @@ import { Link } from "gatsby"
 import homePageStyle from "./style.module.scss"
 import Slider from "../slider"
 
-
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
-
-
 
 const HomePage = ({ homePageData }) => {
   useEffect(() => {
@@ -63,27 +60,37 @@ const HomePage = ({ homePageData }) => {
             </div>
           ))}
           <div className={homePageStyle.greetingsCard}>
-          <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
-              </span>
+            <span className="decoratorContainer">
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
             <nav className={homePageStyle.navigationContainer}>
               <div className={homePageStyle.navigationPages}>
                 {homePageData.pages.navigation.map(item => (
-                  <Link
-                    className={homePageStyle.navigationLink}
-                    key={item.id}
-                    to={item.link}
-                  >
-                    {item.title}
-                  </Link>
+                  <div className={homePageStyle.linkHolder} key={item.id}>
+                    <Link
+                      className={homePageStyle.navigationLink}
+                      to={item.link}
+                    >
+                      {item.title}
+                      <span className={homePageStyle.circle}>
+                      <figure className={homePageStyle.imageHolder}>
+                        <img
+                          className={homePageStyle.imageSource}
+                          src={item.icon.file.url}
+                        />
+                      </figure>
+                    </span>
+                    </Link>
+                    
+                  </div>
                 ))}
               </div>
             </nav>
             <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
-              </span>
+              <span className="lineDecorator white"></span>
+              <span className="lineDecorator white mobile"></span>
+            </span>
           </div>
         </section>
 
@@ -93,7 +100,10 @@ const HomePage = ({ homePageData }) => {
           data-aos-once="true"
           data-aos-anchor-placement="top"
         >
-          <Slider sliderData={homePageData.slider} />
+          <Slider
+            sliderData={homePageData.slider}
+            homePageData={homePageData}
+          />
         </section>
         <section
           className={`${homePageStyle.aboutContainer}`}

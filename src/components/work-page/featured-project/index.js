@@ -5,7 +5,7 @@ import workPageStyle from "./style.module.scss"
 import "../../../reusable-styles/styles.scss"
 
 
-const featuredProject = ({ featuredProjectData }) => {
+const featuredProject = ({ featuredProjectData, rightArrow }) => {
   return (
     <div className={workPageStyle.fullWidth}>
       {featuredProjectData.map((item, index) => (
@@ -34,9 +34,13 @@ const featuredProject = ({ featuredProjectData }) => {
               </p>
               <div className={workPageStyle.buttonLinkContainer}>
                 <figure className={workPageStyle.buttonLink}>
-                  <span className={workPageStyle.buttonImage}>></span>
+                <img
+                              className={workPageStyle.imageSource}
+                              src={rightArrow.file.url}
+                            />
                 </figure>
               </div>
+             
             </div>
           </div>
           <div className={`${workPageStyle.featuredProjectImage}`}>
