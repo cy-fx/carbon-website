@@ -1,16 +1,18 @@
 import caseStudyPageStyle from "./style.module.scss"
 import React, { useEffect } from "react"
+import { Link } from "gatsby"
 
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-const CaseStudyPage = ({ caseStudyData }) => {
+const CaseStudyPage = ({ caseStudyData, older, newer }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
   })
+
   return (
     <div className={caseStudyPageStyle.backgroundContainer}>
       <div className={caseStudyPageStyle.componentContainer}>
@@ -218,15 +220,20 @@ const CaseStudyPage = ({ caseStudyData }) => {
               <span className="lineDecorator white"></span>
             </span>
             <div className={caseStudyPageStyle.textAndArrow}>
-              <p className={caseStudyPageStyle.paragraph}>Next Project</p>
-              <div className={caseStudyPageStyle.nextArrow}>
-                <figure className={caseStudyPageStyle.imageHolder}>
-                  <img
-                    className={caseStudyPageStyle.imageSource}
-                    src={caseStudyData.nextArrow.file.url}
-                  />
-                </figure>
-              </div>
+              <Link
+                className={caseStudyPageStyle.textAndArrowLink}
+                to={`/work${newer.slideDescription.link}`}
+              >
+                <p className={caseStudyPageStyle.paragraph}>Next Project</p>
+                <div className={caseStudyPageStyle.nextArrow}>
+                  <figure className={caseStudyPageStyle.imageHolder}>
+                    <img
+                      className={caseStudyPageStyle.imageSource}
+                      src={caseStudyData.nextArrow.file.url}
+                    />
+                  </figure>
+                </div>
+              </Link>
             </div>
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>

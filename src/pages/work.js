@@ -9,6 +9,7 @@ const Work = () => (
   <StaticQuery
     query={graphql`
       query {
+       
         contentfulV1WorkPage {
           name
           introduction {

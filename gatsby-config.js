@@ -45,6 +45,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,

@@ -300,6 +300,16 @@
   align-items: center;
 }
 
+.notActive {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: underline;
+  color: #0000ff;
+  .navSlash{
+    background-color:  #0000ff;
+  }
+}
+
 @media screen and (max-width: 756px) {
   .backgroundContainer {
     min-width: 320px;

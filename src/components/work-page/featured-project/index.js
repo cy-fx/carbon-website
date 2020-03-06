@@ -1,9 +1,8 @@
 import React from "react"
-import Img from "gatsby-image"
 import workPageStyle from "./style.module.scss"
+import { Link } from "gatsby"
 
 import "../../../reusable-styles/styles.scss"
-
 
 const featuredProject = ({ featuredProjectData, rightArrow }) => {
   return (
@@ -33,14 +32,18 @@ const featuredProject = ({ featuredProjectData, rightArrow }) => {
                 {item.slideDescription.paragraph}
               </p>
               <div className={workPageStyle.buttonLinkContainer}>
-                <figure className={workPageStyle.buttonLink}>
-                <img
-                              className={workPageStyle.imageSource}
-                              src={rightArrow.file.url}
-                            />
-                </figure>
+                <Link
+                  className={workPageStyle.greetingsLink}
+                  to={`/work${item.slideDescription.link}`}
+                >
+                  <figure className={workPageStyle.buttonLink}>
+                    <img
+                      className={workPageStyle.imageSource}
+                      src={rightArrow.file.url}
+                    />
+                  </figure>
+                </Link>
               </div>
-             
             </div>
           </div>
           <div className={`${workPageStyle.featuredProjectImage}`}>

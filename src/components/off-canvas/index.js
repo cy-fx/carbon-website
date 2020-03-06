@@ -1,11 +1,18 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 import offCanvasStyle from "./style.module.scss"
 import HeaderOffCanvas from "../header-off-canvas"
 import "../../reusable-styles/styles.scss"
 
-const OffCanvas = ({ navBarClicked }) => (
+const OffCanvas = ({ navBarClicked, pagePath }) => {
+  const [currentPath, setCurrentPath] = useState("");
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname)
+  })
+
+  return(
   <StaticQuery
     query={graphql`
       query {
@@ -124,7 +131,11 @@ const OffCanvas = ({ navBarClicked }) => (
                   <div className={offCanvasStyle.navigationList}>
                     <Link
                       key={item.id}
-                      className={offCanvasStyle.link}
+                      className={
+                        currentPath === `${item.link}` || currentPath === `${item.link}/`
+                          ? `${offCanvasStyle.link} ${offCanvasStyle.notActive}`
+                          : `${offCanvasStyle.link}`
+                      }
                       to={item.link}
                     >
                       {item.title === "Home" ? (
@@ -156,5 +167,5 @@ const OffCanvas = ({ navBarClicked }) => (
       )
     }}
   />
-)
+)}
 export default OffCanvas
