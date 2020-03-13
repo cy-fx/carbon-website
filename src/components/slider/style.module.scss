@@ -215,11 +215,14 @@
   width: 30px;
   margin-right: 4px;
   cursor: initial;
+  transition: .3s;
 }
 
 .circle:hover {
-  background-color: #000000;
-  cursor: initial;
+  background-color: #2a2844;
+  transition: .3s;
+
+  cursor: pointer;
 }
 
 .circleActive {
@@ -304,7 +307,7 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  margin-left: -30px;
+  margin-left: 0;
   transition: 0.5s;
   top: 0;
   z-index: 1;

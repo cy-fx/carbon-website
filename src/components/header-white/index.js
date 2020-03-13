@@ -1,8 +1,8 @@
 import React from "react"
 import headerWhiteStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
-import {setTime, setDate} from "../../utils/date-and-time"
-
+import { getDate } from "../../utils/date-and-time"
+import DisplayTime from "../display-time"
 
 const HeaderWhite = ({ navBarClicked }) => (
   <StaticQuery
@@ -49,11 +49,14 @@ const HeaderWhite = ({ navBarClicked }) => (
                     {headerWhiteData.location}
                   </div>
                   <div className={headerWhiteStyle.timeAndWeather}>
-                    <span className={headerWhiteStyle.date}>
-                     {setDate()}
-                    </span>
+                    <span className={headerWhiteStyle.date}>{getDate()}</span>
                     <span className={headerWhiteStyle.actualTime}>
-                    {`{${setTime()}}`} //
+                      <div>
+                        <span>{` {`}</span>
+                        <DisplayTime />
+                        <span>{`} `}</span>
+                        <span>//</span>
+                      </div>
                     </span>
                     <span className={headerWhiteStyle.weatherIcon}>
                       <img

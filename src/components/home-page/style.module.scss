@@ -201,19 +201,22 @@ img {
   position: relative;
   z-index: 1;
   .circle{
-    top:-10px;
+    top:0;
     left: -30px;
     position: absolute;
-    display: none;
+    visibility: hidden;
     width: 150px;
     z-index: 0;
+    transition: .2s;
+    opacity: .3;
     
   }
 }
 
 .navigationLink:hover .circle{
-  display: flex;
-  
+  visibility: visible;
+  transition: .2s;
+  opacity: 1;
 }
 
 .sliderSwipeContainer{display: none;}

@@ -6,13 +6,15 @@ import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-const CaseStudyPage = ({ caseStudyData, older, newer }) => {
+const CaseStudyPage = ({ caseStudyData, older, newer, pageContext }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
   })
 
+  
+  
   return (
     <div className={caseStudyPageStyle.backgroundContainer}>
       <div className={caseStudyPageStyle.componentContainer}>
@@ -220,9 +222,9 @@ const CaseStudyPage = ({ caseStudyData, older, newer }) => {
               <span className="lineDecorator white"></span>
             </span>
             <div className={caseStudyPageStyle.textAndArrow}>
-              <Link
+              <a
                 className={caseStudyPageStyle.textAndArrowLink}
-                to={`/work${newer.slideDescription.link}`}
+                href={`/work${newer.caseStudy.slug}`}
               >
                 <p className={caseStudyPageStyle.paragraph}>Next Project</p>
                 <div className={caseStudyPageStyle.nextArrow}>
@@ -233,13 +235,21 @@ const CaseStudyPage = ({ caseStudyData, older, newer }) => {
                     />
                   </figure>
                 </div>
-              </Link>
+              </a>
             </div>
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
           </div>
         </section>
+        <span className={caseStudyPageStyle.nextProjectImage}>
+          <img
+            className={caseStudyPageStyle.imageSource}
+            src={newer.caseStudy.jumbotron.heroImage.file.url}
+            alt="Carbón"
+          />
+        </span>
+
       </div>
     </div>
   )

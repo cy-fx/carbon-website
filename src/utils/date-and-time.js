@@ -1,40 +1,36 @@
-let date = new Date()
-let n = date.toLocaleTimeString()
-const getHours = Number(date.getHours())
-const minutes = date.getMinutes()
-const year = date.getFullYear()
-const month = date.getMonth()
-const day = date.getDate()
-let setHours = ""
-let amPm = "AM"
+export const getDate = () => {
+  let date = new Date()
+  const year = date.getFullYear()
+  const month = date.getMonth()
+  const day = date.getDate()
 
-export let activeClock = () => {
-  setTime()
-  setInterval(setTime, 1000)
+  return String(year + " " + months[month] + " " + day)
 }
 
-export const localTime = () => {
-  return n
-}
+export const getTime = (date) => {
+  const getHours = Number(date.getHours())
+  const minutes = date.getMinutes()
+  let amPm = "AM"
 
-export const setDate = () => {
-    return String(year + " " + months[month] + " " + day)
-  }
-
-export const setTime = () => {
-  setAmPm()
-  return String(('0' + String(setHours)).slice(-2) + " : " + ('0' + String(minutes)).slice(-2) + " " + amPm)
-}
-
-let setAmPm = () => {
-  if (getHours >= 12) {
-    if (getHours !== 12) {
-      setHours = getHours - 12
+  let getAmPm = () => {
+    if (getHours >= 12) {
+      if (getHours !== 12) {
+        getHours = getHours - 12
+      }
+      amPm = "PM"
+    } else {
+      amPm = "AM"
     }
-    amPm = "PM"
-  } else {
-    amPm = "AM"
   }
+
+  getAmPm()
+  return String(
+    ("0" + String(getHours)).slice(-2) +
+      " : " +
+      ("0" + String(minutes)).slice(-2) +
+      " " +
+      amPm
+  )
 }
 
 const months = [

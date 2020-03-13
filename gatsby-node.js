@@ -9,25 +9,30 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(`
     {
-      
-      contentfulV1WorkPage {
-        projects {
-          slideDescription {
-            link
+      contentfulV1Showcase {
+        projectDisplayOrder {
+          caseStudy {
+            slug
+            jumbotron {
+              heroImage {
+                file {
+                  url
+                }
+              }
+            }
           }
         }
       }
     }
   `).then(result => {
+    const caseStudyProjects = result.data.contentfulV1Showcase.projectDisplayOrder
     
-    const caseStudyProjects = result.data.contentfulV1WorkPage.projects
-
-    caseStudyProjects.map((caseStudy, index) => {
+    caseStudyProjects.map((item, index) => {
       createPage({
-        path: `/work${caseStudy.slideDescription.link}`,
+        path: `/work${item.caseStudy.slug}`,
         component: path.resolve(`./src/templates/case-study-pages.js`),
         context: {
-          slug: caseStudy.slideDescription.link,
+          slug: item.caseStudy.slug,
           previous:
             index === 0
               ? caseStudyProjects[caseStudyProjects.length - 1]
@@ -39,8 +44,5 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-
   })
 }
-
-

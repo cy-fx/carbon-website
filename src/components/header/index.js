@@ -1,9 +1,10 @@
 import React from "react"
 import headerStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
-import {setTime, setDate} from "../../utils/date-and-time"
+import { getDate } from "../../utils/date-and-time"
+import DisplayTime from "../display-time"
 
-const Header = ({navBarClicked}) => (
+const Header = ({ navBarClicked }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -18,7 +19,7 @@ const Header = ({navBarClicked}) => (
         }
       }
     `}
-    render={(data ) => {
+    render={data => {
       const headerData = data.contentfulV1Header
 
       return (
@@ -42,9 +43,14 @@ const Header = ({navBarClicked}) => (
                     {headerData.location}
                   </div>
                   <div className={headerStyle.timeAndWeather}>
-                    <span className={headerStyle.date}>{setDate()}</span>
+                    <span className={headerStyle.date}>{getDate()}</span>
                     <span className={headerStyle.actualTime}>
-                      {`{${setTime()}}`} //
+                      <div>
+                        <span>{` {`}</span>
+                        <DisplayTime />
+                        <span>{`} `}</span>
+                        <span>//</span>
+                      </div>
                     </span>
                     <span className={headerStyle.weatherIcon}>
                       <img
@@ -58,7 +64,10 @@ const Header = ({navBarClicked}) => (
                 </div>
               </section>
               <section className={headerStyle.navigationContainer}>
-                <div onClick={() => navBarClicked()} className={headerStyle.navigationButton}>
+                <div
+                  onClick={() => navBarClicked()}
+                  className={headerStyle.navigationButton}
+                >
                   <div className={headerStyle.hamburger}>
                     <span className={headerStyle.hamburgerLine}></span>
                     <span className={headerStyle.hamburgerLine}></span>

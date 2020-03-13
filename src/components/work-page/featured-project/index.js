@@ -1,40 +1,41 @@
 import React from "react"
 import workPageStyle from "./style.module.scss"
-import { Link } from "gatsby"
 
 import "../../../reusable-styles/styles.scss"
 
-const featuredProject = ({ featuredProjectData, rightArrow }) => {
+const featuredProject = ({ showCaseData, workPageData }) => {
+  const rightArrow = workPageData.rightArrow
   return (
     <div className={workPageStyle.fullWidth}>
-      {featuredProjectData.map((item, index) => (
+      {showCaseData.map((item, index) => (
         <div
           className={workPageStyle.featuredProjectContainer}
           data-aos="example-anim1"
           data-aos-once="true"
           data-aos-anchor-placement="top"
+          key={`${item.projectDisplay.title}${index}`}
         >
           <div className={workPageStyle.featuredProjectDescription}>
             <div className={workPageStyle.projectNumber}>
-              Project No. {`{00${index + 1}}`}
+              {`${workPageData.projectIndex} {00${index + 1}}`}
             </div>
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
             <div className={workPageStyle.projectInformation}>
               <h2 className={workPageStyle.projectTitle}>
-                {item.slideDescription.title}
+                {item.projectDisplay.title}
               </h2>
               <h2 className={workPageStyle.projectsubtitle}>
-                {item.slideDescription.subtitle}
+                {item.projectDisplay.subtitle}
               </h2>
               <p className={workPageStyle.projectParagraph}>
-                {item.slideDescription.paragraph}
+                {item.projectDisplay.paragraph}
               </p>
               <div className={workPageStyle.buttonLinkContainer}>
-                <Link
+                <a
                   className={workPageStyle.greetingsLink}
-                  to={`/work${item.slideDescription.link}`}
+                  href={`/work${item.projectDisplay.link}`}
                 >
                   <figure className={workPageStyle.buttonLink}>
                     <img
@@ -42,7 +43,7 @@ const featuredProject = ({ featuredProjectData, rightArrow }) => {
                       src={rightArrow.file.url}
                     />
                   </figure>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -50,7 +51,7 @@ const featuredProject = ({ featuredProjectData, rightArrow }) => {
             <figure className={workPageStyle.imageHolder}>
               <img
                 className={workPageStyle.imageSource}
-                src={item.featuredImage.file.url}
+                src={item.projectDisplay.featuredImage.file.url}
                 alt="Carbón"
               />
             </figure>

@@ -103,7 +103,6 @@ const HomePage = ({ homePageData }) => {
         >
           <Slider
             sliderData={homePageData.slider}
-            homePageData={homePageData}
           />
         </section>
 

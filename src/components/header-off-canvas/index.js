@@ -1,7 +1,8 @@
 import React from "react"
 import headerOffCanvasStyle from "./style.module.scss"
 import { StaticQuery, graphql } from "gatsby"
-import {setTime, setDate} from "../../utils/date-and-time"
+import { getDate } from "../../utils/date-and-time"
+import DisplayTime from "../display-time"
 
 
 const HeaderOffCanvas = ({ navBarClicked }) => (
@@ -61,11 +62,14 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
                     {headerOffCanvasData.location}
                   </div>
                   <div className={headerOffCanvasStyle.timeAndWeather}>
-                    <span className={headerOffCanvasStyle.date}>
-                      {setDate()}
-                    </span>
+                    <span className={headerOffCanvasStyle.date}>{getDate()}</span>
                     <span className={headerOffCanvasStyle.actualTime}>
-                      {`{${setTime()}}`} //
+                      <div>
+                        <span>{` {`}</span>
+                        <DisplayTime />
+                        <span>{`} `}</span>
+                        <span>//</span>
+                      </div>
                     </span>
                     <span className={headerOffCanvasStyle.weatherIcon}>
                       <img
@@ -74,9 +78,7 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
                         alt={headerOffCanvasData.logo.title}
                       />
                     </span>
-                    <span className={headerOffCanvasStyle.temperature}>
-                      69°
-                    </span>
+                    <span className={headerOffCanvasStyle.temperature}>69°</span>
                   </div>
                 </div>
               </section>

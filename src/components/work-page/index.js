@@ -6,12 +6,13 @@ import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-const WorkPage = ({ workPageData }) => {
+const WorkPage = ({ workPageData, showCaseData }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
   })
+
   return (
     <div className={workPageStyle.backgroundContainer}>
       <div className={workPageStyle.componentContainer}>
@@ -40,7 +41,7 @@ const WorkPage = ({ workPageData }) => {
             </span>
           </div>
         </section>
-        <FeaturedProject featuredProjectData={workPageData.projects} rightArrow={workPageData.rightArrow}/>
+        <FeaturedProject workPageData={workPageData} showCaseData={showCaseData}/>
       </div>
     </div>
   )

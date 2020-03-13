@@ -16,6 +16,7 @@ export default ({ data, pageContext }) => {
           caseStudyData={caseStudyData}
           older={pageContext.previous}
           newer={pageContext.next}
+          pageContext={pageContext}
         />
         <Footer />
       </div>

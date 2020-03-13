@@ -9,48 +9,36 @@ const Work = () => (
   <StaticQuery
     query={graphql`
       query {
-       
         contentfulV1WorkPage {
-          name
-          introduction {
-            paragraph
-            title
-          }
-          rightArrow{
-            file{
+          rightArrow {
+            file {
               url
             }
           }
-          projects {
-            featuredImage {
-              fluid(maxWidth: 1400, quality: 100) {
-                ...GatsbyContentfulFluid_withWebp_noBase64
-              }
-              file {
-                url
-              }
-              title
-            }
-            hoverImage {
-              fluid(maxWidth: 1400, quality: 100) {
-                ...GatsbyContentfulFluid_withWebp_noBase64
-              }
-              file {
-                url
-              }
-              title
-            }
-            slideDescription {
+          projectIndex
+          introduction {
+            title
+            paragraph
+          }
+        }
+        contentfulV1Showcase {
+          projectDisplayOrder {
+            projectDisplay {
+              link
               buttonText
-              icon {
+              featuredImage {
                 file {
                   url
                 }
-                title
+                description
               }
-              link
-              paragraph
+              hoverImage {
+                file {
+                  url
+                }
+              }
               subtitle
+              paragraph
               title
             }
           }
@@ -59,12 +47,14 @@ const Work = () => (
     `}
     render={data => {
       const workPageData = data.contentfulV1WorkPage
+      const showCaseData = data.contentfulV1Showcase.projectDisplayOrder
+
       return (
         <React.Fragment>
           <HeaderNavigation></HeaderNavigation>
           <SEO title="Work" />
           <div className="disable">
-            <WorkPage workPageData={workPageData} />
+            <WorkPage workPageData={workPageData}  showCaseData={showCaseData}/>
             <FooterWork/>
           </div>
         </React.Fragment>

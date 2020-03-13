@@ -102,6 +102,7 @@ class Slider extends React.Component {
                   : sliderStyle.dontShow
               }`}
             >
+             
               <div className={sliderStyle.featuredProjectDescription}>
                 <div className={sliderStyle.descriptionHolder}>
                   <div className={sliderStyle.projectNumber}>
@@ -150,21 +151,21 @@ class Slider extends React.Component {
                     }
                   >
                     <h2 className={sliderStyle.projectTitle}>
-                      {item.slideDescription.title}
+                      {item.title}
                     </h2>
                     <span className="decoratorContainer desktop">
                       <span className="lineDecorator white"></span>
                       <span className="lineDecorator white mobile"></span>
                     </span>
                     <p className={sliderStyle.projectParagraph}>
-                      {item.slideDescription.paragraph}
+                      {item.paragraph}
                     </p>
                     <Link
                       className={sliderStyle.greetingsLink}
-                      to={`/work${item.slideDescription.link}`}
+                      to={`/work${item.link}`}
                     >
                       <span className={sliderStyle.link}>
-                        {item.slideDescription.buttonText}
+                        {item.buttonText}
                       </span>
                       <span className={sliderStyle.linkDecoration}></span>
                     </Link>
@@ -173,7 +174,7 @@ class Slider extends React.Component {
                     <div className={sliderStyle.circleButtons}>
                       {sliderData.featuredProjects.map((item, index) => (
                         <span
-                          // onClick={() => this.goToThisSlide(index)}
+                          onClick={() => this.goToThisSlide(index)}
                           className={`${sliderStyle.circle} ${
                             this.state.activeItem === index
                               ? sliderStyle.circleActive
@@ -186,7 +187,7 @@ class Slider extends React.Component {
                 </div>
               </div>
               
-              <Link className={`${sliderStyle.featuredProjectImage}`} to={`/work${item.slideDescription.link}`}>
+              <Link className={`${sliderStyle.featuredProjectImage}`} to={`/work${item.link}`}>
                 <figure className={sliderStyle.hoverHolder}>
                   <img
                     className={sliderStyle.showHover}

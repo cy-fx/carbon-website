@@ -95,7 +95,7 @@ const FooterWork = () => (
                         <a
                           className={footerStyle.socialMediaLink}
                           href={item.link}
-                          key={item.id}
+                          key={item.link}
                         >
                           <figure className={footerStyle.imageHolder}>
                             <img

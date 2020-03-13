@@ -50,41 +50,21 @@ const IndexPage = () => (
               title
             }
             featuredProjects {
-              hoverImage {
-                description
-                fluid(maxWidth: 1400, quality: 100) {
-                  ...GatsbyContentfulFluid_withWebp_noBase64
-                }
-                file {
-                  url
-                }
-                title
-              }
-            }
-            title
-            featuredProjects {
               featuredImage {
-                description
-                fluid(maxWidth: 1400, quality: 100) {
-                  ...GatsbyContentfulFluid_withWebp_noBase64
-                }
                 file {
                   url
                 }
-                title
               }
-              slideDescription {
-                buttonText
-                link
-                name
-                icon {
-                  file {
-                    url
-                  }
+              hoverImage {
+                file {
+                  url
                 }
-                paragraph
-                title
               }
+              link
+              subtitle
+              paragraph
+              title
+              buttonText
             }
             leftArrow{
               file{
@@ -106,10 +86,11 @@ const IndexPage = () => (
     `}
     render={data => {
       const homePageData = data.contentfulV1HomePage
+
       return (
         <React.Fragment>
           <SEO title="Home" />
-          <HeaderNavigation></HeaderNavigation>
+          <HeaderNavigation/>
           <div className="disable">
             <HomePage homePageData={homePageData} />
             <Footer />
