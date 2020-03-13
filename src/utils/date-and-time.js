@@ -8,7 +8,7 @@ export const getDate = () => {
 }
 
 export const getTime = (date) => {
-  const getHours = Number(date.getHours())
+  let getHours = Number(date.getHours())
   const minutes = date.getMinutes()
   let amPm = "AM"
 

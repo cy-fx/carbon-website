@@ -160,15 +160,15 @@ class Slider extends React.Component {
                     <p className={sliderStyle.projectParagraph}>
                       {item.paragraph}
                     </p>
-                    <Link
+                    <a
                       className={sliderStyle.greetingsLink}
-                      to={`/work${item.link}`}
+                      href={`/work${item.link}`}
                     >
                       <span className={sliderStyle.link}>
                         {item.buttonText}
                       </span>
                       <span className={sliderStyle.linkDecoration}></span>
-                    </Link>
+                    </a>
                   </div>
                   <div className={sliderStyle.circleButtonsContainer}>
                     <div className={sliderStyle.circleButtons}>
