@@ -194,30 +194,41 @@ const AgencyPage = ({ agencyPageData }) => {
               {agencyPageData.services.listName}
             </h4>
             <div className={agencyPageStyle.servicesLists}>
-            {agencyPageData.services.items.map(list => (
-              <div className={agencyPageStyle.servicesColumn}>
-                {list.items.map(item => (
-                  <p className={agencyPageStyle.servicesList}>{item.text}</p>
-                ))}
-              </div>
-            ))}
+              {agencyPageData.services.items.map(list => (
+                <div className={agencyPageStyle.servicesColumn}>
+                  {list.items.map(item => (
+                    <p className={agencyPageStyle.servicesList}>{item.text}</p>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </section>
       </div>
       <section className={agencyPageStyle.viewWorkSection}>
         <div className={agencyPageStyle.viewWorkContainer}>
-          <Link className={agencyPageStyle.linkContainer} to="/work">
+          <a className={agencyPageStyle.linkContainer} href="/work">
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
-            <h2 className={agencyPageStyle.title}>
-              {agencyPageData.viewWork} ->
-            </h2>
+            <div className={agencyPageStyle.textAndArrow}>
+              <h2 className={agencyPageStyle.title}>
+                {agencyPageData.viewWork}
+              </h2>
+              <div className={agencyPageStyle.nextArrow}>
+                <figure className={agencyPageStyle.imageHolder}>
+                  <img
+                    className={agencyPageStyle.imageSource}
+                    src={agencyPageData.nextArrow.file.url}
+                  />
+                </figure>
+              </div>
+            </div>
+
             <span className="decoratorContainer">
               <span className="lineDecorator white"></span>
             </span>
-          </Link>
+          </a>
         </div>
         <figure className={agencyPageStyle.viewWorkImageHolder}>
           <img

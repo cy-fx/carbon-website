@@ -113,6 +113,11 @@ const Agency = () => (
           }
           viewWorkLink
           viewWork
+          nextArrow {
+            file {
+              url
+            }
+          }
         }
       }
     `}

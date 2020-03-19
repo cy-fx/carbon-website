@@ -9,10 +9,7 @@ const DisplayTime = () => {
     let date = new Date()
     if (date.getSeconds() === 0) {
       setDisplayTime(getTime(date))
-      console.log(getTime(date))
-    } else {
-      console.log(date.getSeconds())
-    }
+    } 
   }
 
   useEffect(() => {
