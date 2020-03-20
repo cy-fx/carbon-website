@@ -84,19 +84,38 @@ button {
   width: 120px;
   background-color: blue;
   padding-top: 50px;
-  transition: .5s;
-
+  position: relative;
 }
 
 .hamburger {
-  padding: 25px;
+  width: 70px;
+  margin: 0;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .hamburgerLine {
   display: flex;
   border-bottom: 2px solid white;
   margin: 6px 0;
+  transition: 0.4s;
 }
+
+.navigationButton:hover {
+  cursor: pointer;
+  .hamburgerLine:nth-child(1) {
+    margin-bottom: 12px;
+    transition: 0.3s ease-in-out;
+  }
+  .hamburgerLine:nth-child(3) {
+    margin-top: 12px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+
 
 .location {
   color: white;
@@ -114,11 +133,7 @@ button {
   margin: 0 5px;
 }
 
-.navigationButton:hover{
-  cursor: pointer;
-  background-color: #005aff;
-  transition: .5s;
-}
+
 
 @media screen and (max-width: 756px) {
 
@@ -147,21 +162,36 @@ button {
 
   .navigationButton {
     width: 56px;
-    height: 60px;
-    background-color: blue;
+    height: 57px;
     padding-top: 0;
   }
-
   
   .hamburger {
-    padding: 0 10px;
-    margin-top: 40px;
+    width: 36px;
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
   
   .hamburgerLine {
     display: flex;
     border-bottom: 1px solid white;
     margin: 3px 0;
+    transition: 0.4s;
+  }
+  
+  .navigationButton:hover {
+    cursor: pointer;
+    .hamburgerLine:nth-child(1) {
+      margin-bottom: 12px;
+      transition: 0.3s ease-in-out;
+    }
+    .hamburgerLine:nth-child(3) {
+      margin-top: 12px;
+      transition: 0.3s ease-in-out;
+    }
   }
   
 }

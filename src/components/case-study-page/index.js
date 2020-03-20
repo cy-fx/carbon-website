@@ -1,20 +1,50 @@
 import caseStudyPageStyle from "./style.module.scss"
-import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import React, { useState, useEffect } from "react"
 
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-const CaseStudyPage = ({ caseStudyData, older, newer, pageContext }) => {
+const CaseStudyPage = ({ caseStudyData, newer }) => {
+  const [playVideo, setPlayVideo] = useState(false)
+
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
+    console.log(playVideo)
   })
 
-  
-  
+  const handleClick = e => {
+    e.preventDefault()
+    document.getElementById("close").style.display = "flex"
+    document.getElementById("video").style.display = "flex"
+    document.getElementById("video").src =
+      "https://player.vimeo.com/video/396790829?autoplay=1&loop=1&title=0&byline=0&portrait=0"
+    document.getElementById(
+      "play"
+    ).className = `${caseStudyPageStyle.fullWidthThumbnail} ${caseStudyPageStyle.fadeOut}`
+    setPlayVideo(true)
+    
+    document.getElementById("videoBox").style.zIndex = "5";
+
+  }
+
+  const handleCloseButton = e => {
+    e.preventDefault()
+    document.getElementById("close").style.display = "none"
+    document.getElementById("video").style.display = "none"
+    document.getElementById("video").src = ""
+    document.getElementById(
+      "play"
+    ).className = `${caseStudyPageStyle.fullWidthThumbnail} ${caseStudyPageStyle.fadeIn}`
+    document.getElementById("videoBox").style.zIndex = "0";
+    document.getElementById("play").style.zIndex = "5";
+
+    setPlayVideo(true)
+    console.log(document.getElementById("image"))
+  }
+
   return (
     <div className={caseStudyPageStyle.backgroundContainer}>
       <div className={caseStudyPageStyle.componentContainer}>
@@ -102,18 +132,61 @@ const CaseStudyPage = ({ caseStudyData, older, newer, pageContext }) => {
           </div>
         </section>
         <section className={caseStudyPageStyle.showCase}>
-          <figure
-            className={caseStudyPageStyle.fullWidthImage}
-            data-aos="example-anim1"
-            data-aos-once="true"
-            data-aos-anchor-placement="top"
-          >
-            <img
-              className={caseStudyPageStyle.imageSource}
-              src={caseStudyData.fullWidthImage1.file.url}
-              alt="Carbón"
-            />
-          </figure>
+          {caseStudyData.fullWidthImage1.description === "video" ? (
+            <React.Fragment>
+              <div id="play" className={caseStudyPageStyle.fullWidthThumbnail}>
+                <div
+                  onClick={handleClick}
+                  className={`${caseStudyPageStyle.playBox} ${caseStudyPageStyle.shadowPlay}`}
+                >
+                  <div className={caseStudyPageStyle.playIcon}>▶</div>
+                </div>
+                <img
+                  id="image"
+                  className={caseStudyPageStyle.imageSource}
+                  src={caseStudyData.fullWidthImage1.file.url}
+                  alt="Carbón"
+                />
+              </div>
+              <figure
+              id="videoBox"
+                className={caseStudyPageStyle.fullWidthImage}
+                data-aos="example-anim1"
+                data-aos-once="true"
+                data-aos-anchor-placement="top"
+              >
+                <div
+                  onClick={handleCloseButton}
+                  id="close"
+                  className={`${caseStudyPageStyle.closeBox} ${caseStudyPageStyle.shadow}`}
+                >
+                  <span className={caseStudyPageStyle.closeIcon}>×</span>
+                </div>
+
+                <iframe
+                  id="video"
+                  className={`${caseStudyPageStyle.video}`}
+                  src=""
+                  frameBorder="0"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                ></iframe>
+              </figure>
+            </React.Fragment>
+          ) : (
+            <figure
+              className={caseStudyPageStyle.fullWidthImage}
+              data-aos="example-anim1"
+              data-aos-once="true"
+              data-aos-anchor-placement="top"
+            >
+              <img
+                className={caseStudyPageStyle.imageSource}
+                src={caseStudyData.fullWidthImage1.file.url}
+                alt="Carbón"
+              />
+            </figure>
+          )}
         </section>
         <div
           className={caseStudyPageStyle.fullWidth}
@@ -249,7 +322,6 @@ const CaseStudyPage = ({ caseStudyData, older, newer, pageContext }) => {
             alt="Carbón"
           />
         </span>
-
       </div>
     </div>
   )

@@ -7,7 +7,7 @@ import HeaderNavigation from "../components/header-navigation"
 
 export default ({ data, pageContext }) => {
   const caseStudyData = data.contentfulV1CaseStudyPage
-  return (
+  return ( 
     <React.Fragment>
       <SEO title="Case Study" />
       <HeaderNavigation></HeaderNavigation>

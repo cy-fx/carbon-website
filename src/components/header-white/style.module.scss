@@ -83,22 +83,41 @@ button {
   display: flex;
 }
 
+
 .navigationButton {
   width: 120px;
   background-color: blue;
   padding-top: 50px;
+  position: relative;
 }
 
 .hamburger {
-  padding: 25px;
+  width: 70px;
+  margin: 0;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .hamburgerLine {
   display: flex;
   border-bottom: 2px solid white;
   margin: 6px 0;
+  transition: 0.4s;
 }
 
+.navigationButton:hover {
+  cursor: pointer;
+  .hamburgerLine:nth-child(1) {
+    margin-bottom: 12px;
+    transition: 0.3s ease-in-out;
+  }
+  .hamburgerLine:nth-child(3) {
+    margin-top: 12px;
+    transition: 0.3s ease-in-out;
+  }
+}
 .location {
   color: black;
 }
@@ -115,13 +134,7 @@ button {
   margin: 0 5px;
 }
 
-.navigationButton:hover .offCanvas {
-  display: initial;
-}
 
-.offCanvas {
-  display: none;
-}
 
 @media screen and (max-width: 756px) {
 
