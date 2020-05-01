@@ -1,10 +1,11 @@
 import React from "react"
-import sliderSwipeStyle from "./style.module.scss"
-import { Link } from "gatsby"
-
+import sliderSwipeWhiteStyle from "./style.module.scss"
+import Img from "gatsby-image"
 import "../../reusable-styles/styles.scss"
+import "../../reusable-styles/slider.scss"
 
-class SliderSwipe extends React.Component {
+
+class SliderSwipeWhite extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,9 +20,10 @@ class SliderSwipe extends React.Component {
   }
 
   componentDidMount() {
-    let animacion = document.getElementById("animationEventSliderSwipe")
+    let animacion = document.getElementById("animationEventSliderSwipeWhite")
 
-    const totalSlides = this.props.sliderSwipeData.featuredProjects.length - 1
+    const totalSlides =
+      this.props.sliderSwipeWhiteData.featuredProjects.length - 1
     this.setState({ lastSlide: totalSlides })
 
     animacion.addEventListener("animationstart", this.starts, true)
@@ -33,13 +35,16 @@ class SliderSwipe extends React.Component {
   }
 
   scrollin = element => {
-    
     if (this.state.scrollWidth !== element.target.scrollWidth) {
       this.setState({ scrollWidth: element.target.scrollWidth })
     }
 
     if (element.target.scrollLeft) {
-      this.setState({ activeItem: Math.floor(element.target.scrollLeft /element.target.clientWidth) })
+      this.setState({
+        activeItem: Math.floor(
+          element.target.scrollLeft / element.target.clientWidth
+        ),
+      })
     }
   }
 
@@ -88,35 +93,44 @@ class SliderSwipe extends React.Component {
   }
 
   render() {
-    const sliderSwipeData = this.props.sliderSwipeData
+    const sliderSwipeWhiteData = this.props.sliderSwipeWhiteData
+    const totalSlides =
+      this.props.sliderSwipeWhiteData.featuredProjects.length 
     return (
-      <div id="animationEventSliderSwipe" className={sliderSwipeStyle.play}>
-        <div className={sliderSwipeStyle.sliderSwipeAbsoluteImages}>
-          <figure className={sliderSwipeStyle.halftoneContainer}>
+      <div id="animationEventSliderSwipeWhite" className={sliderSwipeWhiteStyle.play}>
+        <div className={sliderSwipeWhiteStyle.swipeHeader}>
+          <p>Featured Project</p>
+          <div>{`No. { 00${this.state.activeItem +
+            1} / 00${totalSlides} }`}</div>
+        </div>
+
+        <div className={sliderSwipeWhiteStyle.sliderSwipeWhiteAbsoluteImages}>
+          <figure className={sliderSwipeWhiteStyle.halftoneContainer}>
             <img
-              className={sliderSwipeStyle.imageSource}
-              src={sliderSwipeData.halftone.file.url}
+              className={sliderSwipeWhiteStyle.imageSource}
+              src={sliderSwipeWhiteData.halftone.file.url}
+              alt="Carbon"
             />
           </figure>
-          <figure className={sliderSwipeStyle.logoIconContainer}>
+          <figure className={sliderSwipeWhiteStyle.logoIconContainer}>
             <img
-              className={sliderSwipeStyle.imageSource}
-              src={sliderSwipeData.logoIcon.file.url}
+              className={sliderSwipeWhiteStyle.imageSource}
+              src={sliderSwipeWhiteData.logoIcon.file.url}
               alt="Carbon"
             />
           </figure>
         </div>
         <div
           id="circleButtons"
-          className={sliderSwipeStyle.circleButtonsContainer}
+          className={sliderSwipeWhiteStyle.circleButtonsContainer}
         >
-          <div className={sliderSwipeStyle.circleButtons}>
-            {sliderSwipeData.featuredProjects.map((item, index) => (
+          <div className={sliderSwipeWhiteStyle.circleButtons}>
+            {sliderSwipeWhiteData.featuredProjects.map((item, index) => (
               <div
-                key={item.id}
-                className={`${sliderSwipeStyle.circle} ${
+                key={index}
+                className={`${sliderSwipeWhiteStyle.circle} ${
                   this.state.activeItem === index
-                    ? sliderSwipeStyle.circleActive
+                    ? sliderSwipeWhiteStyle.circleActive
                     : ""
                 }`}
               ></div>
@@ -126,30 +140,30 @@ class SliderSwipe extends React.Component {
 
         <div
           id="scrollin"
-          className={`${sliderSwipeStyle.fullWidth} scroller disable-scrollbar`}
+          className={`${sliderSwipeWhiteStyle.fullWidth} scroller disable-scrollbar`}
         >
-          {sliderSwipeData.featuredProjects.map((item, index) => (
+          {sliderSwipeWhiteData.featuredProjects.map((item, index) => (
             <div
               id={`#slider-${index}`}
-              key={item.id}
-              className={`snap ${sliderSwipeStyle.featuredProjectContainer} `}
+              key={index}
+              className={`snap ${sliderSwipeWhiteStyle.featuredProjectContainer} `}
             >
-              <div className={sliderSwipeStyle.featuredProjectDescription}>
-                <div className={sliderSwipeStyle.descriptionHolder}>
-                  <div className={sliderSwipeStyle.projectNumber}>
-                    <div className={sliderSwipeStyle.featuredProjectTitle}>
+              <div className={sliderSwipeWhiteStyle.featuredProjectDescription}>
+                <div className={sliderSwipeWhiteStyle.descriptionHolder}>
+                  <div className={sliderSwipeWhiteStyle.projectNumber}>
+                    <div className={sliderSwipeWhiteStyle.featuredProjectTitle}>
                       Featured Project No. {`{00${index + 1}}`}
                     </div>
-                    <div className={sliderSwipeStyle.arrows}>
+                    <div className={sliderSwipeWhiteStyle.arrows}>
                       <div
                         onClick={() => this.previousSlide(index)}
-                        className={sliderSwipeStyle.arrow}
+                        className={sliderSwipeWhiteStyle.arrow}
                       >
                         ←
                       </div>
                       <div
                         onClick={() => this.nextSlide()}
-                        className={sliderSwipeStyle.arrow}
+                        className={sliderSwipeWhiteStyle.arrow}
                       >
                         →
                       </div>
@@ -163,44 +177,46 @@ class SliderSwipe extends React.Component {
                   <div
                     className={
                       this.state.animationEnd
-                        ? sliderSwipeStyle.projectInformation
-                        : `${sliderSwipeStyle.projectInformation} ${sliderSwipeStyle.view}`
+                        ? sliderSwipeWhiteStyle.projectInformation
+                        : `${sliderSwipeWhiteStyle.projectInformation} ${sliderSwipeWhiteStyle.view}`
                     }
                   >
-                    <h2 className={sliderSwipeStyle.projectTitle}>
+                    <h2 className={sliderSwipeWhiteStyle.projectTitle}>
                       {item.title}
                     </h2>
                     <span className="decoratorContainer desktop">
                       <span className="lineDecorator white"></span>
                       <span className="lineDecorator white mobile"></span>
                     </span>
-                    <p className={sliderSwipeStyle.projectParagraph}>
+                    <p className={sliderSwipeWhiteStyle.projectParagraph}>
                       {item.paragraph}
                     </p>
                     <a
-                      className={sliderSwipeStyle.greetingsLink}
+                      className={sliderSwipeWhiteStyle.greetingsLink}
                       href={`/work${item.link}`}
                     >
-                      <span className={sliderSwipeStyle.link}>
+                      <span className={sliderSwipeWhiteStyle.link}>
                         {item.buttonText}
                       </span>
-                      <span className={sliderSwipeStyle.linkDecoration}></span>
+                      <span
+                        className={sliderSwipeWhiteStyle.linkDecoration}
+                      ></span>
                     </a>
                   </div>
                 </div>
               </div>
               <a
-                className={`${sliderSwipeStyle.featuredProjectImage}`}
+                className={`${sliderSwipeWhiteStyle.featuredProjectImage}`}
                 href={`/work${item.link}`}
               >
-                <figure className={sliderSwipeStyle.imageHolder}>
-                  <img
+                <figure className={sliderSwipeWhiteStyle.imageHolder}>
+                  <Img
                     className={
                       !this.state.animationEnd
-                        ? sliderSwipeStyle.imageSource
-                        : `${sliderSwipeStyle.imageSource} ${sliderSwipeStyle.grow}`
+                        ? sliderSwipeWhiteStyle.imageSource
+                        : `${sliderSwipeWhiteStyle.imageSource} ${sliderSwipeWhiteStyle.grow}`
                     }
-                    src={item.featuredImage.file.url}
+                    fluid={item.featuredImage.fluid}
                     alt="Carbón"
                   />
                 </figure>
@@ -213,4 +229,4 @@ class SliderSwipe extends React.Component {
   }
 }
 
-export default SliderSwipe
+export default SliderSwipeWhite

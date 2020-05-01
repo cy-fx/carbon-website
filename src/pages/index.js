@@ -1,10 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
-import HomePage from "../components/home-page"
-import Footer from "../components/footer"
-import Header from "../components/header"
+import FooterBlack from "../components/footer-black"
 import HeaderNavigation from "../components/header-navigation"
+import HomePageWhite from "../components/home-page"
 
 
 
@@ -54,10 +53,16 @@ const IndexPage = () => (
                 file {
                   url
                 }
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
               }
               hoverImage {
                 file {
                   url
+                }
+                fluid(maxWidth: 800, quality: 100) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               link
@@ -85,15 +90,15 @@ const IndexPage = () => (
       }
     `}
     render={data => {
-      const homePageData = data.contentfulV1HomePage
+      const homePageWhiteData = data.contentfulV1HomePage
 
       return (
         <React.Fragment>
           <SEO title="Home" />
-          <HeaderNavigation/>
+          <HeaderNavigation whiteNavBar={true}/>
           <div className="disable">
-            <HomePage homePageData={homePageData} />
-            <Footer />
+            <HomePageWhite homePageWhiteData={homePageWhiteData} />
+            <FooterBlack />
           </div>
         </React.Fragment>
       )

@@ -33,6 +33,7 @@
   max-width: 1180px;
   background-color: #ffffff;
   margin-bottom: 60px;
+  width: 90%;
 }
 
 .whoWeAreSection {
@@ -186,6 +187,18 @@
   top: 0;
   left: -200px;
   visibility: visible;
+  animation-name: lsd;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lsd {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .lsdContainerAbsolute .imageSource {
@@ -244,10 +257,147 @@
 .servicesLists {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .servicesColumn {
   width: 40%;
+}
+
+@media screen and (max-width: 1120px) {
+  .word {
+    font-size: 110px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .componentContainer {
+    width: 90%;
+  }
+
+  .lsdContainerAbsolute {
+    top: -180px;
+    left: -340px;
+  }
+
+  .whoWeAreContainer {
+    .title {
+      font-size: 23px;
+      margin-bottom: 40px;
+    }
+    .subtitle {
+      font-size: 36px;
+      width: 100%;
+    }
+    .paragraph1,
+    .paragraph2 {
+      font-size: 18px;
+    }
+  }
+  .paragraph2 {
+    flex-wrap: wrap;
+  }
+
+  .winWinHolder {
+    .circleAbsolute {
+      top: -8px;
+    }
+  }
+
+  .winWinContainerAbsolute {
+    right: -150px;
+    .imageSource {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .whatWeBelieveInCard {
+    width: 50%;
+  }
+
+  .enLoQueCreemosCard {
+    width: 50%;
+  }
+
+  .word {
+    font-size: 55px;
+  }
+
+  .whatWeDoCard {
+    width: 50%;
+    .title {
+    }
+    .subtitle {
+      font-size: 34px;
+      width: 100%;
+    }
+  }
+
+  .servicesList {
+    font-size: 18px;
+  }
+
+  .carbonIconBlackContainerAbsolute {
+    right: -300px;
+    top: -80px;
+    .imageSource {
+      width: 615px;
+    }
+  }
+  .servicesSection {
+    .servicesLists {
+      justify-content: space-between;
+    }
+  }
+
+  .viewWorkSection {
+    background-color: #0000ff;
+    display: flex;
+    height: 400px;
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .viewWorkImageHolder {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  .viewWorkImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .viewWorkContainer {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    z-index: 1;
+  }
+
+  .viewWorkSection .title {
+    color: white;
+    margin: 40px 0;
+    font-size: 26px;
+  }
+
+  .linkContainer {
+    color: white;
+    margin-top: 240px;
+  }
+
+  .textAndArrow {
+    display: flex;
+    align-items: center;
+  }
+
+  .nextArrow {
+    width: 22px;
+    margin: 0 20px;
+  }
 }
 
 @media screen and (max-width: 756px) {
@@ -396,53 +546,6 @@
   }
 
   .viewWorkSection {
-    background-color: #0000ff;
-    display: flex;
-    height: 400px;
     width: 100%;
-    position: relative;
-  }
-
-  .viewWorkImageHolder {
-    position: absolute;
-    top: 0;
-    z-index: 0;
-  }
-  .viewWorkImage {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-  }
-
-  .viewWorkContainer {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    z-index: 1;
-  }
-
-  .viewWorkSection .title {
-    color: white;
-    margin: 40px 0;
-    font-size: 26px;
-  }
-
-  .linkContainer {
-    color: white;
-    margin-top: 240px;
-  }
-
-  .paragraph2 {
-    flex-wrap: wrap;
-  }
-
-  .textAndArrow {
-    display: flex;
-    align-items: center;
-  }
-
-  .nextArrow {
-    width: 22px;
-    margin: 0 20px;
   }
 }

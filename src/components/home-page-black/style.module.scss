@@ -22,10 +22,9 @@ img {
 }
 
 .backgroundContainer {
-  background-color: #FFFFFF;
+  background-color: #000000;
   width: 100%;
   overflow: hidden;
-  color: #000000;
 }
 
 .componentContainer {
@@ -34,10 +33,10 @@ img {
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1180px;
-  background-color: #FFFFFF;
+  background-color: #000000;
   padding-bottom: 100px;
   width: 90%;
-  color: #000000;
+
 }
 
 .greetingsContent {
@@ -136,11 +135,11 @@ img {
 }
 
 .greetingsLink:hover {
-  color: #000000;
+  color: #ffffff;
 }
 
 .navigationLink:hover {
-  color: #000000;
+  color: #ffffff;
 }
 
 .lineDecoratorContainer {
@@ -167,7 +166,7 @@ img {
 
 .greetingsLink,
 .navigationLink {
-  color: #000000;
+  color: #fff;
   display: inline-block;
 }
 
@@ -333,11 +332,13 @@ img {
 
   .sliderSwipeContainer {
     position: relative;
+    min-height: 670px;
     width: 100%;
     min-width: 100%;
     margin-bottom: 0;
     margin-top: 0;
     overflow: visible;
+    min-height: 500px;
     display: flex;
   }
 
@@ -382,6 +383,7 @@ img {
   }
 
   .linkDecoration {
+    height: 8px;
     transition: initial;
     margin-top: 25px;
   }

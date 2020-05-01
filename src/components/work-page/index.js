@@ -26,7 +26,7 @@ const WorkPage = ({ workPageData, showCaseData }) => {
             <p className={workPageStyle.title}>
               {workPageData.introduction.title}
             </p>
-            <span className="decoratorContainer">
+            <span className={`decoratorContainer ${workPageStyle.tablet}`}>
               <span className="lineDecorator white"></span>
               <span className="lineDecorator white mobile"></span>
             </span>

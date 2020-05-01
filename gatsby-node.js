@@ -19,6 +19,7 @@ exports.createPages = ({ graphql, actions }) => {
                   url
                 }
               }
+              clientName
             }
           }
         }

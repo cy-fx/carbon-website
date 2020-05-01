@@ -17,6 +17,7 @@
 .marginContainer {
   max-width: 1180px;
   margin: 0 auto;
+  width: 90%;
 }
 
 .legalAndTextContainer {
@@ -84,6 +85,9 @@
 
 .socialMediaLink {
   margin-right: 12px;
+  .imageHolder{
+    margin-bottom: 0;
+  }
 }
 
 .countries {
@@ -140,8 +144,52 @@
   display: none;
 }
 
-.arrow {
-  color: #0000ff;
+.socialMediaLink {
+  line-height: 1;
+  .imageHolder {
+    position: relative;
+  }
+  .imageSource {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .imageSourceHover {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    left: 0;
+  }
+}
+
+.socialMediaLink:hover {
+  .imageSource {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .imageSourceHover {
+    opacity: 1;
+    transition: 0.5s;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  .marginContainer{
+    width: 90%;
+   }
+  .footerContainer{
+    font-size: 12px;
+  }
+  .contactMessageText {
+
+   font-size: 36px;
+  }
+  .contactMessageEmail{
+    font-size: 36px;
+  }
+  .logo .imageSource {
+    width: 170px;
+  }
 }
 
 @media screen and (max-width: 756px) {
@@ -225,11 +273,21 @@
   }
 
   .hablamosEspanol {
-    display: block;
+    display: flex;
     margin-bottom: 20px;
     font-family: "Helvetica-Now-Bold";
 
   }
+
+  .arrow {
+    color: #0000ff;
+    margin: 0 5px;
+    display: flex;
+    .imageSource{
+      width: 10px;
+    }
+  }
+  
 
   .legal {
     margin-bottom: 20px;

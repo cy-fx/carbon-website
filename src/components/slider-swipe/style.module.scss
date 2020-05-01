@@ -6,7 +6,6 @@
 
 .play {
   position: absolute;
-  min-width: 1180px;
 }
 
 .fullWidth {
@@ -75,7 +74,8 @@
 
 .projectTitle {
   font-size: 55px;
-  font-weight: bolder;
+  font-family: "Helvetica-Now-Regular";
+  font-weight: normal;
   line-height: 1;
   margin-top: 125px;
   margin-bottom: 20px;
@@ -258,6 +258,7 @@
 }
 
 .sliderSwipeAbsoluteImages {
+  display: none;
   position: absolute;
   top: 0;
 }
@@ -318,7 +319,7 @@
 @media screen and (max-width: 756px) {
   .play {
     position: absolute;
-    min-width: 100%;
+    width: 100%;
   }
   .backgroundContainer {
     min-width: 320px;
@@ -357,7 +358,6 @@
     font-size: 2rem;
     width: 65%;
     margin-bottom: 36px;
-font-family: "Helvetica-Now-Regular";
     margin-top: 0;
   }
 
@@ -461,4 +461,6 @@ font-family: "Helvetica-Now-Regular";
   #scrollin{
     scroll-behavior: smooth;
   }
+
+  
 }

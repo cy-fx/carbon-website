@@ -11,12 +11,24 @@ const Contact = () => (
     query={graphql`
       query {
         contentfulV1ContactPage {
+          text1
+          text2
+          arrow {
+            file {
+              url
+            }
+          }
           text
           email
           socialMediaNavigation {
             navigation {
               link
               title
+              iconHover {
+                file {
+                  url
+                }
+              }
               icon {
                 file {
                   url
@@ -43,7 +55,7 @@ const Contact = () => (
         <React.Fragment>
           <SEO title="Contact" />
           <HeaderNavigation></HeaderNavigation>
-          <div className="disable">
+          <div className="disable relative">
             <ContactPage contactPageData={contactPageData} />
             <FooterContact />
           </div>

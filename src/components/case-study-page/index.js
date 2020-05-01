@@ -1,6 +1,5 @@
 import caseStudyPageStyle from "./style.module.scss"
 import React, { useState, useEffect } from "react"
-
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -8,11 +7,12 @@ import "aos/dist/aos.css"
 const CaseStudyPage = ({ caseStudyData, newer }) => {
   const [playVideo, setPlayVideo] = useState(false)
 
+
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
-    console.log(playVideo)
+    
   })
 
   const handleClick = e => {
@@ -25,9 +25,8 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
       "play"
     ).className = `${caseStudyPageStyle.fullWidthThumbnail} ${caseStudyPageStyle.fadeOut}`
     setPlayVideo(true)
-    
-    document.getElementById("videoBox").style.zIndex = "5";
 
+    document.getElementById("videoBox").style.zIndex = "5"
   }
 
   const handleCloseButton = e => {
@@ -38,11 +37,10 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
     document.getElementById(
       "play"
     ).className = `${caseStudyPageStyle.fullWidthThumbnail} ${caseStudyPageStyle.fadeIn}`
-    document.getElementById("videoBox").style.zIndex = "0";
-    document.getElementById("play").style.zIndex = "5";
+    document.getElementById("videoBox").style.zIndex = "0"
+    document.getElementById("play").style.zIndex = "5"
 
     setPlayVideo(true)
-    console.log(document.getElementById("image"))
   }
 
   return (
@@ -63,8 +61,10 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
           data-aos-anchor-placement="top"
         >
           <div className="displayRow desktop">
-            <span className="decoratorContainer col-33">
-              <span className="lineDecorator white desktop"></span>
+            <span className={`decoratorContainer col-33 `}>
+              <span
+                className={`lineDecorator white desktop ${caseStudyPageStyle.tablet}`}
+              ></span>
             </span>
 
             <span className="decoratorContainer col-67">
@@ -74,7 +74,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
               <span className="lineDecorator white mobile"></span>
             </span>
           </div>
-          <span className="decoratorContainer">
+          <span className="decoratorContainer mobile">
             <span className="lineDecorator white"></span>
             <span className="lineDecorator white mobile"></span>
           </span>
@@ -137,9 +137,13 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
               <div id="play" className={caseStudyPageStyle.fullWidthThumbnail}>
                 <div
                   onClick={handleClick}
-                  className={`${caseStudyPageStyle.playBox} ${caseStudyPageStyle.shadowPlay}`}
+                  className={`${caseStudyPageStyle.playBox}`}
                 >
-                  <div className={caseStudyPageStyle.playIcon}>▶</div>
+                  <img
+                    className={`${caseStudyPageStyle.playIcon}`}
+                    src={caseStudyData.playButton.file.url}
+                    alt="Carbón"
+                  />
                 </div>
                 <img
                   id="image"
@@ -149,7 +153,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
                 />
               </div>
               <figure
-              id="videoBox"
+                id="videoBox"
                 className={caseStudyPageStyle.fullWidthImage}
                 data-aos="example-anim1"
                 data-aos-once="true"
@@ -288,7 +292,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
       <div className={caseStudyPageStyle.nextProjectBackground}>
         <section className={caseStudyPageStyle.nextProjectContainer}>
           <div className={caseStudyPageStyle.winWinContainer}>
-            <p className={caseStudyPageStyle.title}>Client Name</p>
+            <p className={caseStudyPageStyle.title}>{newer.caseStudy.jumbotron.clientName}</p>
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
             <span className="decoratorContainer">

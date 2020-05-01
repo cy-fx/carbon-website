@@ -1,12 +1,10 @@
-body {
-  background-color: #000000;
-}
+
 
 .absoluteImage {
   position: absolute;
   top: -150px;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   width: 100%;
 }
 
@@ -15,6 +13,7 @@ body {
   height: 970px;
   object-fit: cover;
   opacity: 1;
+  z-index: 2;
 }
 
 .nextProjectImage {
@@ -36,6 +35,8 @@ body {
 .backgroundContainer {
   margin-bottom: -150px;
   position: relative;
+  z-index: 0;
+  background-color: #000;
 }
 
 .componentContainer {
@@ -46,6 +47,7 @@ body {
   max-width: 1180px;
   color: #ffffff;
   min-height: 600px;
+  width: 90%;
 }
 
 .socialMediaNavigation {
@@ -72,6 +74,8 @@ body {
   flex-direction: column;
   width: 100%;
   margin: 200px 0 126px;
+  position: relative;
+  z-index: 2;
 }
 
 .projectOverview {
@@ -150,14 +154,10 @@ body {
   margin-bottom: 30px;
 }
 
-
-
 .fullWidthThumbnail {
   width: 100%;
   height: 600px;
 }
-
-
 
 .halfWidthImage {
   width: 48.8%;
@@ -330,7 +330,7 @@ body {
 .textAndArrow:hover {
   text-decoration: underline;
 }
-.showCase{
+.showCase {
   height: 600px;
   width: 100%;
   position: relative;
@@ -412,20 +412,143 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #0000ff;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 0;
-  cursor: pointer;
 }
 
 .playIcon {
-  margin-left: 6px;
-  font-size: 40px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.playIcon:hover {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  transition: 0.2s ease-out;
+}
+
+@media screen and (max-width: 980px) {
+  .absoluteImage {
+    .imageSource {
+      height: 650px;
+    }
+  }
+
+  .greeting {
+    margin-top: 80px;
+    .winWinContainer {
+      margin-top: 100px;
+    }
+    .title {
+      font-size: 18px;
+      margin-bottom: 60px;
+    }
+    .paragraph {
+      margin: 40px 0;
+      font-size: 36px;
+    }
+  }
+
+  .tablet {
+    display: none;
+  }
+
+  .componentContainer {
+    width: 90%;
+  }
+
+  .getInTouch {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectOverview {
+    margin-top: 0;
+    margin-bottom: 40px;
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+    .paragraph {
+      margin-top: 0;
+      font-size: 23px;
+    }
+    .services {
+      font-size: 16px;
+    }
+  }
+
+  .projectInformation {
+    width: 100%;
+    margin-left: 0;
+    .projectParagraph {
+      font-size: 16px;
+      width: 85%;
+    }
+  }
+
+  .leadInContainer {
+    height: 400px;
+  }
+
+  .leadInDescription {
+    padding-top: 100px;
+  }
+
+  .showCase {
+    height: 400px;
+    .fullWidthImage {
+      height: 100%;
+    }
+  }
+
+  .halfWidthImage {
+    height: 400px;
+  }
+
+  .testimonialParagraph {
+    font-size: 23px;
+  }
+
+  .testimonialTitle {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .testimonialSubtitle {
+    font-size: 18px;
+  }
+
+  .nextProjectContainer {
+    min-height: 600px;
+    width: 90%;
+    .winWinContainer {
+      margin-top: 100px;
+    }
+    .title {
+      font-size: 18px;
+    }
+    .paragraph {
+      font-size: 28px;
+    }
+    .nextArrow {
+      width: 20px;
+      margin: 0 20px;
+    }
+    .imageHolder {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+  }
 }
 
 @media screen and (max-width: 756px) {
@@ -489,7 +612,7 @@ body {
     margin-bottom: 45px;
   }
 
-  .title {
+  .greeting .title {
     font-size: 18px;
     margin-bottom: 0;
   }
@@ -503,7 +626,8 @@ body {
   }
 
   .getInTouch .paragraph {
-    margin-top: 15px;
+    margin-top: 10px;
+    font-size: 23px;
   }
 
   .projectOverview {
@@ -517,7 +641,8 @@ body {
   }
 
   .projectOverview .title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
     font-size: 23px;
   }
 
@@ -526,8 +651,10 @@ body {
     width: 100%;
   }
 
-  .services {
-    margin: 5px 0;
+  .projectOverview .services {
+    margin: 0;
+    font-size: 23px;
+    line-height: 1.3;
   }
 
   .halfWidthImage {
@@ -599,16 +726,12 @@ body {
 
   .absoluteImage .imageSource {
     width: 100%;
-    height: 450px;
+    height: 400px;
     object-fit: cover;
   }
 
   .absoluteImage {
-    position: absolute;
     top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
   }
 
   .projectOverview {
@@ -648,9 +771,7 @@ body {
     cursor: pointer;
   }
 
- 
-
-  .showCase{
+  .showCase {
     height: 400px;
     width: 100%;
     position: relative;
@@ -679,5 +800,4 @@ body {
       height: 100%;
     }
   }
-  
 }

@@ -24,11 +24,12 @@ img {
 }
 
 body{
-  min-width: 1180px;
   color: #fff;
   font-family:  "Helvetica-Now-Regular";
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  background-color: #000;
+
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -61,7 +62,10 @@ h1,h2,h3,h4,h5,h6{
   src: local('Helvetica-Now-Light'), url("../static/fonts/Helvetica-Now/Monotype\ \ -\ Helvetica\ Now\ Display\ Light.otf") format('truetype');
 }
 
-
+.relative{
+  position: relative;
+ height: 100%;
+}
 
 
 .lineDecoratorWhite {
@@ -100,6 +104,10 @@ h1,h2,h3,h4,h5,h6{
 
 .margin-66{
   margin-right: 66%;
+}
+
+.margin-64{
+  margin-right: 64%;
 }
 
 .margin-55{

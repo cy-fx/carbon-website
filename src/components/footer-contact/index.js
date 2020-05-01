@@ -7,6 +7,13 @@ const Footer = () => (
     query={graphql`
       query {
         contentfulV1Footer {
+          text1
+          text2
+          arrow {
+            file {
+              url
+            }
+          }
           countries
           signOff {
             carbonWordmark {
@@ -21,6 +28,11 @@ const Footer = () => (
           }
           socialMediaNavigation {
             navigation {
+              iconHover {
+                file {
+                  url
+                }
+              }
               icon {
                 file {
                   url
@@ -44,7 +56,6 @@ const Footer = () => (
           <div className={footerStyle.backgroundContainer}>
             <div className={footerStyle.marginContainer}>
               <section className={footerStyle.signOffContainer}>
-                
                 <figure
                   className={`${footerStyle.logo} ${footerStyle.imageHolder}`}
                 >
@@ -59,11 +70,11 @@ const Footer = () => (
                   />
                 </figure>
                 <div className={footerStyle.multiLegal}>
-                <span className="decoratorContainer">
-              <span className="lineDecorator black  margin-66 desktop"></span>
-              <span className="lineDecorator black"></span>
-              <span className="lineDecorator black mobile"></span>
-            </span>
+                  <span className="decoratorContainer">
+                    <span className="lineDecorator black  margin-64 desktop"></span>
+                    <span className="lineDecorator black"></span>
+                    <span className="lineDecorator black mobile"></span>
+                  </span>
                   <span className={footerStyle.multiCultural}>
                     {footerData.signOff.multiCultural}
                   </span>
@@ -72,7 +83,7 @@ const Footer = () => (
                   </span>
                 </div>
                 <section className={footerStyle.countriesContainer}>
-                <span className="decoratorContainer desktop">
+                  <span className="decoratorContainer desktop">
                     <span className="lineDecorator black"></span>
                     <span className="lineDecorator black mobile"></span>
                   </span>

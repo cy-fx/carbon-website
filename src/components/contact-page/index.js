@@ -47,32 +47,55 @@ const ContactPage = ({ contactPageData }) => {
               <span className="lineDecorator white mobile"></span>
             </span>
             <p className={contactPageStyle.paragraph}>{contactPageData.text}</p>
-            <p className={contactPageStyle.eMail}>{contactPageData.email}</p>
+            <a
+              className={contactPageStyle.eMail}
+              href={`mailto: ${contactPageData.email}`}
+            >
+              {contactPageData.email}
+            </a>
             <nav className={contactPageStyle.socialMediaNavigation}>
-              {contactPageData.socialMediaNavigation.navigation.map(item => (
-                <a
-                  className={contactPageStyle.socialMediaLink}
-                  href={item.link}
-                  key={item.id}
-                >
-                  <figure className={contactPageStyle.imageHolder}>
-                    <img
-                      className={contactPageStyle.imageSource}
-                      src={item.icon.file.url}
-                      alt={item.title}
-                      alt="Carbón"
-                    />
-                  </figure>
-                </a>
-              ))}
+              {contactPageData.socialMediaNavigation.navigation.map(
+                (item, index) => (
+                  <a
+                    target="_blank"
+                    className={contactPageStyle.socialMediaLink}
+                    href={item.link}
+                    key={index}
+                    rel="noopener"
+                  >
+                    <figure className={contactPageStyle.imageHolder}>
+                      <img
+                        className={contactPageStyle.imageSource}
+                        src={item.icon.file.url}
+                        alt="Carbón"
+                      />
+                      <img
+                        className={contactPageStyle.imageSourceHover}
+                        src={item.iconHover.file.url}
+                        alt="Carbón"
+                      />
+                    </figure>
+                  </a>
+                )
+              )}
             </nav>
             <figure>
-              <img className={contactPageStyle.halftone} src={contactPageData.dots.file.url}/>
+              <img
+                className={contactPageStyle.halftone}
+                src={contactPageData.dots.file.url}
+              />
             </figure>
             <p className={contactPageStyle.hablamosEspanol}>
-              {`{ Hablamos `}
-              {<span className={contactPageStyle.arrow}>-></span>}
-              {` Español }`}
+              {contactPageData.text1}
+              {
+                <span className={contactPageStyle.arrow}>
+                  <img
+                    className={contactPageStyle.imageSource}
+                    src={contactPageData.arrow.file.url}
+                  />
+                </span>
+              }
+              {contactPageData.text2}
             </p>
             <span className="decoratorContainer desktop">
               <span className="lineDecorator white margin-55 hidden"></span>

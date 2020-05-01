@@ -13,7 +13,7 @@ const featuredProject = ({ showCaseData, workPageData }) => {
             data-aos="example-anim1"
             data-aos-once="true"
             data-aos-anchor-placement="top"
-            key={`${item.projectDisplay.title}${index}`}
+            key={index}
             href={`/work${item.projectDisplay.link}`}
           >
             <div className={workPageStyle.featuredProjectDescription}>
@@ -34,9 +34,9 @@ const featuredProject = ({ showCaseData, workPageData }) => {
                   {item.projectDisplay.paragraph}
                 </p>
                 <div className={workPageStyle.buttonLinkContainer}>
-                  <a
+                  <div
                     className={workPageStyle.greetingsLink}
-                    href={`/work${item.projectDisplay.link}`}
+                    
                   >
                     <figure className={workPageStyle.buttonLink}>
                       <img
@@ -44,7 +44,7 @@ const featuredProject = ({ showCaseData, workPageData }) => {
                         src={rightArrow.file.url}
                       />
                     </figure>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -119,6 +119,32 @@
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 980px) {
+
+  .featuredProjectContainer{
+    width: 100%;
+    height: 500px;
+  }
+
+  .featuredProjectDescription{
+    width: 50%;
+    padding-top: 70px;
+  }
+
+  .featuredProjectImage{
+    width: 50%;
+  }
+
+  .buttonLink{
+    width: 35px;
+    height: 35px;
+  }
+
+  .buttonLinkContainer{
+    margin-top: 40px;
+  }
+}
+
 
 @media screen and (max-width: 756px) {
   .backgroundContainer {

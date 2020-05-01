@@ -1,5 +1,5 @@
 .backgroundContainer {
-  background-color: #000000;
+  background-color: #ffffff;
   width: 100%;
   min-height: 670px;
 }
@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1180px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .featuredProjectContainer {
@@ -210,8 +210,8 @@
 }
 
 .circle {
-  background-color: #000000;
-  border: 2px solid #fff;
+  background-color: #ffffff;
+  border: 2px solid #000000;
   border-radius: 18px;
   height: 30px;
   width: 30px;
@@ -221,24 +221,25 @@
 }
 
 .circle:hover {
-  background-color: #2a2844;
+  background-color: #dedede;
   transition: 0.3s;
 
   cursor: pointer;
 }
 
 .circleActive {
-  background-color: #ffffff;
+  background-color: #0000ff;
+  border: 2px solid #0000ff;
 }
 
 .circleActive:hover {
-  background-color: #ffffff;
+  background-color: #0000FF;
   cursor: initial;
 }
 
 .greetingsLink,
 .navigationLink {
-  color: #fff;
+  color: #000;
   display: inline-block;
 }
 
@@ -271,7 +272,7 @@
   margin-top: 0;
 }
 
-.sliderAbsoluteImages {
+.sliderWhiteAbsoluteImages {
   position: absolute;
   top: 0;
 }
@@ -329,15 +330,16 @@
   object-fit: cover;
 }
 
+
+
 @media screen and (max-width: 980px) {
   .backgroundContainer {
     min-height: 380px;
   }
 
-  .play{
+  .play {
     min-width: 100%;
   }
-
 
   .featuredProjectTitle {
     font-size: 18px;
@@ -370,6 +372,8 @@
       justify-content: center;
     }
   }
+
+  
   .projectTitle {
     margin-top: 50px;
     margin-bottom: 50px;

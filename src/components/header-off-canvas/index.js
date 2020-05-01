@@ -22,6 +22,16 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
             }
             title
           }
+          sunBlack{
+            file{
+              url
+            }
+          }
+          sunWhite{
+            file{
+              url
+            }
+          }
           location
           closeNavigation
           closeIcon {
@@ -68,17 +78,10 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
                         <span>{` {`}</span>
                         <DisplayTime />
                         <span>{`} `}</span>
-                        <span>//</span>
                       </div>
                     </span>
-                    <span className={headerOffCanvasStyle.weatherIcon}>
-                      <img
-                        className={headerOffCanvasStyle.imageSource}
-                        src={headerOffCanvasData.logo.file.url}
-                        alt={headerOffCanvasData.logo.title}
-                      />
-                    </span>
-                    <span className={headerOffCanvasStyle.temperature}>69°</span>
+                    
+                    <span className={headerOffCanvasStyle.temperature}>--°</span>
                   </div>
                 </div>
               </section>

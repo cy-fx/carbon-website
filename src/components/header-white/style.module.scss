@@ -38,14 +38,15 @@ button {
 
 .homeLogoContainer {
   width: 33%;
-  margin-top: 45px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .locationContainer {
   width: 47%;
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
+  justify-content: flex-end;
 }
 
 .navigationContainer {
@@ -77,6 +78,8 @@ button {
   margin: 0 auto;
   max-width: 1180px;
   background-color: white;
+  width: 90%;
+min-height: 120px;
 }
 
 .headerWhiteContainer {
@@ -134,11 +137,46 @@ button {
   margin: 0 5px;
 }
 
+.temperature {
+  display: none;
+}
 
+@media screen and (max-width: 980px) {
+  .homeLogoContainer {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    .imageSource {
+      width: 70px;
+    }
+  }
+
+  .locationContainer {
+    font-size: 18px;
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .headerWhiteContainer {
+    min-height: 100px;
+    width: 90%;
+  }
+
+  .navigationButton {
+    width: 92px;
+    padding-top: 0;
+  }
+
+  .hamburger{
+    bottom: 10px;
+  }
+
+  
+}
 
 @media screen and (max-width: 756px) {
-
-  .backgroundContainer{
+  .backgroundContainer {
     min-width: 320px;
   }
   .locationContainer {
@@ -146,16 +184,16 @@ button {
   }
   .headerWhiteContainer {
     width: 90%;
+    min-height: 60px;
+    padding-bottom: 10px;
   }
-  
+
   .homeLogoContainer {
     width: 50%;
-    margin: 20px 0;
-    
+    margin: 0;
   }
   .navigationContainer {
     width: 50%;
-    
   }
   .homeLogoContainer .imageSource {
     width: 40px;
@@ -163,21 +201,35 @@ button {
 
   .navigationButton {
     width: 56px;
-    height: 60px;
-    background-color: blue;
+    height: 100%;
     padding-top: 0;
   }
 
-  
   .hamburger {
-    padding: 0 10px;
-    margin-top: 40px;
+    width: 36px;
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
-  
+
   .hamburgerLine {
     display: flex;
     border-bottom: 1px solid white;
     margin: 3px 0;
+    transition: 0.4s;
   }
-  
+
+  .navigationButton:hover {
+    cursor: pointer;
+    .hamburgerLine:nth-child(1) {
+      margin-bottom: 12px;
+      transition: 0.3s ease-in-out;
+    }
+    .hamburgerLine:nth-child(3) {
+      margin-top: 12px;
+      transition: 0.3s ease-in-out;
+    }
+  }
 }

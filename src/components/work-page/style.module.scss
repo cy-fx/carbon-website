@@ -9,6 +9,7 @@
   max-width: 1180px;
   color: #ffffff;
   min-height: 600px;
+  width: 90%;
 }
 
 .socialMediaNavigation {
@@ -71,6 +72,37 @@
 .paragraph {
   margin-bottom: 70px;
   
+}
+
+
+@media screen and (max-width: 980px) {
+  .componentContainer{
+    width: 90%;
+  }
+  .greeting{
+    margin-top: 60px;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+
+  .getInTouch{
+    width: 90%;
+  }
+  .paragraph{
+    font-size: 36px;
+    margin-top: 60px;
+    margin-bottom: 90px;
+  }
+  .tablet{
+    display: none;
+  }
+
+  .title{
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+ 
 }
 
 @media screen and (max-width: 756px) {

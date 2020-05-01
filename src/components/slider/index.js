@@ -1,8 +1,5 @@
 import React from "react"
 import sliderStyle from "./style.module.scss"
-import { Link } from "gatsby"
-
-
 import "../../reusable-styles/styles.scss"
 
 class Slider extends React.Component {
@@ -19,7 +16,7 @@ class Slider extends React.Component {
   }
 
   componentDidMount() {
-    let animacion = document.getElementById("animationEvent")
+    let animacion = document.getElementById("animationEventSlider")
 
     const totalSlides = this.props.sliderData.featuredProjects.length - 1
     this.setState({ lastSlide: totalSlides })
@@ -77,7 +74,7 @@ class Slider extends React.Component {
   render() {
     const sliderData = this.props.sliderData
     return (
-      <div id="animationEvent" className={sliderStyle.play}>
+      <div id="animationEventSlider" className={sliderStyle.play}>
         <div className={sliderStyle.sliderAbsoluteImages}>
           <figure className={sliderStyle.halftoneContainer}>
             <img
@@ -153,7 +150,7 @@ class Slider extends React.Component {
                     <h2 className={sliderStyle.projectTitle}>
                       {item.title}
                     </h2>
-                    <span className="decoratorContainer desktop">
+                    <span className={`decoratorContainer desktop ${sliderStyle.tablet}`}>
                       <span className="lineDecorator white"></span>
                       <span className="lineDecorator white mobile"></span>
                     </span>

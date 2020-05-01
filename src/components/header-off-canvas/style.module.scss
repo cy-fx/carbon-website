@@ -38,14 +38,15 @@ button {
 
 .homeLogoContainer {
   width: 33%;
-  margin-top: 45px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .locationContainer {
   width: 47%;
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
+  justify-content: flex-end;
 }
 
 .navigationContainer {
@@ -56,7 +57,7 @@ button {
 
 .navigationButton {
   width: 120px;
-  height: 130px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -89,7 +90,8 @@ button {
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1180px;
-  // background-color: white;
+  width: 90%;
+  min-height: 120px;
 }
 
 .headerOffCanvasContainer {
@@ -143,6 +145,40 @@ button {
   line-height: .8;
 }
 
+.temperature {
+  display: none;
+}
+
+
+@media screen and (max-width: 980px) {
+  .homeLogoContainer {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    .imageSource {
+      width: 70px;
+    }
+  }
+
+  .locationContainer {
+    font-size: 18px;
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .headerOffCanvasContainer {
+    min-height: 100px;
+    width: 90%;
+  }
+
+  .navigationButton {
+    width: 92px;
+    padding-top: 0;
+    height: 100%;
+  }
+}
+
 @media screen and (max-width: 756px) {
   .backgroundContainer {
     min-width: 320px;
@@ -152,14 +188,17 @@ button {
   }
   .headerOffCanvasContainer {
     width: 90%;
+    min-height: 60px;
+    padding-bottom: 10px;
   }
 
   .homeLogoContainer {
     width: 50%;
-    margin: 20px 0;
+    margin: 0;
   }
   .navigationContainer {
     width: 50%;
+    
   }
   .homeLogoContainer .imageSource {
     width: 40px;
@@ -199,12 +238,12 @@ button {
   }
 
   .navigationButton {
-    margin: 20px 10px 0 0;
+    margin: 0 10px 0 0;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: initial;
+    justify-content: flex-end;
     align-items: flex-end;
   }
 }

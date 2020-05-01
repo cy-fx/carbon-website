@@ -121,6 +121,11 @@ export const query = graphql`
           url
         }
       }
+      playButton {
+        file {
+          url
+        }
+      }
     }
   }
 `

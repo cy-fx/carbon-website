@@ -1,84 +1,85 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import homePageStyle from "./style.module.scss"
-import Slider from "../slider"
-import SlideSwipe from "../slider-swipe"
+import homePageWhiteStyle from "./style.module.scss"
+import SliderWhite from "../slider-white"
+import SlideSwipeWhite from "../slider-swipe-white"
 
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
-const HomePage = ({ homePageData }) => {
+const HomePageWhite = ({ homePageWhiteData }) => {
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
   })
   return (
-    <div className={homePageStyle.backgroundContainer}>
-      <div className={homePageStyle.componentContainer}>
+    <div className={homePageWhiteStyle.backgroundContainer}>
+      <div className={homePageWhiteStyle.componentContainer}>
         <section
-          className={`${homePageStyle.heroContainer}`}
+          className={`${homePageWhiteStyle.heroContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
           data-aos-anchor-placement="top"
         >
-          <figure className={homePageStyle.imageHolder}>
+          <figure className={homePageWhiteStyle.imageHolder}>
             <img
-              className={homePageStyle.imageSource}
-              src={homePageData.heroImage.file.url}
+              className={homePageWhiteStyle.imageSource}
+              src={homePageWhiteData.heroImage.file.url}
               alt="Carbón"
             />
           </figure>
         </section>
 
         <section
-          className={`${homePageStyle.greetingsContainer}`}
+          className={`${homePageWhiteStyle.greetingsContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
           data-aos-anchor-placement="top"
         >
-          {homePageData.greetings.map(item => (
-            <div className={homePageStyle.greetingsCard} key={item.id}>
+          {homePageWhiteData.greetings.map((item, index) => (
+            <div className={homePageWhiteStyle.greetingsCard} key={index}>
               <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
               </span>
 
-              <div className={homePageStyle.greetingsContent}>
-                <p className={homePageStyle.greetingsParagraph}>
+              <div className={homePageWhiteStyle.greetingsContent}>
+                <p className={homePageWhiteStyle.greetingsParagraph}>
                   {item.paragraph}
                 </p>
-                <Link className={homePageStyle.greetingsLink} to={item.link}>
-                  <span className={homePageStyle.link}>{item.buttonText}</span>
-                  <span className={homePageStyle.linkDecoration}></span>
+                <Link className={homePageWhiteStyle.greetingsLink} to={item.link}>
+                  <span className={homePageWhiteStyle.link}>{item.buttonText}</span>
+                  <span className={homePageWhiteStyle.linkDecoration}></span>
                 </Link>
               </div>
               <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
               </span>
             </div>
           ))}
-          <div className={homePageStyle.greetingsCard}>
+          <div className={homePageWhiteStyle.greetingsCard}>
             <span className="decoratorContainer">
-              <span className="lineDecorator white"></span>
-              <span className="lineDecorator white mobile"></span>
+              <span className="lineDecorator black"></span>
+              <span className="lineDecorator black mobile"></span>
             </span>
-            <nav className={homePageStyle.navigationContainer}>
-              <div className={homePageStyle.navigationPages}>
-                {homePageData.pages.navigation.map(item => (
-                  <div className={homePageStyle.linkHolder} key={item.id}>
+            <nav className={homePageWhiteStyle.navigationContainer}>
+              <div className={homePageWhiteStyle.navigationPages}>
+                {homePageWhiteData.pages.navigation.map((item, index) => (
+                  <div className={homePageWhiteStyle.linkHolder} key={index}>
                     <Link
-                      className={homePageStyle.navigationLink}
+                      className={homePageWhiteStyle.navigationLink}
                       to={item.link}
                     >
                       {item.title}
-                      <span className={homePageStyle.circle}>
-                      <figure className={homePageStyle.imageHolder}>
+                      <span className={homePageWhiteStyle.circle}>
+                      <figure className={homePageWhiteStyle.imageHolder}>
                         <img
-                          className={homePageStyle.imageSource}
+                          className={homePageWhiteStyle.imageSource}
                           src={item.icon.file.url}
+                          alt="Circle"
                         />
                       </figure>
                     </span>
@@ -89,52 +90,52 @@ const HomePage = ({ homePageData }) => {
               </div>
             </nav>
             <span className="decoratorContainer">
-              <span className="lineDecorator white"></span>
-              <span className="lineDecorator white mobile"></span>
+              <span className="lineDecorator black"></span>
+              <span className="lineDecorator black mobile"></span>
             </span>
           </div>
         </section>
 
         <section
-          className={homePageStyle.sliderContainer}
+          className={homePageWhiteStyle.sliderContainer}
           data-aos="example-anim1"
           data-aos-once="true"
           data-aos-anchor-placement="top"
         >
-          <Slider
-            sliderData={homePageData.slider}
+          <SliderWhite
+            sliderWhiteData={homePageWhiteData.slider}
           />
         </section>
 
         <section
-          className={homePageStyle.sliderSwipeContainer}
+          className={homePageWhiteStyle.sliderSwipeContainer}
           data-aos="example-anim1"
           data-aos-once="true"
           data-aos-anchor-placement="top"
         >
-          <SlideSwipe sliderSwipeData={homePageData.slider}/>
+          <SlideSwipeWhite sliderSwipeWhiteData={homePageWhiteData.slider}/>
         </section>
         
         <section
-          className={`${homePageStyle.aboutContainer}`}
+          className={`${homePageWhiteStyle.aboutContainer}`}
           data-aos="example-anim1"
           data-aos-once="true"
           data-aos-anchor-placement="top"
         >
-          {homePageData.about.map(item => (
-            <div className={homePageStyle.aboutCard} key={item.id}>
+          {homePageWhiteData.about.map((item, index) => (
+            <div className={homePageWhiteStyle.aboutCard} key={index}>
               <span className="decoratorContainer">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
               </span>
-              <div className={homePageStyle.aboutContent}>
-                <h3 className={homePageStyle.aboutTitle}>{item.title}</h3>
-                <p className={homePageStyle.aboutParagraph}>{item.paragraph}</p>
+              <div className={homePageWhiteStyle.aboutContent}>
+                <h3 className={homePageWhiteStyle.aboutTitle}>{item.title}</h3>
+                <p className={homePageWhiteStyle.aboutParagraph}>{item.paragraph}</p>
               </div>
 
               <span className="decoratorContainer desktop">
-                <span className="lineDecorator white"></span>
-                <span className="lineDecorator white mobile"></span>
+                <span className="lineDecorator black"></span>
+                <span className="lineDecorator black mobile"></span>
               </span>
             </div>
           ))}
@@ -144,4 +145,4 @@ const HomePage = ({ homePageData }) => {
   )
 }
 
-export default HomePage
+export default HomePageWhite

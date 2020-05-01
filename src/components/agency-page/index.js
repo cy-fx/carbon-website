@@ -116,8 +116,8 @@ const AgencyPage = ({ agencyPageData }) => {
             <h4 className={agencyPageStyle.title}>
               {agencyPageData.whatWeBelieveIn.listName}
             </h4>
-            {agencyPageData.whatWeBelieveIn.items.map(item => (
-              <p className={agencyPageStyle.word}>{item.text}</p>
+            {agencyPageData.whatWeBelieveIn.items.map((item, index) => (
+              <p key={index} className={agencyPageStyle.word}>{item.text}</p>
             ))}
           </div>
           <div className={agencyPageStyle.enLoQueCreemosCard}>
@@ -129,7 +129,7 @@ const AgencyPage = ({ agencyPageData }) => {
               {agencyPageData.enLoQueCreemos.listName}
             </h4>
             {agencyPageData.enLoQueCreemos.items.map((item, index) => (
-              <div className={agencyPageStyle.enLoQueCreemosItem}>
+              <div key={index} className={agencyPageStyle.enLoQueCreemosItem}>
                 <span
                   className={
                     index === 0
@@ -194,10 +194,10 @@ const AgencyPage = ({ agencyPageData }) => {
               {agencyPageData.services.listName}
             </h4>
             <div className={agencyPageStyle.servicesLists}>
-              {agencyPageData.services.items.map(list => (
-                <div className={agencyPageStyle.servicesColumn}>
+              {agencyPageData.services.items.map((list,index) => (
+                <div key={index} className={agencyPageStyle.servicesColumn}>
                   {list.items.map(item => (
-                    <p className={agencyPageStyle.servicesList}>{item.text}</p>
+                    <p key={item.text} className={agencyPageStyle.servicesList}>{item.text}</p>
                   ))}
                 </div>
               ))}

@@ -22,6 +22,16 @@ const HeaderWhite = ({ navBarClicked }) => (
             title
           }
           location
+          sunBlack{
+            file{
+              url
+            }
+          }
+          sunWhite{
+            file{
+              url
+            }
+          }
         }
       }
     `}
@@ -55,17 +65,10 @@ const HeaderWhite = ({ navBarClicked }) => (
                         <span>{` {`}</span>
                         <DisplayTime />
                         <span>{`} `}</span>
-                        <span>//</span>
                       </div>
                     </span>
-                    <span className={headerWhiteStyle.weatherIcon}>
-                      <img
-                        className={headerWhiteStyle.imageSource}
-                        src={headerWhiteData.logo.file.url}
-                        alt={headerWhiteData.logo.title}
-                      />
-                    </span>
-                    <span className={headerWhiteStyle.temperature}>69°</span>
+                    
+                    <span className={headerWhiteStyle.temperature}>--°</span>
                   </div>
                 </div>
               </section>

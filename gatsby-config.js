@@ -36,15 +36,6 @@ module.exports = {
         icon: `src/images/carbon-agency-favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['HelveticaNowDisplay', 'HelveticaNow'],
-          urls: ["src/static/fonts/Helvetica-Now", "src/reusable-styles/carbon-font.css"],
-        }
-      }
-    },
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
@@ -52,7 +43,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     
   ],
 }

@@ -9,6 +9,8 @@
   max-width: 1180px;
   color: #ffffff;
   min-height: 600px;
+  width: 90%;
+
 }
 
 .socialMediaNavigation {
@@ -87,6 +89,54 @@
   margin-top: 70px;
 }
 
+.socialMediaLink {
+  line-height: 1;
+  margin-top: 20px;
+  .imageHolder {
+    position: relative;
+    display: flex;
+  }
+  .imageSource {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .imageSourceHover {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    left: 0;
+  }
+}
+
+.socialMediaLink:hover {
+  .imageSource {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .imageSourceHover {
+    opacity: 1;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .halftone{
+    margin-bottom: 40px;
+  }
+  .greeting{
+    margin-bottom: 80px;
+  }
+  .getInTouch{
+    .paragraph{
+      font-size: 45px;
+    }
+    .eMail{
+      font-size: 45px;
+
+    }
+  }
+}
+
 
 @media screen and (max-width: 756px) {
   .backgroundContainer {
@@ -115,27 +165,38 @@
     width: 100%;
   }
 
-  .eMail {
+  .getInTouch .eMail {
     display: inline-block;
     margin: 8px 0 15px;
     background-color: #ffffff;
     color: #000000;
-    font-size: 23px;
+    font-size: 24px;
     padding: 10px 10px 10px 10px;
   }
 
   .paragraph {
     width: 80%;
     font-size: 23px;
-    line-height: 1.3;
+    line-height: 1;
     margin-top: 45px;
   }
 
-  .hablamosEspanol {
-    display: block;
-    font-size: 14px;
-    margin-top :15px;
+   .hablamosEspanol {
+    display: flex;
+    margin-top: 15px;
+    font-family: "Helvetica-Now-Bold";
+font-size: 14px;
   }
+
+  .arrow {
+    color: #0000ff;
+    margin: 0 5px;
+    display: flex;
+    .imageSource{
+      width: 10px;
+    }
+  }
+  
 
   .halftone{
     display:none

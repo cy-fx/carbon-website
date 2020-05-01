@@ -30,11 +30,17 @@ const Work = () => (
                 file {
                   url
                 }
+                fluid(maxWidth: 1400, quality: 100) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
+                }
                 description
               }
               hoverImage {
                 file {
                   url
+                }
+                fluid(maxWidth: 1400, quality: 100) {
+                  ...GatsbyContentfulFluid_withWebp_noBase64
                 }
               }
               subtitle

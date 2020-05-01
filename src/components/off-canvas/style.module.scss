@@ -1,7 +1,6 @@
-
 .backgroundContainer {
-  background-color: #000;
-  min-height: 900px;
+  background-color: #fff;
+  min-height: 100vh;
   width: 100%;
   z-index: 999;
   padding-bottom: 200px;
@@ -10,14 +9,22 @@
   box-shadow: 0px 30px 30px -7px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
-  animation-name: example;
-  animation-duration: .3s;
-  animation-fill-mode: forwards;
+}
+
+.offCanvasStyleBg {
+  background-repeat: repeat;
+  background-size: 300px;
+  z-index: -2;
+  margin: 5% 0 120px;
 }
 
 @keyframes example {
-  from {background-color: #000;}
-  to {background-color: white;}
+  from {
+    background-color: #000;
+  }
+  to {
+    background-color: white;
+  }
 }
 
 .carbonAnimation {
@@ -25,10 +32,10 @@
   z-index: -9;
   top: 100px;
   right: -1500px;
-  // display: inline-block; 
+  // display: inline-block;
   // animation: skew 25s infinite;
   transform: skew(-5deg, -10deg);
-  transform: rotate(-10deg)
+  transform: rotate(-10deg);
 
   // animation-direction: alternate;
 }
@@ -40,7 +47,7 @@
   100% {
     transform: skew(+5deg);
   }
-} 
+}
 
 .componentContainer {
   display: flex;
@@ -49,7 +56,7 @@
   color: #000000;
   margin: 0 auto;
   max-width: 1180px;
-  
+  width: 90%;
 }
 
 .whoWeAreSection {
@@ -137,10 +144,16 @@
   text-decoration: none;
   color: black;
   line-height: 0.9;
+  transition: .5s;
 }
 
 .link:hover {
-  text-decoration: underline;
+  color: #0000ff;
+  transition: .5s;
+.navSlash, .homeNavSlash {
+  background-color: #0000ff;
+  transition: .5s;
+}
 }
 
 .navigationSection {
@@ -163,15 +176,20 @@
   padding: 85px 0 125px;
 }
 
-.socialMediaNavigation {
+.signOffContent .socialMediaNavigation {
   display: flex;
   flex-direction: row;
+  .imageHolder{
+    margin-bottom: 0;
+  }
+  
 }
 
 .signOffContainer {
   width: 33%;
   display: flex;
   flex-direction: column;
+ 
 }
 
 .signOffContent {
@@ -186,7 +204,7 @@
 }
 
 .multiCultural {
-  font-family:  "Helvetica-Now-Bold";
+  font-family: "Helvetica-Now-Bold";
   font-weight: normal;
 }
 
@@ -223,7 +241,7 @@
 .countries {
   margin: 47px 0;
   font-size: 16px;
-  font-family:  "Helvetica-Now-Bold";
+  font-family: "Helvetica-Now-Bold";
   font-weight: normal;
 }
 
@@ -265,53 +283,114 @@
   width: 25px;
 }
 
+.navItem{
+  position: relative;
+}
+
 .homeIcon {
   width: 125px;
+  opacity: 1;
+  transition: .5s;
+
+}
+
+.homeIconHover {
+  position: absolute;
+  width: 125px;
+  opacity: 0;
+  transition: .5s;
+}
+
+.link:hover {
+  .homeIcon {
+  opacity: 0;
+  transition: .5s;
+}
+.homeIconHover {
+  opacity: 1;
+  transition: .5s;
+
+}
 }
 
 .lsdContainerAbsolute {
   position: absolute;
   top: -50px;
-  right: -400px;
-  visibility: visible;
-  z-index: -1;  
+  z-index: -1;
   animation-name: lsd;
-  animation-duration: 1s;
+  animation-duration: 1.2s;
   animation-fill-mode: forwards;
+  margin: 0;
+  top: 50%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+}
+
+.socialMediaLink {
+  line-height: 1;
+  .imageHolder {
+    position: relative;
+    display: flex;
+  }
+  .imageSource {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .imageSourceHover {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    left: 0;
+  }
+}
+
+.socialMediaLink:hover {
+  .imageSource {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .imageSourceHover {
+    opacity: 1;
+    transition: 0.5s;
+  }
 }
 
 @keyframes lsd {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .lsdContainerAbsolute .imageSource {
   height: 1000px;
 }
 
-.navigationContainer{
+.navigationContainer {
   margin-top: 125px;
 }
 
-.homeNavSlash{
+.homeNavSlash {
   width: 80px;
-  height: 4px ;
+  height: 4px;
   background-color: black;
   display: flex;
   margin-left: 5px;
   margin-top: 40px;
 }
 
-.navSlash{
+.navSlash {
   width: 80px;
-  height: 4px ;
+  height: 4px;
   background-color: black;
   display: flex;
   margin-left: 5px;
   margin-top: 10px;
 }
 
-.navItem{
+.navItem {
   display: flex;
   align-items: center;
 }
@@ -319,10 +398,59 @@
 .notActive {
   pointer-events: none;
   cursor: default;
-  text-decoration: underline;
   color: #0000ff;
-  .navSlash{
-    background-color:  #0000ff;
+  .navSlash, .homeNavSlash {
+    background-color: #0000ff;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .componentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .navigationSection {
+    margin-top: 80px;
+    order: 1;
+  }
+  .navigationContainer {
+    margin-top: 50px;
+  }
+  .signOffContainer {
+    order: 2;
+  }
+  .homeIcon, .homeIconHover {
+    width: 80px;
+  }
+  .link {
+    font-size: 70px;
+  }
+  .tablet {
+    display: none;
+  }
+
+  .signOffContent {
+    margin-top: 100px;
+  }
+
+  .signOffContent .imageHolder {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  .signOffContainer {
+    font-size: 12px;
+  }
+
+  .socialMediaNavigation {
+    .imageHolder {
+      margin-top: 20px;
+    }
+  }
+
+  .lsdContainerAbsolute {
+    left: 110%;
   }
 }
 
@@ -379,11 +507,11 @@
   .legal {
     margin-bottom: 30px;
   }
-  .homeIcon {
+  .homeIcon, .homeIconHover {
     width: 50px;
   }
 
-  .carbonAnimation{
+  .carbonAnimation {
     display: none;
   }
 
@@ -393,7 +521,7 @@
     visibility: visible;
     z-index: -1;
   }
-  
+
   .lsdContainerAbsolute .imageSource {
     height: 450px;
   }
@@ -402,26 +530,28 @@
     text-decoration: initial;
   }
 
-  .navigationContainer{
+  .navigationContainer {
     margin-top: 0;
   }
 
-  .navSlash{
+  .navSlash {
     width: 40px;
-    height: 2px ;
-   
+    height: 2px;
   }
-  
-  .navItem{
+
+  .navItem {
     display: flex;
     align-items: center;
   }
 
-  .homeNavSlash{
+  .homeNavSlash {
     width: 40px;
-    height: 2px ;
+    height: 2px;
     margin-left: 5px;
     margin-top: 10px;
   }
-  
+  .lsdContainerAbsolute {
+    left: 90%;
+    top: 300px;
+  }
 }
