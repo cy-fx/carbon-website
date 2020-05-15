@@ -61,7 +61,7 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
                     <img
                       className={headerOffCanvasStyle.imageSource}
                       src={headerOffCanvasData.logoWhite.file.url}
-                      alt={headerOffCanvasData.logoWhite.title}
+                      alt="Carbon Agency"
                     />
                   </figure>
                 </a>
@@ -94,7 +94,7 @@ const HeaderOffCanvas = ({ navBarClicked }) => (
                     <img
                       className={headerOffCanvasStyle.closeIcon}
                       src={headerOffCanvasData.closeIcon.file.url}
-                      alt="Carbón"
+                      alt="Carbon Agency"
                     />
                   </figure>
                   <span className={headerOffCanvasStyle.closeText}>

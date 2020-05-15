@@ -27,7 +27,7 @@ const AgencyPage = ({ agencyPageData }) => {
               <img
                 className={agencyPageStyle.imageSource}
                 src={agencyPageData.backgroundImage.file.url}
-                alt="Carbón"
+                alt="Carbon Agency"
               />
             </figure>
           </div>
@@ -64,12 +64,12 @@ const AgencyPage = ({ agencyPageData }) => {
                     <img
                       className={agencyPageStyle.imageSource}
                       src={agencyPageData.whoWeAre.image2.file.url}
-                      alt="Win-Win"
+                      alt="Carbon Agency"
                     />
                     <img
                       className={`${agencyPageStyle.imageSourrce} ${agencyPageStyle.circleAbsolute}`}
                       src={agencyPageData.whoWeAre.image1.file.url}
-                      alt="Win-Win"
+                      alt="Carbon Agency"
                     />
                   </figure>
                 </span>
@@ -97,7 +97,7 @@ const AgencyPage = ({ agencyPageData }) => {
               <img
                 className={agencyPageStyle.imageSource}
                 src={agencyPageData.winWinGif.file.url}
-                alt="Carbón"
+                alt="Carbon Agency"
               />
             </figure>
           </div>
@@ -163,7 +163,7 @@ const AgencyPage = ({ agencyPageData }) => {
                 <img
                   className={agencyPageStyle.imageSource}
                   src={agencyPageData.carbonIconBlack.file.url}
-                  alt="Carbón"
+                  alt="Carbon Agency"
                 />
               </figure>
             </div>
@@ -220,6 +220,7 @@ const AgencyPage = ({ agencyPageData }) => {
                   <img
                     className={agencyPageStyle.imageSource}
                     src={agencyPageData.nextArrow.file.url}
+                    alt="Carbon Agency"
                   />
                 </figure>
               </div>
@@ -234,6 +235,7 @@ const AgencyPage = ({ agencyPageData }) => {
           <img
             className={agencyPageStyle.viewWorkImage}
             src={agencyPageData.viewWorkImage.file.url}
+            alt="Carbon Agency"
           />
         </figure>
       </section>

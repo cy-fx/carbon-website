@@ -50,7 +50,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
           <img
             className={caseStudyPageStyle.imageSource}
             src={caseStudyData.jumbotron.heroImage.file.url}
-            alt="Carbón"
+            alt="Carbon Agency"
           />
         </span>
 
@@ -142,14 +142,14 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
                   <img
                     className={`${caseStudyPageStyle.playIcon}`}
                     src={caseStudyData.playButton.file.url}
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </div>
                 <img
                   id="image"
                   className={caseStudyPageStyle.imageSource}
                   src={caseStudyData.fullWidthImage1.file.url}
-                  alt="Carbón"
+                  alt="Carbon Agency"
                 />
               </div>
               <figure
@@ -187,7 +187,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
               <img
                 className={caseStudyPageStyle.imageSource}
                 src={caseStudyData.fullWidthImage1.file.url}
-                alt="Carbón"
+                alt="Carbon Agency"
               />
             </figure>
           )}
@@ -222,7 +222,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
                 <img
                   className={caseStudyPageStyle.imageSource}
                   src={caseStudyData.leadInImage.file.url}
-                  alt="Carbón"
+                  alt="Carbon Agency"
                 />
               </figure>
             </div>
@@ -238,7 +238,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
             <img
               className={caseStudyPageStyle.imageSource}
               src={caseStudyData.fullWidthImage2.file.url}
-              alt="Carbón"
+              alt="Carbon Agency"
             />
           </figure>
         </section>
@@ -252,14 +252,14 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
             <img
               className={caseStudyPageStyle.imageSource}
               src={caseStudyData.halfWidthImageLeft.file.url}
-              alt="Carbón"
+              alt="Carbon Agency"
             />
           </figure>
           <figure className={`${caseStudyPageStyle.halfWidthImage}`}>
             <img
               className={caseStudyPageStyle.imageSource}
               src={caseStudyData.halfWidthImageRight.file.url}
-              alt="Carbón"
+              alt="Carbon Agency"
             />
           </figure>
         </section>
@@ -309,6 +309,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
                     <img
                       className={caseStudyPageStyle.imageSource}
                       src={caseStudyData.nextArrow.file.url}
+                      alt="Carbon Agency"
                     />
                   </figure>
                 </div>
@@ -323,7 +324,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
           <img
             className={caseStudyPageStyle.imageSource}
             src={newer.caseStudy.jumbotron.heroImage.file.url}
-            alt="Carbón"
+            alt="Carbon Agency"
           />
         </span>
       </div>

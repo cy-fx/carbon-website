@@ -83,14 +83,14 @@ class SliderWhite extends React.Component {
             <img
               className={sliderWhiteStyle.imageSource}
               src={sliderWhiteData.halftone.file.url}
-              alt="Carbon"
+              alt="Carbon Agency"
             />
           </figure>
           <figure className={sliderWhiteStyle.logoIconContainer}>
             <img
               className={sliderWhiteStyle.imageSource}
               src={sliderWhiteData.logoIcon.file.url}
-              alt="Carbon"
+              alt="Carbon Agency"
             />
           </figure>
         </div>
@@ -121,7 +121,7 @@ class SliderWhite extends React.Component {
                             <img
                               className={sliderWhiteStyle.imageSource}
                               src={sliderWhiteData.leftArrow.file.url}
-                              alt="Carbon"
+                              alt="Carbon Agency"
                             />
                           </figure>
                         </div>
@@ -135,7 +135,7 @@ class SliderWhite extends React.Component {
                             <img
                               className={sliderWhiteStyle.imageSource}
                               src={sliderWhiteData.rightArrow.file.url}
-                              alt="Carbon"
+                              alt="Carbon Agency"
                             />
                           </figure>
                         </div>
@@ -197,7 +197,7 @@ class SliderWhite extends React.Component {
                   <Img
                     className={sliderWhiteStyle.showHover}
                     fluid={item.hoverImage.fluid}
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
 
@@ -209,7 +209,7 @@ class SliderWhite extends React.Component {
                         : `${sliderWhiteStyle.imageSource} ${sliderWhiteStyle.grow}`
                     }
                     fluid={item.featuredImage.fluid}
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
 
@@ -230,7 +230,7 @@ class SliderWhite extends React.Component {
                         : sliderWhiteData.featuredProjects[index - 1].featuredImage
                             .file.url
                     }
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
               </a>

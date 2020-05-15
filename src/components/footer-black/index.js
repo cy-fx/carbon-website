@@ -83,9 +83,7 @@ const FooterBlack = () => {
                           src={
                             footerBlackData.signOff.carbonWordmarkWhite.file.url
                           }
-                          alt={
-                            footerBlackData.signOff.carbonWordmarkWhite.title
-                          }
+                          alt="Carbon Agency"
                         />
                       </figure>
                       <span className={footerBlackStyle.multiCultural}>
@@ -109,12 +107,12 @@ const FooterBlack = () => {
                                 <img
                                   className={footerBlackStyle.imageSource}
                                   src={item.icon.file.url}
-                                  alt="Carbón"
+                                  alt="Carbon Agency"
                                 />
                                 <img
                                   className={footerBlackStyle.imageSourceHover}
                                   src={item.iconHover.file.url}
-                                  alt="Carbón"
+                                  alt="Carbon Agency"
                                 />
                               </figure>
                             </a>
@@ -136,7 +134,7 @@ const FooterBlack = () => {
                         src={
                           footerBlackData.signOff.carbonWordmarkWhite.file.url
                         }
-                        alt={footerBlackData.signOff.carbonWordmarkWhite.title}
+                        alt="Carbon Agency"
                       />
                     </figure>
                     <p className={footerBlackStyle.contactMessageText}>
@@ -152,6 +150,7 @@ const FooterBlack = () => {
                           <img
                             className={footerBlackStyle.imageSource}
                             src={footerBlackData.arrow.file.url}
+                            alt="Carbon Agency"
                           />
                         </span>
                       }

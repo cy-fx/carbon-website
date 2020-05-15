@@ -76,7 +76,7 @@ const OffCanvas = ({ navBarClicked, pagePath }) => {
                 <img
                   className={offCanvasStyle.imageSource}
                   src={offCanvasData.backgroundImage.file.url}
-                  alt="Carbón"
+                  alt="Carbon Agency"
                 />
               </figure>
             </div>
@@ -102,7 +102,7 @@ const OffCanvas = ({ navBarClicked, pagePath }) => {
                     <img
                       className={offCanvasStyle.imageSource}
                       src={offCanvasData.signOff.carbonWordmark.file.url}
-                      alt={offCanvasData.signOff.carbonWordmark.title}
+                      alt="Carbon Agency"
                     />
                   </figure>
                   <span className="decoratorContainer mobile">
@@ -129,12 +129,12 @@ const OffCanvas = ({ navBarClicked, pagePath }) => {
                                 <img
                                   className={offCanvasStyle.imageSource}
                                   src={item.icon.file.url}
-                                  alt="Carbón"
+                                  alt="Carbon Agency"
                                 />
                                 <img
                                   className={offCanvasStyle.imageSourceHover}
                                   src={item.iconHover.file.url}
-                                  alt="Carbón"
+                                  alt="Carbon Agency"
                                 />
                               </figure>
                         </a>
@@ -168,14 +168,14 @@ const OffCanvas = ({ navBarClicked, pagePath }) => {
                               src={currentPath === '/'?item.iconHover.file.url:
                                item.icon.file.url
                               }
-                              alt="Carbón"
+                              alt="Carbon Agency"
                             />
                             <img
                               className={offCanvasStyle.homeIconHover}
                               src={
                                item.iconHover.file.url
                               }
-                              alt="Carbón"
+                              alt="Carbon Agency"
                             />
                             <span
                               className={offCanvasStyle.homeNavSlash}

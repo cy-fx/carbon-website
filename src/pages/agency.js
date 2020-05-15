@@ -11,6 +11,9 @@ const Agency = () => (
     query={graphql`
       query {
         contentfulV1AgencyPage {
+          browserPageTitle
+          keywords
+          metaData
           enLoQueCreemos {
             items {
               ... on ContentfulV1CardType1 {
@@ -135,7 +138,11 @@ const Agency = () => (
       return (
         <React.Fragment>
           <HeaderNavigation whiteNavBar={true} />
-          <SEO title="agency" />
+          <SEO
+            description={agencyPageData.metaData}
+            title={agencyPageData.browserPageTitle}
+            keywords={agencyPageData.keywords}
+          />
           <div className="disable">
             <AgencyPage agencyPageData={agencyPageData} />
             <FooterBlack />

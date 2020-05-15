@@ -25,7 +25,7 @@ const ContactPage = ({ contactPageData }) => {
               <img
                 className={contactPageStyle.imageSource}
                 src={contactPageData.winWinIcon.file.url}
-                alt="Carbón"
+                alt="Carbon Agency"
               />
             </figure>
             <span className="decoratorContainer">
@@ -67,12 +67,12 @@ const ContactPage = ({ contactPageData }) => {
                       <img
                         className={contactPageStyle.imageSource}
                         src={item.icon.file.url}
-                        alt="Carbón"
+                        alt="Carbon Agency"
                       />
                       <img
                         className={contactPageStyle.imageSourceHover}
                         src={item.iconHover.file.url}
-                        alt="Carbón"
+                        alt="Carbon Agency"
                       />
                     </figure>
                   </a>
@@ -83,6 +83,7 @@ const ContactPage = ({ contactPageData }) => {
               <img
                 className={contactPageStyle.halftone}
                 src={contactPageData.dots.file.url}
+                alt="Carbon Agency"
               />
             </figure>
             <p className={contactPageStyle.hablamosEspanol}>
@@ -92,6 +93,7 @@ const ContactPage = ({ contactPageData }) => {
                   <img
                     className={contactPageStyle.imageSource}
                     src={contactPageData.arrow.file.url}
+                    alt="Carbon Agency"
                   />
                 </span>
               }

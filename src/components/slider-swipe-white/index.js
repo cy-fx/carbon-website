@@ -109,14 +109,14 @@ class SliderSwipeWhite extends React.Component {
             <img
               className={sliderSwipeWhiteStyle.imageSource}
               src={sliderSwipeWhiteData.halftone.file.url}
-              alt="Carbon"
+              alt="Carbon Agency"
             />
           </figure>
           <figure className={sliderSwipeWhiteStyle.logoIconContainer}>
             <img
               className={sliderSwipeWhiteStyle.imageSource}
               src={sliderSwipeWhiteData.logoIcon.file.url}
-              alt="Carbon"
+              alt="Carbon Agency"
             />
           </figure>
         </div>

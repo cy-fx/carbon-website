@@ -99,7 +99,7 @@ const FooterWork = () => {
                         <img
                           className={footerStyle.imageSource}
                           src={footerData.signOff.carbonWordmark.file.url}
-                          alt={footerData.signOff.carbonWordmark.title}
+                          alt="Carbon Agency"
                         />
                       </figure>
                       <span className={footerStyle.multiCultural}>
@@ -122,12 +122,12 @@ const FooterWork = () => {
                                 <img
                                   className={footerStyle.imageSource}
                                   src={item.icon.file.url}
-                                  alt="Carbón"
+                                  alt="Carbon Agency"
                                 />
                                 <img
                                   className={footerStyle.imageSourceHover}
                                   src={item.iconHover.file.url}
-                                  alt="Carbón"
+                                  alt="Carbon Agency"
                                 />
                               </figure>
                             </a>
@@ -148,7 +148,7 @@ const FooterWork = () => {
                       <img
                         className={footerStyle.imageSource}
                         src={footerData.signOff.carbonWordmark.file.url}
-                        alt={footerData.signOff.carbonWordmark.title}
+                        alt="Carbon Agency"
                       />
                     </figure>
                     <p className={footerStyle.contactMessageText}>
@@ -164,6 +164,7 @@ const FooterWork = () => {
                           <img
                             className={footerStyle.imageSource}
                             src={footerData.arrow.file.url}
+                            alt="Carbon Agency"
                           />
                         </span>
                       }

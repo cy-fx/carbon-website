@@ -27,7 +27,7 @@ const HomePageWhite = ({ homePageWhiteData }) => {
             <img
               className={homePageWhiteStyle.imageSource}
               src={homePageWhiteData.heroImage.file.url}
-              alt="Carbón"
+              alt="Carbon Agency"
             />
           </figure>
         </section>
@@ -79,7 +79,7 @@ const HomePageWhite = ({ homePageWhiteData }) => {
                         <img
                           className={homePageWhiteStyle.imageSource}
                           src={item.icon.file.url}
-                          alt="Circle"
+                          alt="Carbon Agency"
                         />
                       </figure>
                     </span>

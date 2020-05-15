@@ -12,6 +12,9 @@ const IndexPage = () => (
     query={graphql`
       query {
         contentfulV1HomePage {
+          browserPageTitle
+          keywords
+          metaData
           slug
           heroImage {
             file {
@@ -94,7 +97,11 @@ const IndexPage = () => (
 
       return (
         <React.Fragment>
-          <SEO title="Home" />
+           <SEO
+            description={homePageWhiteData.metaData}
+            title={homePageWhiteData.browserPageTitle}
+            keywords={homePageWhiteData.keywords}
+          />
           <HeaderNavigation whiteNavBar={true}/>
           <div className="disable">
             <HomePageWhite homePageWhiteData={homePageWhiteData} />

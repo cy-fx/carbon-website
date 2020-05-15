@@ -66,7 +66,7 @@ const Footer = () => (
                   <img
                     className={footerStyle.imageSource}
                     src={footerData.signOff.carbonWordmark.file.url}
-                    alt={footerData.signOff.carbonWordmark.title}
+                    alt="Carbon Agency"
                   />
                 </figure>
                 <div className={footerStyle.multiLegal}>

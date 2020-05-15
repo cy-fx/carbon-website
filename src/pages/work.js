@@ -10,6 +10,9 @@ const Work = () => (
     query={graphql`
       query {
         contentfulV1WorkPage {
+          browserPageTitle
+          keywords
+          metaData
           rightArrow {
             file {
               url
@@ -58,7 +61,11 @@ const Work = () => (
       return (
         <React.Fragment>
           <HeaderNavigation></HeaderNavigation>
-          <SEO title="Work" />
+          <SEO
+            description={workPageData.metaData}
+            title={workPageData.browserPageTitle}
+            keywords={workPageData.keywords}
+          />
           <div className="disable">
             <WorkPage workPageData={workPageData}  showCaseData={showCaseData}/>
             <FooterWork/>

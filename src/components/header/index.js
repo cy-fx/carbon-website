@@ -42,7 +42,7 @@ const Header = ({ navBarClicked }) => (
                     <img
                       className={headerStyle.imageSource}
                       src={headerData.logo.file.url}
-                      alt={headerData.logo.title}
+                      alt="Carbon Agency"
                     />
                   </figure>
                 </a>

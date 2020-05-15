@@ -48,7 +48,7 @@ const HeaderWhite = ({ navBarClicked }) => (
                     <img
                       className={headerWhiteStyle.imageSource}
                       src={headerWhiteData.logoWhite.file.url}
-                      alt={headerWhiteData.logo.title}
+                      alt="Carbon Agency"
                     />
                   </figure>
                 </a>

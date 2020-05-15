@@ -7,9 +7,13 @@ import HeaderNavigation from "../components/header-navigation"
 
 export default ({ data, pageContext }) => {
   const caseStudyData = data.contentfulV1CaseStudyPage
-  return ( 
+  return (
     <React.Fragment>
-      <SEO title="Case Study" />
+      <SEO
+        description={caseStudyData.metaData}
+        title={caseStudyData.browserPageTitle}
+        keywords={caseStudyData.keywords}
+      />
       <HeaderNavigation></HeaderNavigation>
       <div className="disable">
         <CaseStudyPage
@@ -27,6 +31,9 @@ export default ({ data, pageContext }) => {
 export const query = graphql`
   query($slug: String!) {
     contentfulV1CaseStudyPage(slug: { eq: $slug }) {
+      browserPageTitle
+      keywords
+      metaData
       jumbotron {
         heroImage {
           description

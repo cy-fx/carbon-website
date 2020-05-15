@@ -11,6 +11,9 @@ const Contact = () => (
     query={graphql`
       query {
         contentfulV1ContactPage {
+          browserPageTitle
+          keywords
+          metaData
           text1
           text2
           arrow {
@@ -53,7 +56,11 @@ const Contact = () => (
       const contactPageData = data.contentfulV1ContactPage
       return (
         <React.Fragment>
-          <SEO title="Contact" />
+           <SEO
+            description={contactPageData.metaData}
+            title={contactPageData.browserPageTitle}
+            keywords={contactPageData.keywords}
+          />
           <HeaderNavigation></HeaderNavigation>
           <div className="disable relative">
             <ContactPage contactPageData={contactPageData} />
