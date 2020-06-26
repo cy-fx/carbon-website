@@ -7,12 +7,10 @@ import "aos/dist/aos.css"
 const CaseStudyPage = ({ caseStudyData, newer }) => {
   const [playVideo, setPlayVideo] = useState(false)
 
-
   useEffect(() => {
     AOS.init({
       duration: 800,
     })
-    
   })
 
   const handleClick = e => {
@@ -20,7 +18,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
     document.getElementById("close").style.display = "flex"
     document.getElementById("video").style.display = "flex"
     document.getElementById("video").src =
-      "https://player.vimeo.com/video/396790829?autoplay=1&loop=1&title=0&byline=0&portrait=0"
+      caseStudyData.fullWidthImage1.description
     document.getElementById(
       "play"
     ).className = `${caseStudyPageStyle.fullWidthThumbnail} ${caseStudyPageStyle.fadeOut}`
@@ -132,7 +130,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
           </div>
         </section>
         <section className={caseStudyPageStyle.showCase}>
-          {caseStudyData.fullWidthImage1.description === "video" ? (
+          {caseStudyData.fullWidthImage1.description.includes("http") ? (
             <React.Fragment>
               <div id="play" className={caseStudyPageStyle.fullWidthThumbnail}>
                 <div
@@ -292,7 +290,9 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
       <div className={caseStudyPageStyle.nextProjectBackground}>
         <section className={caseStudyPageStyle.nextProjectContainer}>
           <div className={caseStudyPageStyle.winWinContainer}>
-            <p className={caseStudyPageStyle.title}>{newer.caseStudy.jumbotron.clientName}</p>
+            <p className={caseStudyPageStyle.title}>
+              {newer.caseStudy.jumbotron.clientName}
+            </p>
           </div>
           <div className={caseStudyPageStyle.getInTouch}>
             <span className="decoratorContainer">
