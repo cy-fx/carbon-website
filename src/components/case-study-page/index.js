@@ -167,6 +167,7 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
                 </div>
 
                 <iframe
+                  title="BYOG Deuce Brand | Carbón Agency"
                   id="video"
                   className={`${caseStudyPageStyle.video}`}
                   src=""
