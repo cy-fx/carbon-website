@@ -1,7 +1,6 @@
-import agencyPageStyle from "./style.module.scss"
-import { Link } from "gatsby"
 import React, { useEffect } from "react"
-
+import Img from "gatsby-image"
+import agencyPageStyle from "./style.module.scss"
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -12,7 +11,6 @@ const AgencyPage = ({ agencyPageData }) => {
       duration: 800,
     })
   })
-
   return (
     <div className={agencyPageStyle.backgroundContainer}>
       <div className={agencyPageStyle.componentContainer}>
@@ -23,10 +21,10 @@ const AgencyPage = ({ agencyPageData }) => {
           data-aos-anchor-placement="top"
         >
           <div className={agencyPageStyle.lsdContainerAbsolute}>
-            <figure className={agencyPageStyle.lsdSize}>
-              <img
+            <figure className={agencyPageStyle.imageHolder}>
+              <Img
                 className={agencyPageStyle.imageSource}
-                src={agencyPageData.backgroundImage.file.url}
+                fluid={agencyPageData.backgroundImage.fluid}
                 alt="Carbon Agency"
               />
             </figure>
@@ -117,7 +115,9 @@ const AgencyPage = ({ agencyPageData }) => {
               {agencyPageData.whatWeBelieveIn.listName}
             </h4>
             {agencyPageData.whatWeBelieveIn.items.map((item, index) => (
-              <p key={index} className={agencyPageStyle.word}>{item.text}</p>
+              <p key={index} className={agencyPageStyle.word}>
+                {item.text}
+              </p>
             ))}
           </div>
           <div className={agencyPageStyle.enLoQueCreemosCard}>
@@ -194,10 +194,12 @@ const AgencyPage = ({ agencyPageData }) => {
               {agencyPageData.services.listName}
             </h4>
             <div className={agencyPageStyle.servicesLists}>
-              {agencyPageData.services.items.map((list,index) => (
+              {agencyPageData.services.items.map((list, index) => (
                 <div key={index} className={agencyPageStyle.servicesColumn}>
                   {list.items.map(item => (
-                    <p key={item.text} className={agencyPageStyle.servicesList}>{item.text}</p>
+                    <p key={item.text} className={agencyPageStyle.servicesList}>
+                      {item.text}
+                    </p>
                   ))}
                 </div>
               ))}
@@ -231,13 +233,15 @@ const AgencyPage = ({ agencyPageData }) => {
             </span>
           </a>
         </div>
-        <figure className={agencyPageStyle.viewWorkImageHolder}>
-          <img
-            className={agencyPageStyle.viewWorkImage}
-            src={agencyPageData.viewWorkImage.file.url}
-            alt="Carbon Agency"
-          />
-        </figure>
+        <div className={agencyPageStyle.viewWorkBackground}>
+          <figure className={agencyPageStyle.imageHolder}>
+            <Img
+              className={agencyPageStyle.imageSource}
+              fluid={agencyPageData.viewWorkImage.fluid}
+              alt="Carbon Agency"
+            />
+          </figure>
+        </div>
       </section>
     </div>
   )

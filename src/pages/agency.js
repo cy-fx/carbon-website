@@ -98,7 +98,7 @@ const Agency = () => (
             file {
               url
             }
-            fluid(maxWidth: 1400, quality: 100) {
+            fluid(maxWidth: 700, quality: 100) {
               ...GatsbyContentfulFluid_withWebp_noBase64
             }
           }

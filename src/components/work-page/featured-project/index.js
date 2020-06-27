@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 import workPageStyle from "./style.module.scss"
 
 import "../../../reusable-styles/styles.scss"
@@ -48,9 +49,9 @@ const featuredProject = ({ showCaseData, workPageData }) => {
           </div>
           <div className={`${workPageStyle.featuredProjectImage}`}>
             <figure className={workPageStyle.imageHolder}>
-              <img
+              <Img
                 className={workPageStyle.imageSource}
-                src={item.projectDisplay.hoverImage.file.url}
+                fluid={item.projectDisplay.hoverImage.fluid}
                 alt="Carbon Agency"
               />
             </figure>

@@ -18,6 +18,15 @@ exports.createPages = ({ graphql, actions }) => {
                 file {
                   url
                 }
+                fluid(maxWidth: 1400, quality: 100) {
+                  tracedSVG
+                  aspectRatio
+                  src
+                  srcSet
+                  srcWebp
+                  srcSetWebp
+                  sizes
+                }
               }
               clientName
             }
@@ -26,8 +35,9 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    const caseStudyProjects = result.data.contentfulV1Showcase.projectDisplayOrder
-    
+    const caseStudyProjects =
+      result.data.contentfulV1Showcase.projectDisplayOrder
+
     caseStudyProjects.map((item, index) => {
       createPage({
         path: `/work${item.caseStudy.slug}`,

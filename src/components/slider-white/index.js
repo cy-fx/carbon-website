@@ -214,21 +214,20 @@ class SliderWhite extends React.Component {
                 </figure>
 
                 <figure className={sliderWhiteStyle.previousImage}>
-                  <img
+                  <Img
                     className={`${sliderWhiteStyle.imageSource} ${sliderWhiteStyle.grow}`}
-                    src={
+                    fluid={
                       this.state.backButton
                         ? index === sliderWhiteData.featuredProjects.length - 1
-                          ? sliderWhiteData.featuredProjects[0].featuredImage.file
-                              .url
+                          ? sliderWhiteData.featuredProjects[0].featuredImage.fluid
                           : sliderWhiteData.featuredProjects[index + 1].featuredImage
                               .file.url
                         : index === 0 
                         ? sliderWhiteData.featuredProjects[
                             sliderWhiteData.featuredProjects.length - 1
-                          ].featuredImage.file.url
+                          ].featuredImage.fluid
                         : sliderWhiteData.featuredProjects[index - 1].featuredImage
-                            .file.url
+                            .fluid
                     }
                     alt="Carbon Agency"
                   />

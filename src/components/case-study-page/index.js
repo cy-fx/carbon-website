@@ -1,5 +1,6 @@
 import caseStudyPageStyle from "./style.module.scss"
 import React, { useState, useEffect } from "react"
+import Img from "gatsby-image"
 import "../../reusable-styles/styles.scss"
 import AOS from "aos"
 import "aos/dist/aos.css"
@@ -45,9 +46,9 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
     <div className={caseStudyPageStyle.backgroundContainer}>
       <div className={caseStudyPageStyle.componentContainer}>
         <span className={caseStudyPageStyle.absoluteImage}>
-          <img
+          <Img
             className={caseStudyPageStyle.imageSource}
-            src={caseStudyData.jumbotron.heroImage.file.url}
+            fluid={caseStudyData.jumbotron.heroImage.fluid}
             alt="Carbon Agency"
           />
         </span>
@@ -143,10 +144,10 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
                     alt="Carbon Agency"
                   />
                 </div>
-                <img
+                <Img
                   id="image"
                   className={caseStudyPageStyle.imageSource}
-                  src={caseStudyData.fullWidthImage1.file.url}
+                  fluid={caseStudyData.fullWidthImage1.fluid}
                   alt="Carbon Agency"
                 />
               </div>
@@ -182,9 +183,9 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
               data-aos-once="true"
               data-aos-anchor-placement="top"
             >
-              <img
+              <Img
                 className={caseStudyPageStyle.imageSource}
-                src={caseStudyData.fullWidthImage1.file.url}
+                fluid={caseStudyData.fullWidthImage1.fluid}
                 alt="Carbon Agency"
               />
             </figure>
@@ -217,9 +218,9 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
                 data-aos-once="true"
                 data-aos-anchor-placement="top"
               >
-                <img
+                <Img
                   className={caseStudyPageStyle.imageSource}
-                  src={caseStudyData.leadInImage.file.url}
+                  fluid={caseStudyData.leadInImage.fluid}
                   alt="Carbon Agency"
                 />
               </figure>
@@ -233,9 +234,9 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
             data-aos-once="true"
             data-aos-anchor-placement="top"
           >
-            <img
+            <Img
               className={caseStudyPageStyle.imageSource}
-              src={caseStudyData.fullWidthImage2.file.url}
+              fluid={caseStudyData.fullWidthImage2.fluid}
               alt="Carbon Agency"
             />
           </figure>
@@ -247,16 +248,16 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
           data-aos-anchor-placement="top"
         >
           <figure className={`${caseStudyPageStyle.halfWidthImage}`}>
-            <img
+            <Img
               className={caseStudyPageStyle.imageSource}
-              src={caseStudyData.halfWidthImageLeft.file.url}
+              fluid={caseStudyData.halfWidthImageLeft.fluid}
               alt="Carbon Agency"
             />
           </figure>
           <figure className={`${caseStudyPageStyle.halfWidthImage}`}>
-            <img
+            <Img
               className={caseStudyPageStyle.imageSource}
-              src={caseStudyData.halfWidthImageRight.file.url}
+              fluid={caseStudyData.halfWidthImageRight.fluid}
               alt="Carbon Agency"
             />
           </figure>
@@ -321,9 +322,9 @@ const CaseStudyPage = ({ caseStudyData, newer }) => {
           </div>
         </section>
         <span className={caseStudyPageStyle.nextProjectImage}>
-          <img
+          <Img
             className={caseStudyPageStyle.imageSource}
-            src={newer.caseStudy.jumbotron.heroImage.file.url}
+            fluid={newer.caseStudy.jumbotron.heroImage.fluid}
             alt="Carbon Agency"
           />
         </span>

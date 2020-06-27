@@ -1,14 +1,15 @@
+.offCanvasContainer {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: #ffffff;
+  padding-bottom: 200px;
+  overflow: hidden;
+}
+
 .backgroundContainer {
-  background-color: #fff;
-  min-height: 100vh;
   width: 100%;
   z-index: 999;
-  padding-bottom: 200px;
-  -webkit-box-shadow: 0px 30px 30px -7px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 30px 30px -7px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 30px 30px -7px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  position: relative;
 }
 
 .offCanvasStyleBg {
@@ -144,16 +145,17 @@
   text-decoration: none;
   color: black;
   line-height: 0.9;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .link:hover {
   color: #0000ff;
-  transition: .5s;
-.navSlash, .homeNavSlash {
-  background-color: #0000ff;
-  transition: .5s;
-}
+  transition: 0.5s;
+  .navSlash,
+  .homeNavSlash {
+    background-color: #0000ff;
+    transition: 0.5s;
+  }
 }
 
 .navigationSection {
@@ -179,17 +181,15 @@
 .signOffContent .socialMediaNavigation {
   display: flex;
   flex-direction: row;
-  .imageHolder{
+  .imageHolder {
     margin-bottom: 0;
   }
-  
 }
 
 .signOffContainer {
   width: 33%;
   display: flex;
   flex-direction: column;
- 
 }
 
 .signOffContent {
@@ -283,47 +283,62 @@
   width: 25px;
 }
 
-.navItem{
+.navItem {
   position: relative;
 }
 
 .homeIcon {
   width: 125px;
   opacity: 1;
-  transition: .5s;
-
+  transition: 0.5s;
 }
 
 .homeIconHover {
   position: absolute;
   width: 125px;
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .link:hover {
   .homeIcon {
-  opacity: 0;
-  transition: .5s;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .homeIconHover {
+    opacity: 1;
+    transition: 0.5s;
+  }
 }
-.homeIconHover {
-  opacity: 1;
-  transition: .5s;
 
-}
-}
 
 .lsdContainerAbsolute {
   position: absolute;
-  top: -50px;
-  z-index: -1;
+  top: 80px;
+  right: -550px;
+  visibility: visible;
   animation-name: lsd;
   animation-duration: 1.2s;
   animation-fill-mode: forwards;
-  margin: 0;
-  top: 50%;
-  left: 105%;
-  transform: translate(-50%, -50%);
+  width: 1000px;
+  .imageHolder{
+    width: 92%;
+    height: 100%;
+  }
+  .imageSource {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+}
+
+@keyframes lsd {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .socialMediaLink {
@@ -355,18 +370,7 @@
   }
 }
 
-@keyframes lsd {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
-.lsdContainerAbsolute .imageSource {
-  height: 1000px;
-}
 
 .navigationContainer {
   margin-top: 125px;
@@ -399,7 +403,8 @@
   pointer-events: none;
   cursor: default;
   color: #0000ff;
-  .navSlash, .homeNavSlash {
+  .navSlash,
+  .homeNavSlash {
     background-color: #0000ff;
   }
 }
@@ -420,7 +425,8 @@
   .signOffContainer {
     order: 2;
   }
-  .homeIcon, .homeIconHover {
+  .homeIcon,
+  .homeIconHover {
     width: 80px;
   }
   .link {
@@ -450,16 +456,14 @@
   }
 
   .lsdContainerAbsolute {
-    left: 110%;
+    right: -550px;
   }
 }
 
 @media screen and (max-width: 756px) {
-  .backgroundContainer {
+  .offCanvasStyleBg {
     min-width: 320px;
-    top: 0;
-    min-height: 100vh;
-    padding-bottom: 80px;
+    
   }
   .componentContainer {
     width: 90%;
@@ -507,7 +511,8 @@
   .legal {
     margin-bottom: 30px;
   }
-  .homeIcon, .homeIconHover {
+  .homeIcon,
+  .homeIconHover {
     width: 50px;
   }
 
@@ -516,15 +521,14 @@
   }
 
   .lsdContainerAbsolute {
-    top: 50px;
-    right: -300px;
+    right: -800px;
     visibility: visible;
-    z-index: -1;
+    .imageHolder{
+      width: 46%;
+    }
   }
 
-  .lsdContainerAbsolute .imageSource {
-    height: 450px;
-  }
+ 
 
   .link:hover {
     text-decoration: initial;
@@ -549,9 +553,5 @@
     height: 2px;
     margin-left: 5px;
     margin-top: 10px;
-  }
-  .lsdContainerAbsolute {
-    left: 90%;
-    top: 300px;
   }
 }
