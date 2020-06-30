@@ -46,7 +46,7 @@ const ContactPage = ({ contactPageData }) => {
               <span className="lineDecorator white"></span>
               <span className="lineDecorator white mobile"></span>
             </span>
-            <p className={contactPageStyle.paragraph}>{contactPageData.text}</p>
+            <h1 className={contactPageStyle.paragraph}>{contactPageData.text}</h1>
             <a
               className={contactPageStyle.eMail}
               href={`mailto: ${contactPageData.email}`}
