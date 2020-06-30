@@ -79,6 +79,7 @@ const HomePage = ({ homePageData }) => {
                         <img
                           className={homePageStyle.imageSource}
                           src={item.icon.file.url}
+                          alt="Carbon Agency"
                         />
                       </figure>
                     </span>

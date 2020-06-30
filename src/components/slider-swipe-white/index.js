@@ -217,7 +217,7 @@ class SliderSwipeWhite extends React.Component {
                         : `${sliderSwipeWhiteStyle.imageSource} ${sliderSwipeWhiteStyle.grow}`
                     }
                     fluid={item.featuredImage.fluid}
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
               </a>

@@ -96,13 +96,14 @@ class SliderSwipe extends React.Component {
             <img
               className={sliderSwipeStyle.imageSource}
               src={sliderSwipeData.halftone.file.url}
+              alt="Carbon Agency"
             />
           </figure>
           <figure className={sliderSwipeStyle.logoIconContainer}>
             <img
               className={sliderSwipeStyle.imageSource}
               src={sliderSwipeData.logoIcon.file.url}
-              alt="Carbon"
+              alt="Carbon Agency"
             />
           </figure>
         </div>
@@ -201,7 +202,7 @@ class SliderSwipe extends React.Component {
                         : `${sliderSwipeStyle.imageSource} ${sliderSwipeStyle.grow}`
                     }
                     src={item.featuredImage.file.url}
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
               </a>

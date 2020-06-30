@@ -80,12 +80,14 @@ class Slider extends React.Component {
             <img
               className={sliderStyle.imageSource}
               src={sliderData.halftone.file.url}
+              alt="Carbon Agency"
             />
           </figure>
           <figure className={sliderStyle.logoIconContainer}>
             <img
               className={sliderStyle.imageSource}
               src={sliderData.logoIcon.file.url}
+              alt="Carbon Agency"
             />
           </figure>
         </div>
@@ -116,6 +118,7 @@ class Slider extends React.Component {
                             <img
                               className={sliderStyle.imageSource}
                               src={sliderData.leftArrow.file.url}
+                              alt="Carbon Agency"
                             />
                           </figure>
                         </div>
@@ -129,6 +132,7 @@ class Slider extends React.Component {
                             <img
                               className={sliderStyle.imageSource}
                               src={sliderData.rightArrow.file.url}
+                              alt="Carbon Agency"
                             />
                           </figure>
                         </div>
@@ -189,7 +193,7 @@ class Slider extends React.Component {
                   <img
                     className={sliderStyle.showHover}
                     src={item.hoverImage.file.url}
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
 
@@ -201,7 +205,7 @@ class Slider extends React.Component {
                         : `${sliderStyle.imageSource} ${sliderStyle.grow}`
                     }
                     src={item.featuredImage.file.url}
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
 
@@ -222,7 +226,7 @@ class Slider extends React.Component {
                         : sliderData.featuredProjects[index - 1].featuredImage
                             .file.url
                     }
-                    alt="Carbón"
+                    alt="Carbon Agency"
                   />
                 </figure>
               </a>
