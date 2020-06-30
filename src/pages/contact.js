@@ -54,7 +54,6 @@ const Contact = () => (
     `}
     render={data => {
       const contactPageData = data.contentfulV1ContactPage
-      console.log(contactPageData)
       return (
         <React.Fragment>
            <SEO
